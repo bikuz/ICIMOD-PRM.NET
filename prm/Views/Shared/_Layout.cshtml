@@ -15,174 +15,179 @@
 </head>
 <body>
  
-
     <div class="wrapper" id="wrapper">
+        <div class="nav-side-menu">
 
-        <div class="container-fluid">
-            <div class="row" style="position:relative;top:55px">
-                <div class="nav-side-menu">
+            <div class="brand" id='logo'><img src=@Url.Content("~/Content/images/Logo.png") style="width: 290px;height: 178px;" /></div>
+            <div class="brand" id='logoCollapsed'><img src=@Url.Content("~/Content/images/logoCollapsed.png") style="width: 108px;height: 178px;" /></div>
 
-                    <div class="brand" id='logo'><img src=@Url.Content("~/Content/images/Logo.png") style="width: 290px;height: 178px;" /></div>
-                    <div class="brand" id='logoCollapsed'><img src=@Url.Content("~/Content/images/logoCollapsed.png") style="width: 108px;height: 178px;" /></div>
-                   
-                    <div class="menu-list">
+           
+           
+            <div class="menu-list">
 
-                        <ul id="menu-content" class="menu-content collapse out">
-                            <li class="active">
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li class="active">
 
-                                <a href="#">
+                        <a href="#">
 
-                                    <i class="fa fa-home fa-2x"></i><span class="menu-names">Home</span>
+                            <i class="fa fa-home fa-2x"></i><span class="menu-names">Home</span>
 
-                                </a>
-
-
-                            </li>
-
-                            <li data-toggle="collapse" data-target="#products" id="productsLI" class="collapsed">
-                                <a href="#" class="click">
-                                    <i class="fa fa-users fa-2x"></i>
-                                    <span class="menu-names">
-                                        Partners
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow"></span>
-                                </a>
-
-                            </li>
-                            <ul class="sub-menu collapse" id="products">
-
-                                <li>Partner List</li>
-                                <li class="active"><a href="#">CSS3 Animation</a></li>
-                                <li><a href="#">Buttons</a></li>
-                                <li><a href="#">Tabs & Accordions</a></li>
-                                <li><a href="#">Typography</a></li>
-                                <li><a href="#">FontAwesome</a></li>
-                                <li><a href="#">Slider</a></li>
-                                <li><a href="#">Panels</a></li>
-                                <li><a href="#">Widgets</a></li>
-                                <li><a href="#">Bootstrap Model</a></li>
-                            </ul>
+                        </a>
 
 
+                    </li>
 
-                            <li data-toggle="collapse" data-target="#service" class="collapsed">
-                                <a href="#">
-                                    <i class="fa fa-globe fa-2x"></i>
-                                    <span class="menu-names">
-                                        Partnership Instruments
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow"></span>
-                                </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="service">
-                                <li>New Service 1</li>
-                                <li>New Service 2</li>
-                                <li>New Service 3</li>
-                            </ul>
+                    <li data-toggle="collapse" data-target="#products" id="productsLI" class="collapsed">
+                        <a href="#" class="click">
+                            <i class="fa fa-users fa-2x"></i>
+                            <span class="menu-names">
+                                Partners
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow"></span>
+                        </a>
 
+                    </li>
+                    <ul class="sub-menu collapse" id="products">
 
-                            <li data-toggle="collapse" data-target="#new" class="collapsed">
-                                <a href="#">
-                                    <i class="fa fa-car fa-2x"></i><span class="menu-names">
-                                        Initiative
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow"></span>
-                                </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="new">
-                                <li>New New 1</li>
-                                <li>New New 2</li>
-                                <li>New New 3</li>
-                            </ul>
-
-
-                            <li data-toggle="collapse" data-target="#RP" class="collapsed">
-                                <a href="#">
-                                    <i class="fa fa-map fa-2x"></i><span class="menu-names">
-                                        RP
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow"></span>
-                                </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="RP">
-                                <li>New Service 1</li>
-                                <li>New Service 2</li>
-                                <li>New Service 3</li>
-                            </ul>
-
-                            <li data-toggle="collapse" data-target="#RMC" class="collapsed">
-                                <a href="#">
-                                    <i class="fa fa-flag fa-2x"></i><span class="menu-names">
-                                        RMC
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow">
-                                    </span>
-
-                                </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="RMC">
-                                <li>New Service 1</li>
-                                <li>New Service 2</li>
-                                <li>New Service 3</li>
-                            </ul>
-
-
-                            <li data-toggle="collapse" data-target="#other" class="collapsed">
-                                <a href="#">
-                                    <i class="fa fa-file fa-2x"></i><span class="menu-names">
-                                        Other
-                                        <span class="arrow"></span>
-                                    </span>
-                                    <span class="down-arrow"></span>
-                                </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="other">
-                                <li>New Service 1</li>
-                                <li>New Service 2</li>
-                                <li>New Service 3</li>
-                            </ul>
-                        </ul>
-                    </div>
+                        <li>Partner List</li>
+                        <li class="active"><a href="#">CSS3 Animation</a></li>
+                        <li><a href="#">Buttons</a></li>
+                        <li><a href="#">Tabs & Accordions</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">FontAwesome</a></li>
+                        <li><a href="#">Slider</a></li>
+                        <li><a href="#">Panels</a></li>
+                        <li><a href="#">Widgets</a></li>
+                        <li><a href="#">Bootstrap Model</a></li>
+                    </ul>
 
 
 
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="#">
+                            <i class="fa fa-globe fa-2x"></i>
+                            <span class="menu-names">
+                                Partnership Instruments
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="service">
+                        <li>New Service 1</li>
+                        <li>New Service 2</li>
+                        <li>New Service 3</li>
+                    </ul>
 
-                    <!--Nav Side Menu ends-->
-                </div>
 
-                <div class="main-header">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <a href="#menu-toggle" id="menu-toggle">
-                                    <span style="float: left;">
-                                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <!--Signout Button (To be added)-->
-                                <a href="#"><span style="float: right;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></span></a>
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="#">
+                            <i class="fa fa-car fa-2x"></i><span class="menu-names">
+                                Initiative
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="new">
+                        <li>New New 1</li>
+                        <li>New New 2</li>
+                        <li>New New 3</li>
+                    </ul>
 
-                            </div>
-                            <!--Container Row Ends-->
-                        </div>
-                        <!--Container Ends-->
-                    </div>
-                </div>
 
-                <div class="content">
-                    @RenderBody()
-                </div>
+                    <li data-toggle="collapse" data-target="#RP" class="collapsed">
+                        <a href="#">
+                            <i class="fa fa-map fa-2x"></i><span class="menu-names">
+                                RP
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="RP">
+                        <li>New Service 1</li>
+                        <li>New Service 2</li>
+                        <li>New Service 3</li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#RMC" class="collapsed">
+                        <a href="#">
+                            <i class="fa fa-flag fa-2x"></i><span class="menu-names">
+                                RMC
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow">
+                            </span>
+
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="RMC">
+                        <li>New Service 1</li>
+                        <li>New Service 2</li>
+                        <li>New Service 3</li>
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#other" class="collapsed">
+                        <a href="#">
+                            <i class="fa fa-file fa-2x"></i><span class="menu-names">
+                                Other
+                                <span class="arrow"></span>
+                            </span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="other">
+                        <li>New Service 1</li>
+                        <li>New Service 2</li>
+                        <li>New Service 3</li>
+                    </ul>
+                </ul>
             </div>
 
 
 
+
+            <!--Nav Side Menu ends-->
         </div>
+
+        <!--Main Header starts-->
+        <div class="main-header">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" id="menu-toggle">
+                            <span style="float: left;">
+                                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <!--Signout Button (To be added)-->
+                        <a href="#"><span style="float: right;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></span></a>
+
+                    </div>
+                    <!--Container Row Ends-->
+                </div>
+                <!--Container Ends-->
+            </div>
+
+            <!--Main Header Ends-->
+        </div>
+
+
+        <div class="content" style="position:relative;top:55px;">
+            @RenderBody()
+        </div>
+
+
+
+        <!--Main wrapper ends-->
     </div>
+
+
+    
 
 
     @Scripts.Render("~/bundles/jquery")
