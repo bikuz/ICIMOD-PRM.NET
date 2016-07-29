@@ -221,10 +221,7 @@ margin-top: 60px;
     }
     #wrapper.toggled .main-image {
        background-size: cover;
-   
     }
-
-    
 
     #wrapper.toggled .menu-names {
        display: none;
@@ -232,15 +229,12 @@ margin-top: 60px;
 
     #wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
     #wrapper.toggled .nav-side-menu li :not(collapsed) .down-arrow:before {
-
       display: block;
     }
 
 
-    #wrapper.toggled #logo{
-
-    display: none;
-
+    #wrapper.toggled #logo {
+        display: none;
     }
 
     #wrapper.toggled .nav-side-menu {
