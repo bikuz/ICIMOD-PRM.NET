@@ -42,8 +42,9 @@
                             <i class="fa fa-users fa-2x"></i>
                             <span class="menu-names">
                                 Partners
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
 
@@ -69,8 +70,9 @@
                             <i class="fa fa-globe fa-2x"></i>
                             <span class="menu-names">
                                 Partnership Instruments
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -85,8 +87,9 @@
                         <a href="#">
                             <i class="fa fa-car fa-2x"></i><span class="menu-names">
                                 Initiative
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -101,8 +104,9 @@
                         <a href="#">
                             <i class="fa fa-map fa-2x"></i><span class="menu-names">
                                 RP
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -116,8 +120,9 @@
                         <a href="#">
                             <i class="fa fa-flag fa-2x"></i><span class="menu-names">
                                 RMC
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow">
                             </span>
 
@@ -134,8 +139,9 @@
                         <a href="#">
                             <i class="fa fa-file fa-2x"></i><span class="menu-names">
                                 Other
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -196,28 +202,75 @@
 
     <script>
         $(document).ready(function () {
-            $("#menu-toggle").click(function (e) {
+
+                $(window).resize(function(){
+                   if((Modernizr.mq('(max-width: 1001px)')))
+                        {   
+
+                       $('.menu-names').css('display', 'inherit');           
+                            } else {
+                                  $('.menu-names').css('display', 'inherit');
+                                    
+                                    $("#wrapper").removeClass('toggled'); 
+                                      
+                            } 
+                
+                        });
+
+                $("#menu-toggle").click(function (e) {
                 e.preventDefault();
+               
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+
+                       $('.menu-names').css('display', 'none');           
+                } 
+                
+
                 $('.collapse').collapse('hide');
                 $("#wrapper").toggleClass("toggled");
+
+               
+                $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                function(e) {
+
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+                    if ($('.nav-side-menu').width() == 300) {
+                    $('.menu-names').css('display', 'inherit');
+                } else {
+                    $('.menu-names').css('display', 'none');
+                }
+            }
+            
+                   
+
+                    });
+
 
             });
 
             $(".collapsed").click(function (e) {
                 console.log($('.nav-side-menu').width());
                 if ($('.nav-side-menu').width() == 100) {
+                    $('.menu-names').css('display', 'none');
                     $("#wrapper").toggleClass("toggled");
+                     $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                        function(e) {
 
+                        $('.menu-names').css('display', 'inherit');
+                    
+                    });
                 };
             });
-            //$('.cardCollapseLink').click(function (e) {
+            $('.cardCollapseLink').click(function (e) {
 
-            //    e.preventDefault();
-            //    console.log('.' + e.currentTarget.id + '-main');
-            //    var id = '#' + e.currentTarget.id + '-main';
-            //    $(id).toggleClass("toggled");
+                e.preventDefault();
+                console.log('.' + e.currentTarget.id + '-main');
+                var id = '#' + e.currentTarget.id + '-main';
+                $(id).toggleClass("toggled");
 
-            //});
+            });
         })
 
     </script>

@@ -19,8 +19,13 @@ div {
   overflow-y: auto;
   overflow-x: hidden; 
   z-index: 3;
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
 
 }
+
 .nav-side-menu .brand {
   background-color: rgb(6,20,86);
   line-height: 50px;
@@ -183,6 +188,10 @@ body {
   z-index: 1;
   background-color: white;
   /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
   
 }
 
@@ -194,6 +203,7 @@ body {
  position: relative;
   
  height: 200px;
+
   
   
 }
@@ -204,6 +214,10 @@ body {
   overflow-x: hidden;
   position: relative;
   z-index: 0;
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
   
 }
 
@@ -225,10 +239,15 @@ body {
    width: 100px;
 }
 
-#wrapper.toggled .menu-names {
+.displayNone {
    display: none;
 }
-
+#wrapper.toggled .menu-names {
+  display: none;
+}
+#wrapper.toggled .arrow {
+  display: none;
+}
 #wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
 #wrapper.toggled .nav-side-menu li :not(collapsed) .down-arrow:before {
 
@@ -351,10 +370,23 @@ display: none;
 }
 
 @media only screen and (max-width: 1000px) {
+  .menu-list {
+       -webkit-transition:all 0.5s linear;
+  -moz-transition:all 0.5s linear;
+  -o-transition:all 0.5s linear;
+  transition:all 1s linear;
+     
+   }
+
+
    .nav-side-menu {
 
     width:100%;
     position: relative;
+    height: 250px;
+    overflow: hidden;
+     
+     
 
    }
    .content {
@@ -370,13 +402,18 @@ display: none;
 
    }
    #wrapper:not(toggled) .nav-side-menu .menu-content {
-    display: none;
+    display: block;
    }
 
    #wrapper.toggled .nav-side-menu .menu-content {
-    display: block;
-
+    
+    
    }
+   #wrapper.toggled .nav-side-menu  {
+    
+    height: 555px;    
+   }
+  
 
 }
 
