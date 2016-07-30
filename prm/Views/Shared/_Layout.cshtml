@@ -160,7 +160,7 @@
         </div>
 
         <!--Main Header starts-->
-        <div class="main-header">
+        <div id="header" class="main-header">
 
             <div class="container-fluid">
                 <div class="row">
@@ -202,6 +202,18 @@
 
     <script>
         $(document).ready(function () {
+
+
+
+
+            $(window).scroll(function () {
+                var sc = $(window).scrollTop()
+                    if (sc > 10) {
+                $("#header").addClass('shadow')
+                    } else {
+                $("#header").removeClass('shadow')
+                    }
+                });
 
                 $(window).resize(function(){
                    if((Modernizr.mq('(max-width: 1001px)')))
