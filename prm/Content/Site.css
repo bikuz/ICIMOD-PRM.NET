@@ -292,13 +292,13 @@ display: none;
 }
 
 .card {
-  margin-top: 10px;
+  margin-top: 20px;
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;
   z-index: 1;
   background-color: white;
- 
+  
 
 }
 .card span.card-title {
