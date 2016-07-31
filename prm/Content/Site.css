@@ -346,19 +346,6 @@ display: none;
   margin: 0;
   color: inherit;
 }
-.card .card-content #highlights ul {
-  list-style-type: none; 
-}
-.card .card-content #highlights li {
-  padding-top: 10px;
-}
-.card .card-content #highlights li:before {
-
-font-family: 'FontAwesome';
-content: '\f005';
-margin:0 5px 0 -35px;
-color: #e5c028;
-}
 
 }
 .card .card-content span.card-title {
@@ -447,3 +434,66 @@ color: #e5c028;
 
 }
 
+/*Link not active*/
+.Link-not-active {
+   pointer-events: none;
+   cursor: default;
+ }
+
+/*Index Page CSS*/
+
+.card .card-content #highlights ul {
+  list-style-type: none; 
+}
+.card .card-content #highlights li {
+  padding-top: 10px;
+}
+.card .card-content #highlights li:before {
+
+font-family: 'FontAwesome';
+content: '\f005';
+margin:0 5px 0 -35px;
+color: #e5c028;
+}
+.card .card-content #downloads a {
+  text-decoration: none;
+}
+.card .card-content #downloads table .DownloadsView a::before {
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:  #FF6347;
+padding-right: 5px;
+}
+
+.card .card-content #downloads table .DownloadsDown a::before {
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:green;
+padding-right: 5px;
+}
+.card .card-content #downloads table .DownloadsViewDisabled a,
+.card .card-content #downloads table .DownloadsDownDisabled a
+ {
+
+    pointer-events: none;
+   cursor: default;
+
+}
+.card .card-content #downloads table .DownloadsViewDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}
+.card .card-content #downloads table .DownloadsDownDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}

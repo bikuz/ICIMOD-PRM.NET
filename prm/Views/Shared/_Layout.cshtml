@@ -289,11 +289,11 @@
                 var id = '#' + e.currentTarget.id + '-main';
                 
                 // $(id).toggleClass('toggled');
-                if ($(id).height() === 100) {
+                if ($(id).height() === 90) {
                     autoHeightAnimate($(id), 500);
                     
                 } else {
-                     $(id).animate({height: "100px"}, 500);
+                     $(id).animate({height: "90px"}, 500);
                 }
 
                 
@@ -307,6 +307,7 @@
             autoHeight = element.css('height', 'auto').height(); // Get Auto Height
             element.height(curHeight); // Reset to Default Height
             element.stop().animate({ height: autoHeight }, time, function() {
+                //after the animation completes change the height to auto
                 element.height('auto');
             }); // Animate to Auto Height
             }
