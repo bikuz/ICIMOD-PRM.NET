@@ -299,6 +299,8 @@ display: none;
   z-index: 1;
   background-color: white;
   overflow: hidden;
+  height: auto;
+ 
 
 }
 .card span.card-title {
@@ -338,6 +340,7 @@ display: none;
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box;
+
 }
 .card .card-content p {
   margin: 0;
@@ -377,9 +380,14 @@ color: #e5c028;
 }
 
 /*card toggle styling*/
+.card.toggled .innerContent  {
+  display: none;
+}
 .card.toggled {
 
-  height: 300px;
+   max-height:100px;
+    overflow:hidden;
+    
 }
 
 
