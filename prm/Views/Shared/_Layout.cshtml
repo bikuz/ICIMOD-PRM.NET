@@ -205,33 +205,35 @@
 
 
 
-
+            //Function for adding box shadow effect while scrolling 
             $(window).scroll(function () {
                 var sc = $(window).scrollTop()
                     if (sc > 10) {
-                $("#header").addClass('shadow')
+                        $("#header").addClass('shadow')
                     } else {
-                $("#header").removeClass('shadow')
+                        $("#header").removeClass('shadow')
                     }
-                });
+            });
 
+            //handling side menu-names when the screen is resized
                 $(window).resize(function(){
                    if((Modernizr.mq('(max-width: 1001px)')))
                         {   
 
                        $('.menu-names').css('display', 'inherit');           
-                            } else {
+                    } else {        
                                   
-                                    
-                                    $("#wrapper").removeClass('toggled'); 
+                        $("#wrapper").removeClass('toggled'); 
 
-                            } 
+                    } 
                 
-                        });
+                });
 
+            //Handling menu toggle click
                 $("#menu-toggle").click(function (e) {
                 e.preventDefault();
                
+                //switching the  display to none when the screen size is of a desktop
                 if((Modernizr.mq('(min-width: 1001px)')))
                 {   
 
@@ -245,7 +247,7 @@
                
                 $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
                 function(e) {
-
+                    //after the animation ends switching display for menu-names based on it's state
                 if((Modernizr.mq('(min-width: 1001px)')))
                 {   
                     if ($('.nav-side-menu').width() == 300) {
@@ -262,6 +264,7 @@
 
             });
 
+        //Handling when user tries to open the menu item when the side bar is collapsed
             $(".collapsed").click(function (e) {
                 console.log($('.nav-side-menu').width());
                 if ($('.nav-side-menu').width() == 100) {
@@ -275,6 +278,8 @@
                     });
                 };
             });
+
+        //Collapse card hieght
             $('.cardCollapseLink').click(function (e) {
 
                 e.preventDefault();

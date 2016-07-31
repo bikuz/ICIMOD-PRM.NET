@@ -243,15 +243,14 @@ body {
    width: 100px;
 }
 
-.displayNone {
-   display: none;
-}
-#wrapper.toggled .menu-names {
+/*Removed below property - handled by javascript*/
+/*#wrapper.toggled .menu-names {
   display: none;
-}
+}*/
 #wrapper.toggled .arrow {
   display: none;
 }
+
 #wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
 #wrapper.toggled .nav-side-menu li :not(collapsed) .down-arrow:before {
 
@@ -374,13 +373,13 @@ display: none;
 }
 
 @media only screen and (max-width: 1000px) {
-  .menu-list {
+ /* .menu-list {
        -webkit-transition:all 0.5s linear;
   -moz-transition:all 0.5s linear;
   -o-transition:all 0.5s linear;
   transition:all 1s linear;
      
-   }
+   }*/
 
 
    .nav-side-menu {
@@ -413,6 +412,7 @@ display: none;
     
     
    }
+   /*Using height toggle to create animation*/
    #wrapper.toggled .nav-side-menu  {
     
     height: 555px;    
