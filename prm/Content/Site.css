@@ -298,7 +298,7 @@ display: none;
   background-clip: padding-box;
   z-index: 1;
   background-color: white;
-  
+  overflow: hidden;
 
 }
 .card span.card-title {
@@ -342,6 +342,21 @@ display: none;
 .card .card-content p {
   margin: 0;
   color: inherit;
+}
+.card .card-content #highlights ul {
+  list-style-type: none; 
+}
+.card .card-content #highlights li {
+  padding-top: 10px;
+}
+.card .card-content #highlights li:before {
+
+font-family: 'FontAwesome';
+content: '\f005';
+margin:0 5px 0 -35px;
+color: #e5c028;
+}
+
 }
 .card .card-content span.card-title {
   line-height: 48px;
