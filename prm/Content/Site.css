@@ -347,8 +347,12 @@ display: none;
   background-color: #0095da;
   height: 30px;
   padding: 5px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
 
 }
+
+
 .card .card-header .cardButton{
 
   float: right;
@@ -377,7 +381,7 @@ display: none;
   color: inherit;
 }
 
-}
+
 .card .card-content span.card-title {
   line-height: 48px;
 }
@@ -397,15 +401,22 @@ display: none;
 }
 
 /*card toggle styling*/
-.card.toggled .innerContent  {
-  display: none;
+.card.visibility .card-content  {
+  visibility: hidden;
 }
-.card.toggled {
+/*.card.toggled {
 
    max-height:100px;
     overflow:hidden;
     
+}*/
+.card.visibility .card-header a .cardCollapseLink {
+ -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  
 }
+
+
 
 /*Chart View*/
 
