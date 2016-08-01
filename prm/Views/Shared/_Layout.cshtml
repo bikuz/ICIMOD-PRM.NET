@@ -8,6 +8,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <script src="http://code.highcharts.com/highcharts.js"></script>
 
+    
+    <!-- Slider for charts CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
     @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -222,7 +226,8 @@
                    if((Modernizr.mq('(max-width: 1001px)')))
                         {   
 
-                       $('.menu-names').css('display', 'inherit');           
+                       $('.menu-names').css('display', 'inherit');   
+
                     } else {        
                                   
                         $("#wrapper").removeClass('toggled'); 
@@ -314,5 +319,54 @@
             }
 
     </script>
+
+<!-- Slider for charts-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+    centerMode: true,
+    prevArrow: $('#previousChart'),
+    nextArrow: $('#nextChart'),
+    centerPadding: '30px',
+    slidesToShow: 3,
+
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+
+
+
+
+
+      });
+    });
+  </script>
+
 </body>
 </html>
