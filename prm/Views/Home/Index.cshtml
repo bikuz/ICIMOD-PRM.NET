@@ -404,8 +404,7 @@
                     <div class="card-content">
                         <div class="row container-fluid">
                         <div class="col-md-12 chartView">
-                         
-                        <p>1</p>
+                          
 
                          <!-- ChartView Ends -->   
                         </div>
@@ -413,20 +412,45 @@
                          <p>Select Charts</p>
                          <!-- SelectChartTitle Ends -->   
                         </div>
+
+                         <div class="col-md-12">
+                         <a href="#" id="previousChart" class="chartPrevious"><i class="fa fa-chevron-left fa-bold" aria-hidden="true"></i></a>
+                        <a href="#" id="nextChart" class="chartNext"><i class="fa fa-chevron-right fa-bold" aria-hidden="true"></i></a>
+                        </div>
                         
                         <div class="col-md-12">
-                       
+
+
                             <div class="chartsSelect">
-                                <div>Chart1</div>
-                                <div>Chart2</div>
-                                <div>Chart3</div>
+                                <div>
+                                <!-- Chart-1 -->
+                                <div class="chartHolder chart1" style="height: 300px; width: 400px; margin:0;"></div>
+                                <div class="chartRadioContainer"><input id="chart1" type="radio" aria-label="..." name="chartGroup"></div>
+                                </div>
+                                <div>
+                                <!-- Chart-2 -->
+                                <div class="chartHolder chart2" style="width: 400px; height: 300px; margin:0;"></div>
+                                <div class="chartRadioContainer"><input class="cardRadio" id="chart2" type="radio" aria-label="..." name="chartGroup" ></div>
+                                </div>
+                                
+                                <div>
+                                <!-- Chart-3 -->
+                                <div class="chartHolder chart3" style="width: 400px; height: 300px; margin:0;"></div>
+                                <div class="chartRadioContainer"><input class="cardRadio" id="chart3" type="radio" aria-label="..." name="chartGroup" ></div>
+                                </div>
+
                                 <div>Chart4</div>
                                 <div>Chart5</div>
                                 <div>Chart6</div>
+                                 <div>
+                                 <div id="" class="chartHolder chart3" style="width: 400px; height: 300px; margin:0;"></div>
+                                 <div class="chartRadioContainer"><input class="cardRadio" type="radio" aria-label="..." name="chartGroup"></div>
+                                 </div>
+                                
                             </div>
                        
-                       <a href="#" id="previousChart" class="chartPrevious"><i class="fa fa-chevron-left fa-bold" aria-hidden="true"></i></a>
-                        <a href="#" id="nextChart" class="chartNext"><i class="fa fa-chevron-right fa-bold" aria-hidden="true"></i></a>
+                       
+                       
                        
                         
 
