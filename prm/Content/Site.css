@@ -17,6 +17,10 @@ padding: 10px;
 .DefaultMargin {
   margin: 10px;
 }
+.centered {
+  padding-left: 40%;
+  
+}
 
 /*General Elements CSS*/
 .nav-side-menu {
@@ -559,5 +563,8 @@ padding-right: 5px;
   }
 #card-3-main .rcorners2 p {
   color: white;
+}
+
+#card-3-main .rcorner2:hover {
 
 }
