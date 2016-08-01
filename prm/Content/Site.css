@@ -19,8 +19,13 @@ div {
   overflow-y: auto;
   overflow-x: hidden; 
   z-index: 3;
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
 
 }
+
 .nav-side-menu .brand {
   background-color: rgb(6,20,86);
   line-height: 50px;
@@ -182,8 +187,16 @@ body {
   left: 0;
   z-index: 1;
   background-color: white;
-  /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
+  /**/
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
   
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .main-image {
@@ -194,6 +207,7 @@ body {
  position: relative;
   
  height: 200px;
+
   
   
 }
@@ -204,6 +218,10 @@ body {
   overflow-x: hidden;
   position: relative;
   z-index: 0;
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
   
 }
 
@@ -225,8 +243,12 @@ body {
    width: 100px;
 }
 
-#wrapper.toggled .menu-names {
-   display: none;
+/*Removed below property - handled by javascript*/
+/*#wrapper.toggled .menu-names {
+  display: none;
+}*/
+#wrapper.toggled .arrow {
+  display: none;
 }
 
 #wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
@@ -270,17 +292,22 @@ display: none;
 }
 
 .card {
-  margin-top: 10px;
+  margin-top: 20px;
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;
   z-index: 1;
   background-color: white;
+  overflow: hidden;
+  height: auto;
+ 
+
 }
 .card span.card-title {
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
+    padding: 5px;
     text-transform: uppercase;
 }
 
@@ -313,10 +340,13 @@ display: none;
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box;
+
 }
 .card .card-content p {
   margin: 0;
   color: inherit;
+}
+
 }
 .card .card-content span.card-title {
   line-height: 48px;
@@ -337,9 +367,14 @@ display: none;
 }
 
 /*card toggle styling*/
+.card.toggled .innerContent  {
+  display: none;
+}
 .card.toggled {
 
-  height: 300px;
+   max-height:100px;
+    overflow:hidden;
+    
 }
 
 
@@ -351,10 +386,23 @@ display: none;
 }
 
 @media only screen and (max-width: 1000px) {
+ /* .menu-list {
+       -webkit-transition:all 0.5s linear;
+  -moz-transition:all 0.5s linear;
+  -o-transition:all 0.5s linear;
+  transition:all 1s linear;
+     
+   }*/
+
+
    .nav-side-menu {
 
     width:100%;
     position: relative;
+    height: 250px;
+    overflow: hidden;
+     
+     
 
    }
    .content {
@@ -370,13 +418,82 @@ display: none;
 
    }
    #wrapper:not(toggled) .nav-side-menu .menu-content {
-    display: none;
+    display: block;
    }
 
    #wrapper.toggled .nav-side-menu .menu-content {
-    display: block;
-
+    
+    
    }
+   /*Using height toggle to create animation*/
+   #wrapper.toggled .nav-side-menu  {
+    
+    height: 555px;    
+   }
+  
 
 }
 
+/*Link not active*/
+.Link-not-active {
+   pointer-events: none;
+   cursor: default;
+ }
+
+/*Index Page CSS*/
+
+.card .card-content #highlights ul {
+  list-style-type: none; 
+}
+.card .card-content #highlights li {
+  padding-top: 10px;
+}
+.card .card-content #highlights li:before {
+
+font-family: 'FontAwesome';
+content: '\f005';
+margin:0 5px 0 -35px;
+color: #e5c028;
+}
+.card .card-content #downloads a {
+  text-decoration: none;
+}
+.card .card-content #downloads table .DownloadsView a::before {
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:  #FF6347;
+padding-right: 5px;
+}
+
+.card .card-content #downloads table .DownloadsDown a::before {
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:green;
+padding-right: 5px;
+}
+.card .card-content #downloads table .DownloadsViewDisabled a,
+.card .card-content #downloads table .DownloadsDownDisabled a
+ {
+
+    pointer-events: none;
+   cursor: default;
+
+}
+.card .card-content #downloads table .DownloadsViewDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}
+.card .card-content #downloads table .DownloadsDownDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}

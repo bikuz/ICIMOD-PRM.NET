@@ -42,8 +42,9 @@
                             <i class="fa fa-users fa-2x"></i>
                             <span class="menu-names">
                                 Partners
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
 
@@ -69,8 +70,9 @@
                             <i class="fa fa-globe fa-2x"></i>
                             <span class="menu-names">
                                 Partnership Instruments
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -85,8 +87,9 @@
                         <a href="#">
                             <i class="fa fa-car fa-2x"></i><span class="menu-names">
                                 Initiative
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -101,8 +104,9 @@
                         <a href="#">
                             <i class="fa fa-map fa-2x"></i><span class="menu-names">
                                 RP
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -116,8 +120,9 @@
                         <a href="#">
                             <i class="fa fa-flag fa-2x"></i><span class="menu-names">
                                 RMC
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow">
                             </span>
 
@@ -134,8 +139,9 @@
                         <a href="#">
                             <i class="fa fa-file fa-2x"></i><span class="menu-names">
                                 Other
-                                <span class="arrow"></span>
+                                
                             </span>
+                            <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
@@ -154,7 +160,7 @@
         </div>
 
         <!--Main Header starts-->
-        <div class="main-header">
+        <div id="header" class="main-header">
 
             <div class="container-fluid">
                 <div class="row">
@@ -168,6 +174,7 @@
                         <a href="#"><span style="float: right;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></span></a>
 
                     </div>
+
                     <!--Container Row Ends-->
                 </div>
                 <!--Container Ends-->
@@ -196,29 +203,114 @@
 
     <script>
         $(document).ready(function () {
-            $("#menu-toggle").click(function (e) {
+
+
+
+            //Function for adding box shadow effect while scrolling 
+            $(window).scroll(function () {
+                var sc = $(window).scrollTop()
+                    if (sc > 5) {
+                        $("#header").addClass('shadow')
+                    } else {
+                        $("#header").removeClass('shadow')
+                    }
+            });
+
+            //handling side menu-names when the screen is resized
+                $(window).resize(function(){
+                   if((Modernizr.mq('(max-width: 1001px)')))
+                        {   
+
+                       $('.menu-names').css('display', 'inherit');           
+                    } else {        
+                                  
+                        $("#wrapper").removeClass('toggled'); 
+
+                    } 
+                
+                });
+
+            //Handling menu toggle click
+                $("#menu-toggle").click(function (e) {
                 e.preventDefault();
+               
+                //switching the  display to none when the screen size is of a desktop
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+
+                       $('.menu-names').css('display', 'none');           
+                } 
+                
+
                 $('.collapse').collapse('hide');
                 $("#wrapper").toggleClass("toggled");
 
+               
+                $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                function(e) {
+                    //after the animation ends switching display for menu-names based on it's state
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+                    if ($('.nav-side-menu').width() == 300) {
+                    $('.menu-names').css('display', 'inherit');
+                } else {
+                    $('.menu-names').css('display', 'none');
+                }
+            }
+            
+                   
+
+                    });
+
+
             });
 
+        //Handling when user tries to open the menu item when the side bar is collapsed
             $(".collapsed").click(function (e) {
                 console.log($('.nav-side-menu').width());
                 if ($('.nav-side-menu').width() == 100) {
+                    $('.menu-names').css('display', 'none');
                     $("#wrapper").toggleClass("toggled");
+                     $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                        function(e) {
 
+                        $('.menu-names').css('display', 'inherit');
+                    
+                    });
                 };
             });
-            //$('.cardCollapseLink').click(function (e) {
 
-            //    e.preventDefault();
-            //    console.log('.' + e.currentTarget.id + '-main');
-            //    var id = '#' + e.currentTarget.id + '-main';
-            //    $(id).toggleClass("toggled");
+        //Collapse card hieght
+            $('.cardCollapseLink').click(function (e) {
 
-            //});
+                
+                 e.preventDefault();
+
+                var id = '#' + e.currentTarget.id + '-main';
+                
+                // $(id).toggleClass('toggled');
+                if ($(id).height() === 90) {
+                    autoHeightAnimate($(id), 500);
+                    
+                } else {
+                     $(id).animate({height: "90px"}, 500);
+                }
+
+                
+                
+
+            });
         })
+        //Function to animate the auto-height from collapsed height
+        function autoHeightAnimate(element, time){
+            var curHeight = element.height(), // Get Default Height
+            autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+            element.height(curHeight); // Reset to Default Height
+            element.stop().animate({ height: autoHeight }, time, function() {
+                //after the animation completes change the height to auto
+                element.height('auto');
+            }); // Animate to Auto Height
+            }
 
     </script>
 </body>
