@@ -22,6 +22,15 @@ padding: 10px;
   
 }
 
+.circle {
+  width: 30px;
+  height: 30px;
+  background: #0095da;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
 /*General Elements CSS*/
 .nav-side-menu {
   
@@ -402,11 +411,15 @@ display: none;
 
 .chartPrevious {
   float:left; 
-  padding:20px;
+  text-align: center;
+  padding: 6px;
+  margin-bottom: 5px;
 }
 .chartNext {
   float:right; 
-  padding:20px;
+  text-align: center;
+  padding: 6px;
+   margin-bottom: 5px;
 }
 .selectChartTitle {
   height: 40px;
@@ -424,6 +437,8 @@ display: none;
 }
 .chartHolder {
   border: 1px solid #eeeeee;
+  height: 300px; 
+  width: 400px;
 }
 .chartRadioContainer {
   width:100%; 
