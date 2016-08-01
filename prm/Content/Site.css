@@ -398,8 +398,27 @@ display: none;
 
 /*Chart View*/
 
-.chartSelect {
-  
+.chartPrevious {
+  float:left; 
+  padding:20px;
+}
+.chartNext {
+  float:right; 
+  padding:20px;
+}
+.selectChartTitle {
+  height: 40px;
+  background-color:#eeeeee;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.selectChartTitle p {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+.chartView {
+  height: 300px;
 }
 
 
