@@ -507,7 +507,9 @@ padding-right: 5px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
+.tabs-modified >li.active{
+    font-weight:bold;
+}
 .guide-info{
     /*text-align:center;*/
     display: block;
@@ -531,6 +533,7 @@ padding-right: 5px;
     height:210px;
     border:1px solid #ddd;
     border-radius:3px;
+    padding:10px;
 }
 .rangedef{
     display: inline-block;
@@ -540,4 +543,14 @@ padding-right: 5px;
     text-align: right;
     padding-right: 10px;
     border-right: 1px solid #CCC;
+}
+
+.list-code-name,.list-code-code{
+    font-family: Consolas,"courier new";
+}
+.list-code-name{
+    color:brown;
+}
+.list-code-code{
+    color:blue;
 }

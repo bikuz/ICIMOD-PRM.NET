@@ -128,7 +128,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InitialAgreementController.cs" />
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
+    <Compile Include="Controllers\PartnershipAgreementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,6 +221,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\InstitutionalProfile\AddPartner.cshtml" />
+    <Content Include="Views\InitialAgreement\AddDonor.cshtml" />
+    <Content Include="Views\PartnershipAgreement\ImportDeliverable.cshtml" />
+    <Content Include="Views\InitialAgreement\AddClauses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
