@@ -21,6 +21,9 @@ padding: 10px;
   padding-left: 40%;
   
 }
+.align {
+  text-align: center;
+}
 
 .circle {
   width: 30px;
@@ -679,4 +682,10 @@ padding-right: 5px;
 
 .updatesRow3 {
   color:#A9A9A9;
+}
+
+
+.updateTab2 {
+  background-color: #eeeeee;
+ 
 }
