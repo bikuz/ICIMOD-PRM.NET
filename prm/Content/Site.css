@@ -431,13 +431,13 @@ display: none;
   float:left; 
   text-align: center;
   padding: 6px;
-  margin-bottom: 5px;
+  margin-top: 100px;
 }
 .chartNext {
   float:right; 
   text-align: center;
   padding: 6px;
-   margin-bottom: 5px;
+  margin-top: 100px;
 }
 .selectChartTitle {
   height: 40px;
@@ -518,6 +518,10 @@ display: none;
   /*Index Page CSS*/
   .main-image .updates {
   display: none;
+  }
+
+  .chartArrows {
+    display: none;
   }
 
 
