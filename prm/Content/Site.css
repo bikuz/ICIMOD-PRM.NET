@@ -21,6 +21,9 @@ padding: 10px;
   padding-left: 40%;
   
 }
+.align {
+  text-align: center;
+}
 
 .circle {
   width: 30px;
@@ -235,7 +238,6 @@ body {
 }
 
 .main-image {
-    background-size:cover;
     background-color:white;
   background-image: url("images/Mountain.png");
   
@@ -680,4 +682,20 @@ padding-right: 5px;
 
 .updatesRow3 {
   color:#A9A9A9;
+}
+
+.updateTab1 {
+  color:  #999900;
+  border-bottom:2px solid #eeeeee;
+
+}
+.updateTab2 {
+  /*background-color: #eeeeee;*/
+ color:   #FF6347;
+ border-bottom:2px solid #eeeeee;
+}
+.updateTab3 {
+
+  color:blue;
+  
 }
