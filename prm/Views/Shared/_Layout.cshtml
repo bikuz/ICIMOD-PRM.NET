@@ -56,22 +56,20 @@
                     </li>
                     <ul class="sub-menu collapse" id="products">
 
-                        <li>Partner List</li>
-                        <li class="active"><a href="#">CSS3 Animation</a></li>
-                        <li><a href="#">Buttons</a></li>
-                        <li><a href="#">Tabs & Accordions</a></li>
-                        <li><a href="#">Typography</a></li>
-                        <li><a href="#">FontAwesome</a></li>
-                        <li><a href="#">Slider</a></li>
-                        <li><a href="#">Panels</a></li>
-                        <li><a href="#">Widgets</a></li>
-                        <li><a href="#">Bootstrap Model</a></li>
+                        <li class="Title">Partner List</li>
+                        <li class="elem active"><a href="#">View Partner List</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
+                        <li class="elem"><a href="#">Partner Contact</a></li>
+                        <li class="Title">Roaster Partner</li>
+                        <li class="elem"><a href="#">+ Add Partner Information</a></li>
+                        <li class="elem"><a href="#">View Partner List</a></li>
+                                                
                     </ul>
 
 
 
                     <li data-toggle="collapse" data-target="#service" class="collapsed">
-                        <a href="#">
+                        <a href="javascript:void(0">
                             <i class="fa fa-globe fa-2x"></i>
                             <span class="menu-names">
                                 Partnership Instruments
@@ -82,14 +80,23 @@
                         </a>
                     </li>
                     <ul class="sub-menu collapse" id="service">
-                        <li>New Service 1</li>
-                        <li>New Service 2</li>
-                        <li>New Service 3</li>
+                        <li class="Title">New Partnership Instrument</li>
+                        <li class="elem"><a href="#">Create New Partnership</a></li>
+                        <li class="elem"><a href="#">Partnership Tracker</a></li>
+                        <li class="elem"><a href="#">View Partnership</a></li>
+                        <li class="elem"><a href="#">Partnership Profile</a></li>
+                        <li class="Title">Old Manual Partnership</li>
+                        <li class="elem"><a href="#">Create Partnership</a></li>
+                        <li class="elem"><a href="#">View Partnership</a></li>
+                        <li class="Title">Donor Agreement</li>
+                        <li class="elem"><a href="#">+Add Donor</a></li>
+                        <li class="elem"><a href="#">View Donor List</a></li>
+                        <li class="elem"><a href="#">+ Add Deliverables</a></li>
                     </ul>
 
 
                     <li data-toggle="collapse" data-target="#new" class="collapsed">
-                        <a href="#">
+                        <a href="javascript:void(0">
                             <i class="fa fa-car fa-2x"></i><span class="menu-names">
                                 Initiative
                                 
@@ -99,14 +106,14 @@
                         </a>
                     </li>
                     <ul class="sub-menu collapse" id="new">
-                        <li>New New 1</li>
-                        <li>New New 2</li>
-                        <li>New New 3</li>
+                         <li class="Title">Initiative</li>
+                        <li class="elem"><a href="#">View Initiative</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
                     </ul>
 
 
                     <li data-toggle="collapse" data-target="#RP" class="collapsed">
-                        <a href="#">
+                        <a href="javascript:void(0)">
                             <i class="fa fa-map fa-2x"></i><span class="menu-names">
                                 RP
                                 
@@ -116,13 +123,13 @@
                         </a>
                     </li>
                     <ul class="sub-menu collapse" id="RP">
-                        <li>New Service 1</li>
-                        <li>New Service 2</li>
-                        <li>New Service 3</li>
+                        <li class="Title">Regional Programme</li>
+                        <li class="elem"><a href="#">View RP</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
                     </ul>
 
                     <li data-toggle="collapse" data-target="#RMC" class="collapsed">
-                        <a href="#">
+                        <a href="javascript:void(0">
                             <i class="fa fa-flag fa-2x"></i><span class="menu-names">
                                 RMC
                                 
@@ -134,14 +141,14 @@
                         </a>
                     </li>
                     <ul class="sub-menu collapse" id="RMC">
-                        <li>New Service 1</li>
-                        <li>New Service 2</li>
-                        <li>New Service 3</li>
+                        <li class="Title">Regional Member Country</li>
+                        <li class="elem"><a href="#">View RMC</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
                     </ul>
 
 
                     <li data-toggle="collapse" data-target="#other" class="collapsed">
-                        <a href="#">
+                        <a href="javascript:void(0">
                             <i class="fa fa-file fa-2x"></i><span class="menu-names">
                                 Other
                                 
@@ -151,9 +158,17 @@
                         </a>
                     </li>
                     <ul class="sub-menu collapse" id="other">
-                        <li>New Service 1</li>
-                        <li>New Service 2</li>
-                        <li>New Service 3</li>
+                         <li class="Title">Other</li>
+                        <li class="elem"><a href="#">Customized Reports</a></li>
+                        <li class="elem"><a href="#">Partner Landscape</a></li>
+                        <li class="elem"><a href="#">RP, RMC, Initiative Reports Upload</a></li>
+                        <li class="elem"><a href="#">Monthly Reports Upload</a></li>
+                        <li class="elem"><a href="#">Infographics Upload</a></li>
+                        <li class="elem"><a href="#">Other Reports Upload</a></li>
+                        <li class="elem"><a href="#">Add News</a></li>
+                        <li class="elem"><a href="#">Update Exchange Rate</a></li>
+                        <li class="elem"><a href="#">Add Clauses</a></li>
+                        <li class="elem"><a href="#">Recent Clauses List</a></li>
                     </ul>
                 </ul>
             </div>
@@ -209,15 +224,6 @@
 
     <script>
         $(document).ready(function () {
-
-            chart1('.chart1');
-            chart1('.chartView');
-            chart2('.chart2');
-            chart3('.chart3');
-            chart4('.chart4');
-            chart5('.chart5');
-            chart6('.chart6');
-            chart7('.chart7');
 
             //Function for adding box shadow effect while scrolling 
             $(window).scroll(function () {
@@ -344,6 +350,18 @@
 <!-- custom script for Index Page -->
 <script type="text/javascript">
     $(document).ready(function(){
+
+        chart1('.chart1');
+        chart1('.chartView');
+        chart2('.chart2');
+        chart3('.chart3');
+        chart4('.chart4');
+        chart5('.chart5');
+        chart6('.chart6');
+        chart7('.chart7');
+
+
+
       $('.chartsSelect').slick({
     centerMode: true,
     infinite: true,
