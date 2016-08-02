@@ -611,3 +611,4 @@ function chart7(chartName) {
         }]
     });
 };
+

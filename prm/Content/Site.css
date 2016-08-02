@@ -505,7 +505,7 @@ display: none;
    /*Using height toggle to create animation*/
    #wrapper.toggled .nav-side-menu  {
     
-    height: 555px;    
+    height: auto;    
    }
   
 
@@ -632,3 +632,4 @@ padding-right: 5px;
 #card-3-main .rcorner2:hover {
 
 }
+
