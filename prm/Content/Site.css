@@ -684,8 +684,18 @@ padding-right: 5px;
   color:#A9A9A9;
 }
 
+.updateTab1 {
+  color:  #999900;
+  border-bottom:2px solid #eeeeee;
 
+}
 .updateTab2 {
-  background-color: #eeeeee;
- 
+  /*background-color: #eeeeee;*/
+ color:   #FF6347;
+ border-bottom:2px solid #eeeeee;
+}
+.updateTab3 {
+
+  color:blue;
+  
 }
