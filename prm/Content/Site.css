@@ -455,7 +455,7 @@ display: none;
   width:100%; 
   height:50px; 
   background:#eeeeee;
-  border: 1px solid;
+  border: 1px solid #A9A9A9;
   text-align: center;
   padding: 15px;
 }
@@ -508,6 +508,11 @@ display: none;
     height: auto;    
    }
   
+  /*Index Page CSS*/
+  .main-image .updates {
+  display: none;
+  }
+
 
 }
 
@@ -633,3 +638,36 @@ padding-right: 5px;
 
 }
 
+.updates  {
+  padding-top: 110px;
+  padding-left: 10px;
+  text-align: center;
+   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.updates .col-md-12 {
+
+  border-right: 2px solid;
+}
+.updatesRow1 p {
+  color:#fff;
+  font-size: 12px;
+
+}
+
+.updatesRow2 {
+  margin-top: -10px;
+  font-size: 35px;
+  color: #e5c028;
+  text-align: center;
+
+}
+
+#wrapper.toggled .updatesRow2 {
+
+  
+ 
+}
