@@ -20,5 +20,10 @@ namespace prm.Controllers
         {
             return View();
         }
+
+        public ActionResult AddContract()
+        {
+            return View();
+        }
     }
 }

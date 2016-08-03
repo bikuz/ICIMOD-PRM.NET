@@ -228,6 +228,7 @@
     <Content Include="Views\PartnershipAgreement\ImportDeliverable.cshtml" />
     <Content Include="Views\InitialAgreement\AddClauses.cshtml" />
     <Content Include="Views\Home\PartnershipMap.cshtml" />
+    <Content Include="Views\InitialAgreement\AddContract.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
