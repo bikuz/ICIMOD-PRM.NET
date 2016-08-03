@@ -16,5 +16,10 @@ namespace prm.Controllers
             return View();
         }
 
+        public ActionResult PartnershipMap()
+        {
+            return View();
+        }
+
     }
 }

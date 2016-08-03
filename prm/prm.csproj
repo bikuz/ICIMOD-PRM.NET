@@ -142,6 +142,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\icimodmap.jpg" />
     <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\logoCollapsed.png" />
     <Content Include="Content\images\Mountain.png" />
@@ -226,6 +227,7 @@
     <Content Include="Views\InitialAgreement\AddDonor.cshtml" />
     <Content Include="Views\PartnershipAgreement\ImportDeliverable.cshtml" />
     <Content Include="Views\InitialAgreement\AddClauses.cshtml" />
+    <Content Include="Views\Home\PartnershipMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
