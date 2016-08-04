@@ -22,8 +22,14 @@ padding: 10px;
   
 }
 .align {
-  text-align: center;
+  text-align: center !important;
+  padding-right: 50%;
+  vertical-align: middle;
 }
+.space {
+   padding: 0 1.5em 0 1.5em;
+}
+
 
 .circle {
   width: 30px;
@@ -698,4 +704,21 @@ padding-right: 5px;
 
   color:blue;
   
+}
+
+.dataTables_filter {
+  text-align: center !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.dataTables_length {
+  margin-top: 10px !important;
+margin-bottom: 10px !important;
+}
+.dataTables_paginate {
+ margin-top: 10px !important;
+margin-bottom: 10px !important;
+}
+.dataTables_info {
+ margin-bottom: 10px !important;
 }

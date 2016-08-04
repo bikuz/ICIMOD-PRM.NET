@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    
+
+    
+    <!-- Slider for charts CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+ 
+    <div class="wrapper" id="wrapper">
+        <div class="nav-side-menu">
+
+            <div class="brand" id='logo'><img src=@Url.Content("~/Content/images/Logo.png") style="width: 290px;height: 178px;" /></div>
+            <div class="brand" id='logoCollapsed'><img src=@Url.Content("~/Content/images/logoCollapsed.png") style="width: 108px;height: 178px;" /></div>
+
+           
+           
+            <div class="menu-list">
+
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li class="active">
+
+                        <a href="#">
+
+                            <i class="fa fa-home fa-2x"></i><span class="menu-names">Home</span>
+
+                        </a>
+
+
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#products" id="productsLI" class="collapsed">
+                        <a href="#" class="click">
+                            <i class="fa fa-users fa-2x"></i>
+                            <span class="menu-names">
+                                Partners
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow"></span>
+                        </a>
+
+                    </li>
+                    <ul class="sub-menu collapse" id="products">
+
+                        <li class="Title">Partner List</li>
+                        <li class="elem active"><a href="#">View Partner List</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
+                        <li class="elem"><a href="#">Partner Contact</a></li>
+                        <li class="Title">Roaster Partner</li>
+                        <li class="elem"><a href="#">+ Add Partner Information</a></li>
+                        <li class="elem"><a href="#">View Partner List</a></li>
+                                                
+                    </ul>
+
+
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="javascript:void(0">
+                            <i class="fa fa-globe fa-2x"></i>
+                            <span class="menu-names">
+                                Partnership Instruments
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="service">
+                        <li class="Title">New Partnership Instrument</li>
+                        <li class="elem"><a href="#">Create New Partnership</a></li>
+                        <li class="elem"><a href="#">Partnership Tracker</a></li>
+                        <li class="elem"><a href="#">View Partnership</a></li>
+                        <li class="elem"><a href="#">Partnership Profile</a></li>
+                        <li class="Title">Old Manual Partnership</li>
+                        <li class="elem"><a href="#">Create Partnership</a></li>
+                        <li class="elem"><a href="#">View Partnership</a></li>
+                        <li class="Title">Donor Agreement</li>
+                        <li class="elem"><a href="#">+Add Donor</a></li>
+                        <li class="elem"><a href="#">View Donor List</a></li>
+                        <li class="elem"><a href="#">+ Add Deliverables</a></li>
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="javascript:void(0">
+                            <i class="fa fa-car fa-2x"></i><span class="menu-names">
+                                Initiative
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="new">
+                         <li class="Title">Initiative</li>
+                        <li class="elem"><a href="#">View Initiative</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#RP" class="collapsed">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-map fa-2x"></i><span class="menu-names">
+                                RP
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="RP">
+                        <li class="Title">Regional Programme</li>
+                        <li class="elem"><a href="#">View RP</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#RMC" class="collapsed">
+                        <a href="javascript:void(0">
+                            <i class="fa fa-flag fa-2x"></i><span class="menu-names">
+                                RMC
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow">
+                            </span>
+
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="RMC">
+                        <li class="Title">Regional Member Country</li>
+                        <li class="elem"><a href="#">View RMC</a></li>
+                        <li class="elem"><a href="#">View Profile</a></li>
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#other" class="collapsed">
+                        <a href="javascript:void(0">
+                            <i class="fa fa-file fa-2x"></i><span class="menu-names">
+                                Other
+                                
+                            </span>
+                            <span class="arrow"></span>
+                            <span class="down-arrow"></span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="other">
+                         <li class="Title">Other</li>
+                        <li class="elem"><a href="#">Customized Reports</a></li>
+                        <li class="elem"><a href="#">Partner Landscape</a></li>
+                        <li class="elem"><a href="#">RP, RMC, Initiative Reports Upload</a></li>
+                        <li class="elem"><a href="#">Monthly Reports Upload</a></li>
+                        <li class="elem"><a href="#">Infographics Upload</a></li>
+                        <li class="elem"><a href="#">Other Reports Upload</a></li>
+                        <li class="elem"><a href="#">Add News</a></li>
+                        <li class="elem"><a href="#">Update Exchange Rate</a></li>
+                        <li class="elem"><a href="#">Add Clauses</a></li>
+                        <li class="elem"><a href="#">Recent Clauses List</a></li>
+                    </ul>
+                </ul>
+            </div>
+
+
+
+
+            <!--Nav Side Menu ends-->
+        </div>
+
+        <!--Main Header starts-->
+        <div id="header" class="main-header">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" id="menu-toggle">
+                            <span style="float: left;">
+                                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <!--Signout Button (To be added)-->
+                        <a href="#"><span style="float: right;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></span></a>
+
+                    </div>
+
+                    <!--Container Row Ends-->
+                </div>
+                <!--Container Ends-->
+            </div>
+
+            <!--Main Header Ends-->
+        </div>
+
+
+        <div class="content" style="position:relative;top:55px;">
+            @RenderBody()
+        </div>
+
+
+
+        <!--Main wrapper ends-->
+    </div>
+
+
+    
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/CustomChart.js")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+
+            //Function for adding box shadow effect while scrolling 
+            $(window).scroll(function () {
+                var sc = $(window).scrollTop()
+                    if (sc > 5) {
+                        $("#header").addClass('shadow')
+                    } else {
+                        $("#header").removeClass('shadow')
+                    }
+            });
+
+            //handling side menu-names when the screen is resized
+                $(window).resize(function(){
+                   if((Modernizr.mq('(max-width: 1001px)')))
+                        {   
+
+                       $('.menu-names').css('display', 'inherit');   
+
+                    } else {        
+                                  
+                        $("#wrapper").removeClass('toggled'); 
+
+                    } 
+                
+                });
+
+            //Handling menu toggle click
+                $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+               
+                //switching the  display to none when the screen size is of a desktop
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+
+                       $('.menu-names').css('display', 'none');           
+                } 
+                
+
+                $('.collapse').collapse('hide');
+                $("#wrapper").toggleClass("toggled");
+
+               
+                $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                function(e) {
+                    //after the animation ends switching display for menu-names based on it's state
+                if((Modernizr.mq('(min-width: 1001px)')))
+                {   
+                    if ($('.nav-side-menu').width() == 300) {
+                    $('.menu-names').css('display', 'inherit');
+                } else {
+                    $('.menu-names').css('display', 'none');
+                }
+            }                     
+                   
+
+                    });
+
+
+            });
+
+        //Handling when user tries to open the menu item when the side bar is collapsed
+            $(".collapsed").click(function (e) {
+                console.log($('.nav-side-menu').width());
+                if ($('.nav-side-menu').width() == 100) {
+                    $('.menu-names').css('display', 'none');
+                    $("#wrapper").toggleClass("toggled");
+                     $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                        function(e) {
+
+                        $('.menu-names').css('display', 'inherit');
+                    
+                    });
+                };
+            });
+
+        //Collapse card hieght
+            $('.cardCollapseLink').click(function (e) {
+
+                
+                 e.preventDefault();
+
+                var id = '#' + e.currentTarget.id + '-main';
+                
+                
+                if ($(id).height() === 90) {
+                    autoHeightAnimate($(id), 500);
+                    
+                } else {
+                     $(id).animate({height: "90px"}, 500, function(){
+                        $(id).addClass('visibility');
+                     });
+
+                }
+
+                
+                
+
+            });
+
+        // handling Radio Card Change Event
+            $('input[type=radio][name=chartGroup]').change(function() {
+                    window[this.id]('.chartView');
+
+            });
+        })
+        //Function to animate the auto-height from collapsed height
+        function autoHeightAnimate(element, time){
+            var curHeight = element.height(), // Get Default Height
+            autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+            element.height(curHeight); // Reset to Default Height
+            element.stop().animate({ height: autoHeight }, time, function() {
+                //after the animation completes change the height to auto
+                
+                element.removeClass('visibility');
+                element.height('auto');
+            }); // Animate to Auto Height
+            }
+
+    </script>
+
+<!-- Slider for charts-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<!-- custom script for Index Page -->
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        chart1('.chart1');
+        chart1('.chartView');
+        chart2('.chart2');
+        chart3('.chart3');
+        chart4('.chart4');
+        chart5('.chart5');
+        chart6('.chart6');
+        chart7('.chart7');
+
+
+
+      $('.chartsSelect').slick({
+    centerMode: true,
+    infinite: true,
+    variableWidth: true,
+    prevArrow: $('#previousChart'),
+    nextArrow: $('#nextChart'),
+    
+    slidesToShow: 3,
+
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+
+      });
+
+
+     $('.IP').slick({
+   
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  adaptiveHeight: true,
+  autoplay: true,
+  prevArrow: $('#previousUpdate1'),
+    nextArrow: $('#nextUpdate1'),
+}); 
+
+     $('.IC').slick({
+   
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  adaptiveHeight: true,
+  autoplay: true,
+  prevArrow: $('#previousUpdate2'),
+    nextArrow: $('#nextUpdate2'),
+}); 
+
+     $('.OP').slick({
+   
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  adaptiveHeight: true,
+  autoplay: true,
+  prevArrow: $('#previousUpdate3'),
+    nextArrow: $('#nextUpdate3'),
+}); 
+    });
+  </script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+<!-- Temporary Chart Script -->
+<script type="text/javascript">
+  // Each function to load multiple charts  
+
+
+</script>
+</body>
+</html>

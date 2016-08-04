@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -130,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitialAgreementController.cs" />
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
+    <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -226,6 +228,7 @@
     <Content Include="Views\InitialAgreement\AddDonor.cshtml" />
     <Content Include="Views\PartnershipAgreement\ImportDeliverable.cshtml" />
     <Content Include="Views\InitialAgreement\AddClauses.cshtml" />
+    <Content Include="Views\Partner\ViewPartnerList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
