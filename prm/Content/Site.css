@@ -29,6 +29,9 @@ padding: 10px;
 .space {
    padding: 0 1.5em 0 1.5em;
 }
+.bold {
+  font-weight: bold;
+}
 
 
 .circle {
@@ -38,6 +41,13 @@ padding: 10px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+}
+
+.intensity_dot {
+  border-radius: 50%;
+    height: 14px;
+    margin: auto;
+    width: 14px;
 }
 
 /*General Elements CSS*/
