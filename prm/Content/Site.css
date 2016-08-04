@@ -326,6 +326,12 @@ display: none;
 
 }
 
+/*chart for expanded screen CSS*/
+
+#wrapper.toggled .chartView {
+  width: 1100px;
+}
+
 }
 
 
@@ -461,6 +467,8 @@ display: none;
 }
 .chartView {
   height: 400px;
+  width: 900px;
+  text-align: center;
 }
 .chartHolder {
   border: 1px solid #eeeeee;
@@ -727,3 +735,8 @@ padding-right: 5px;
 }
 
 /*Index Page CSS Ends*/
+
+/*View partner List Page CSS*/
+#SumResult .dataBox:hover {
+  background-color: #eeeeee;
+}

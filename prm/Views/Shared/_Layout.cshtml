@@ -226,8 +226,8 @@
 
     <script>
         $(document).ready(function () {
+            var PageChart = true;
 
-          
             $('#example').DataTable({
 
                 "dom": '<"row"<"col-md-12"f><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
@@ -289,6 +289,12 @@
                    
 
                     });
+
+                if(PageChart){
+                    //Rerendering of chart on toggle- To be updated to suit all charts
+                chart1('.chartView'); 
+                }
+               
 
 
             });
