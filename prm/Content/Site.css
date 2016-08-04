@@ -476,8 +476,26 @@ display: none;
   padding: 15px;
 }
 
+/*Data table*/
+.dataTables_filter {
+  text-align: center !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.dataTables_length {
+  margin-top: 10px !important;
+margin-bottom: 10px !important;
+}
+.dataTables_paginate {
+ margin-top: 10px !important;
+margin-bottom: 10px !important;
+}
+.dataTables_info {
+ margin-bottom: 10px !important;
+}
+/*Data table Ends*/
 
-
+/*Mobile View CSS*/
 @media only screen and (max-width: 1000px) {
  /* .menu-list {
        -webkit-transition:all 0.5s linear;
@@ -535,6 +553,8 @@ display: none;
 
 
 }
+/*Mobile View CSS Ends*/
+
 
 /*Link not active*/
 .Link-not-active {
@@ -706,19 +726,4 @@ padding-right: 5px;
   
 }
 
-.dataTables_filter {
-  text-align: center !important;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.dataTables_length {
-  margin-top: 10px !important;
-margin-bottom: 10px !important;
-}
-.dataTables_paginate {
- margin-top: 10px !important;
-margin-bottom: 10px !important;
-}
-.dataTables_info {
- margin-bottom: 10px !important;
-}
+/*Index Page CSS Ends*/
