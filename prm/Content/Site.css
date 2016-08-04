@@ -49,6 +49,18 @@ padding: 10px;
     margin: auto;
     width: 14px;
 }
+.ico{
+    content: '';
+    display: block;
+    height: 40px;  /*height of icon */
+    width: 40px;  /*width of icon */
+         /*where to replace the icon */
+    top: 0px;
+    text-align: center;
+    
+      /*background */
+    background: url(images/PDF.ico) no-repeat 0px 0px;
+}
 
 /*General Elements CSS*/
 .nav-side-menu {
