@@ -49,7 +49,8 @@ padding: 10px;
     margin: auto;
     width: 14px;
 }
-.ico{
+
+.icoPDF{
     content: '';
     display: block;
     height: 40px;  /*height of icon */
@@ -60,7 +61,22 @@ padding: 10px;
     
       /*background */
     background: url(images/PDF.ico) no-repeat 0px 0px;
+   
 }
+.icoExcel{
+    content: '';
+    display: block;
+    height: 40px;  /*height of icon */
+    width: 40px;  /*width of icon */
+         /*where to replace the icon */
+    top: 0px;
+    text-align: center;
+    
+      /*background */
+    background: url(images/Excel.ico) no-repeat 0px 0px;
+   
+}
+
 
 /*General Elements CSS*/
 .nav-side-menu {
@@ -389,10 +405,12 @@ display: none;
   position: relative;
   overflow: hidden;
   background-color: #0095da;
-  height: 30px;
-  padding: 5px;
+  height: 40px;
+  padding: 10px;
     -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
+  vertical-align: middle;
+
 
 }
 
@@ -400,6 +418,7 @@ display: none;
 .card .card-header .cardButton{
 
   float: right;
+  
 }
 .card .card-image img {
   border-radius: 2px 2px 0 0;
@@ -769,7 +788,7 @@ padding-right: 5px;
   padding: 5px;
   background-color: #f9f9f9;
   height: 500px;
-   overflow-y: scroll;
+   overflow-y: auto;
 }
 
 
