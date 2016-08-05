@@ -762,3 +762,23 @@ padding-right: 5px;
 #SumResult .dataBox:hover {
   background-color: #eeeeee;
 }
+/*View Partner List CSS Ends*/
+
+/*View Partner Contact CSS*/
+.contactList {
+  padding: 5px;
+  background-color: #f9f9f9;
+  min-height: 500px;
+}
+
+.contactList ul li {
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: 20px;
+  list-style-type: none;
+  background-color: white;
+  height: 200px;
+  padding: 20px;
+
+}
+/*View Partner Contact CSS Ends*/
