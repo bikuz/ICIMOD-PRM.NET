@@ -130,6 +130,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitialAgreementController.cs" />
+    <Compile Include="Controllers\Initiative.cs" />
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
     <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
@@ -233,6 +234,8 @@
     <Content Include="Views\Partner\ViewPartnerProfile.cshtml" />
     <Content Include="Views\Partner\PartnerContact.cshtml" />
     <Content Include="Views\PartnershipInstrument\PartnershipProfile.cshtml" />
+    <Content Include="Views\Initiative\ViewProfile.cshtml" />
+    <Content Include="Views\GeneralElements\DataCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
