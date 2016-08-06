@@ -23,7 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:01</publishTime>
     </File>
     <File Include="bin/prm.dll">
-      <publishTime>08/06/2016 00:22:31</publishTime>
+      <publishTime>08/06/2016 06:51:34</publishTime>
     </File>
     <File Include="bin/System.Net.Http.dll">
       <publishTime>07/09/2013 11:04:48</publishTime>
@@ -280,6 +280,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/_references.js">
       <publishTime>07/30/2016 02:53:02</publishTime>
     </File>
+    <File Include="Views/GeneralElements/DataCard.cshtml">
+      <publishTime>08/06/2016 03:56:47</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>08/05/2016 22:37:19</publishTime>
     </File>
@@ -289,8 +292,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/InitialAgreement/AddDonor.cshtml">
       <publishTime>08/03/2016 03:40:05</publishTime>
     </File>
+    <File Include="Views/Initiative/ViewProfile.cshtml">
+      <publishTime>08/06/2016 06:49:14</publishTime>
+    </File>
     <File Include="Views/InstitutionalProfile/AddPartner.cshtml">
-      <publishTime>08/03/2016 03:40:05</publishTime>
+      <publishTime>08/06/2016 03:52:53</publishTime>
     </File>
     <File Include="Views/Partner/PartnerContact.cshtml">
       <publishTime>08/06/2016 00:40:56</publishTime>

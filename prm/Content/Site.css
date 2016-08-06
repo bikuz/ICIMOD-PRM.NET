@@ -52,7 +52,7 @@ padding: 10px;
 
 .icoPDF{
     content: '';
-    display: block;
+    display: inline-block;
     height: 40px;  /*height of icon */
     width: 40px;  /*width of icon */
          /*where to replace the icon */
@@ -65,7 +65,7 @@ padding: 10px;
 }
 .icoExcel{
     content: '';
-    display: block;
+    display: inline-block;
     height: 40px;  /*height of icon */
     width: 40px;  /*width of icon */
          /*where to replace the icon */

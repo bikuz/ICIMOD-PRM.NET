@@ -799,9 +799,13 @@ padding-right: 5px;
 /*Index Page CSS Ends*/
 
 /*View partner List Page CSS*/
-#SumResult .dataBox:hover {
+ .dataBox:hover {
   background-color: #eeeeee;
+  border: 2px solid #eeeeee; 
+  height: 130px;
 }
+
+
 /*View Partner List CSS Ends*/
 
 /*View Partner Contact CSS*/
