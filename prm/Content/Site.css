@@ -418,7 +418,7 @@ display: none;
 .card .card-header .cardButton{
 
   float: right;
-  
+
 }
 .card .card-image img {
   border-radius: 2px 2px 0 0;
@@ -541,6 +541,27 @@ margin-bottom: 10px !important;
 }
 .dataTables_info {
  margin-bottom: 10px !important;
+}
+
+#advanceSearchTab {
+  border: 1px solid #eeeeee;
+  
+
+}
+.advanceContent {
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+.advanceContent:not(toggled) {
+  height: 0px;
+  overflow: hidden;
+   
+ 
+}
+.advanceContent.toggled{
+  height: 430px;
 }
 /*Data table Ends*/
 
@@ -804,3 +825,10 @@ padding-right: 5px;
 
 }
 /*View Partner Contact CSS Ends*/
+
+/*PartnershipInstrument Partnership Profile*/
+
+.my:after{
+
+  content: ""
+}

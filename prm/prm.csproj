@@ -133,6 +133,7 @@
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
     <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
+    <Compile Include="Controllers\PartnershipInstrument.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,6 +232,7 @@
     <Content Include="Views\Partner\ViewPartnerList.cshtml" />
     <Content Include="Views\Partner\ViewPartnerProfile.cshtml" />
     <Content Include="Views\Partner\PartnerContact.cshtml" />
+    <Content Include="Views\PartnershipInstrument\PartnershipProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
