@@ -23,7 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:01</publishTime>
     </File>
     <File Include="bin/prm.dll">
-      <publishTime>08/05/2016 06:50:20</publishTime>
+      <publishTime>08/06/2016 00:22:31</publishTime>
     </File>
     <File Include="bin/System.Net.Http.dll">
       <publishTime>07/09/2013 11:04:48</publishTime>
@@ -101,7 +101,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:02</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>08/05/2016 10:12:08</publishTime>
+      <publishTime>08/06/2016 00:18:39</publishTime>
     </File>
     <File Include="Content/themes/base/accordion.css">
       <publishTime>07/30/2016 02:53:02</publishTime>
@@ -281,7 +281,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:02</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/03/2016 04:11:50</publishTime>
+      <publishTime>08/05/2016 22:37:19</publishTime>
     </File>
     <File Include="Views/InitialAgreement/AddClauses.cshtml">
       <publishTime>08/03/2016 03:40:05</publishTime>
@@ -293,25 +293,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2016 03:40:05</publishTime>
     </File>
     <File Include="Views/Partner/PartnerContact.cshtml">
-      <publishTime>08/05/2016 10:13:21</publishTime>
+      <publishTime>08/05/2016 12:14:07</publishTime>
     </File>
     <File Include="Views/Partner/ViewPartnerList.cshtml">
-      <publishTime>08/04/2016 03:55:07</publishTime>
+      <publishTime>08/05/2016 15:07:31</publishTime>
     </File>
     <File Include="Views/Partner/ViewPartnerProfile.cshtml">
-      <publishTime>08/04/2016 11:09:05</publishTime>
+      <publishTime>08/05/2016 11:13:18</publishTime>
     </File>
     <File Include="Views/PartnershipAgreement/ImportDeliverable.cshtml">
       <publishTime>08/03/2016 03:39:10</publishTime>
     </File>
     <File Include="Views/PartnershipInstrument/PartnershipProfile.cshtml">
-      <publishTime>08/05/2016 13:18:18</publishTime>
+      <publishTime>08/06/2016 00:17:58</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/30/2016 02:53:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/04/2016 03:31:37</publishTime>
+      <publishTime>08/06/2016 00:09:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/03/2016 07:42:46</publishTime>

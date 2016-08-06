@@ -11,6 +11,7 @@
     
     <!-- Slider for charts CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+   
 
 
 
@@ -226,13 +227,59 @@
 
     <script>
         $(document).ready(function () {
+            
+
             var PageChart = true;
+
+
+            // Data Table for View Partner List Page
+            
+
 
             $('#example').DataTable({
 
                 "dom": '<"row"<"col-md-12"f><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
             });
                 
+
+
+
+            // Data Table for PartnershipInstrument/PartnershipProfile Page
+
+
+
+              var AgreementTable = $('#Agreement').DataTable({
+
+                "dom": '<"row"<"col-md-12"f><"advanceSearch"><"ColumnSH"><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
+            });
+
+             $( ".tempColumnSH" ).appendTo( ".ColumnSH" );
+              $( ".tempAdvanceSearch" ).appendTo( ".advanceSearch" );
+
+               $('.toggle-vis').on( 'click', function (e) {
+        
+ 
+        // Get the column API object
+        var column = AgreementTable.column( $(this).attr('data-column') );
+ 
+        // Toggle the visibility
+        column.visible( ! column.visible() );
+    } );
+                
+
+                $('#advanceSearchBtn').click(function(e) {
+                        e.preventDefault();
+                        console.log("I am awesome");
+                        $(".advanceContent").toggleClass("toggled");
+
+                });
+
+                $('#advanceClose').click(function(e){
+                    e.preventDefault();
+                    $(".advanceContent").removeClass("toggled");
+                });
+         // Data Table for PartnershipInstrument/PartnershipProfile Page Ends
+
 
             //Function for adding box shadow effect while scrolling 
             $(window).scroll(function () {
@@ -243,6 +290,9 @@
                         $("#header").removeClass('shadow')
                     }
             });
+
+
+
 
             //handling side menu-names when the screen is resized
                 $(window).resize(function(){
@@ -457,6 +507,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
 
 
 
