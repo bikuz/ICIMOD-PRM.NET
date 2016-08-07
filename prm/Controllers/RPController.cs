@@ -15,6 +15,10 @@ namespace prm.Controllers
         {
             return View();
         }
+        public ActionResult ViewProfile()
+        {
+            return View();
+        }
 
     }
 }
