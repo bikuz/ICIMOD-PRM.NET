@@ -132,6 +132,7 @@
     <Compile Include="Controllers\InitialAgreementController.cs" />
     <Compile Include="Controllers\Initiative.cs" />
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
+    <Compile Include="Controllers\Other.cs" />
     <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
     <Compile Include="Controllers\PartnershipInstrument.cs" />
@@ -236,6 +237,7 @@
     <Content Include="Views\PartnershipInstrument\PartnershipProfile.cshtml" />
     <Content Include="Views\Initiative\ViewProfile.cshtml" />
     <Content Include="Views\GeneralElements\DataCard.cshtml" />
+    <Content Include="Views\Other\RMC_RP_InitiativeReportsUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -101,7 +101,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:02</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>08/06/2016 00:40:54</publishTime>
+      <publishTime>08/06/2016 07:19:11</publishTime>
     </File>
     <File Include="Content/themes/base/accordion.css">
       <publishTime>07/30/2016 02:53:02</publishTime>
@@ -293,7 +293,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2016 03:40:05</publishTime>
     </File>
     <File Include="Views/Initiative/ViewProfile.cshtml">
-      <publishTime>08/06/2016 06:49:14</publishTime>
+      <publishTime>08/06/2016 07:25:29</publishTime>
     </File>
     <File Include="Views/InstitutionalProfile/AddPartner.cshtml">
       <publishTime>08/06/2016 03:52:53</publishTime>
