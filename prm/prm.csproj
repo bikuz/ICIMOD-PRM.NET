@@ -240,6 +240,7 @@
     <Content Include="Views\Other\RMC_RP_InitiativeReportsUpload.cshtml" />
     <Content Include="Views\Partner\ViewPartnerProfileRoster.cshtml" />
     <Content Include="Views\PartnershipInstrument\PartnerTracker.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewPartnershipsNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
