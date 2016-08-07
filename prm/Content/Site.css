@@ -480,6 +480,7 @@ display: none;
 
 }
 
+
 /*chart for expanded screen CSS*/
 
 #wrapper.toggled .chartView {
@@ -640,6 +641,7 @@ display: none;
   text-align: center;
   padding: 15px;
 }
+
 
 /*Data table*/
 .dataTables_filter {
@@ -900,22 +902,7 @@ padding-right: 5px;
   margin-top: -10px;
 }
 
-.updateTab1 {
-  color:  #999900;
-  border-bottom:2px solid #eeeeee;
-
-}
-.updateTab2 {
-  /*background-color: #eeeeee;*/
- color:   #FF6347;
- border-bottom:2px solid #eeeeee;
-}
-.updateTab3 {
-
-  color:blue;
-  
-}
-
+.
 /*Index Page CSS Ends*/
 
 /*View partner List Page CSS*/
