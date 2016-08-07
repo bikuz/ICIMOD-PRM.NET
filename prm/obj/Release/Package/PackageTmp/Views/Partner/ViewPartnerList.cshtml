@@ -1,6 +1,19 @@
 ﻿@{
     ViewBag.Title = "View Partner List";
 }
+<Style>
+
+.dataBox{
+        border: 2px solid #eeeeee; 
+        height: 130px;
+}
+.dataBox h2 {
+    color:#e5c028;
+}
+.dataBox p {
+    text-align:center;
+}
+</Style>
 
 <div class="row">
 
@@ -13,7 +26,11 @@
                     <div class="card-header">
                         <!--Card Title-->
                         <span class="card-title">View Partner List</span>
+
+                        <!-- Removed Collapsed Button -->
+
                         <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
+                        
                         <!--Card-Header Ends-->
                     </div>
                    
@@ -83,34 +100,34 @@
 
                              <div class="row container-fluid" style="margin: 10px;">
                                 
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                    <h2 class="text-center" style="color:#e5c028">377</h2>
-                                    <p style="text-align:center" >Total number of Partners</p>
+                                <div class="col-md-2 dataBox">
+                                    <h2 class="text-center">377</h2>
+                                    <p>Total number of Partners</p>
                                 </div>
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                 <h2 class="text-center" style="color:#e5c028">28</h2>
-                                    <p style="text-align:center">Total number of Countries</p>
+                                <div class="col-md-2 dataBox">
+                                 <h2 class="text-center">28</h2>
+                                    <p>Total number of Countries</p>
                                    
                                 </div>
                                 
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                    <h2 class="text-center" style="color:#e5c028">236</h2>
-                                    <p style="text-align:center" >Total number of LoAs</p>
+                                <div class="col-md-2 dataBox">
+                                    <h2 class="text-center">236</h2>
+                                    <p>Total number of LoAs</p>
                                 </div>
                                 
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                     <h2 class="text-center" style="color:#e5c028">104</h2>
-                                    <p style="text-align:center" >Total number of MoUs</p>
+                                <div class="col-md-2 dataBox">
+                                     <h2 class="text-center">104</h2>
+                                    <p>Total number of MoUs</p>
                                 </div>
                                 
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                     <h2 class="text-center" style="color:#e5c028">30</h2>
-                                    <p style="text-align:center" >Total number of Donor Agreement</p>
+                                <div class="col-md-2 dataBox">
+                                     <h2 class="text-center">30</h2>
+                                    <p>Total number of Donor Agreement</p>
                                 </div>
                                 
-                                <div class="col-md-2 dataBox" style="border: 2px solid #eeeeee; height: 130px;">
-                                     <h2 class="text-center" style="color:#e5c028">209</h2>
-                                    <p style="text-align:center" >Total number without Agreements</p>
+                                <div class="col-md-2 dataBox">
+                                     <h2 class="text-center">209</h2>
+                                    <p>Total number without Agreements</p>
                                 </div>
                                 
 
@@ -119,11 +136,12 @@
                                 <div class= "row container-fluid">
                                 <!-- Chart View -->
                                        <div class="col-md-12">
+                                    <!-- CSS Property Defined in the Site CSS File -->
                                        <div class="chartView"></div>
                           
 
-                         <!-- ChartView Ends -->   
-                        </div>
+                                 <!-- ChartView Ends -->   
+                                </div>
                         <div class="col-md-12 selectChartTitle">
                          <p>Select Charts</p>
                          <!-- SelectChartTitle Ends -->   
