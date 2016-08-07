@@ -35,19 +35,26 @@
 
                 <ul id="menu-content" class="menu-content collapse out">
                     <li class="active">
+                         
 
-                        <a href="#">
+                         <a href="#">
 
-                            <i class="fa fa-home fa-2x"></i><span class="menu-names">Home</span>
+                           <!--  <i class="fa fa-home fa-2x"></i> -->
+                           <i class="flag"></i>
+                           
+                            <span class="menu-names">Dashboard</span>
 
                         </a>
+                        
 
 
                     </li>
 
                     <li data-toggle="collapse" data-target="#products" id="productsLI" class="collapsed">
+                       
                         <a href="#" class="click">
-                            <i class="fa fa-users fa-2x"></i>
+                            <!-- <i class="fa fa-users fa-2x"></i> -->
+                            <i class="partner"></i>
                             <span class="menu-names">
                                 Partners
                                 
@@ -73,7 +80,8 @@
 
                     <li data-toggle="collapse" data-target="#service" class="collapsed">
                         <a href="javascript:void(0">
-                            <i class="fa fa-globe fa-2x"></i>
+                           <!--  <i class="fa fa-globe fa-2x"></i> -->
+                            <i class="instrument"></i>
                             <span class="menu-names">
                                 Partnership Instruments
                                 
@@ -100,7 +108,10 @@
 
                     <li data-toggle="collapse" data-target="#new" class="collapsed">
                         <a href="javascript:void(0">
-                            <i class="fa fa-car fa-2x"></i><span class="menu-names">
+                            <!-- <i class="fa fa-car fa-2x"></i> -->
+                            <i class="initiative"></i>
+
+                            <span class="menu-names">
                                 Initiative
                                 
                             </span>
@@ -117,7 +128,9 @@
 
                     <li data-toggle="collapse" data-target="#RP" class="collapsed">
                         <a href="javascript:void(0)">
-                            <i class="fa fa-map fa-2x"></i><span class="menu-names">
+                            <!-- <i class="fa fa-map fa-2x"></i> -->
+                            <i class="RP"></i>
+                            <span class="menu-names">
                                 RP
                                 
                             </span>
@@ -133,7 +146,11 @@
 
                     <li data-toggle="collapse" data-target="#RMC" class="collapsed">
                         <a href="javascript:void(0">
-                            <i class="fa fa-flag fa-2x"></i><span class="menu-names">
+                            <!-- <i class="fa fa-flag fa-2x"></i> -->
+
+                            <i class="RMC"></i>
+
+                            <span class="menu-names">
                                 RMC
                                 
                             </span>
@@ -230,6 +247,11 @@
             
 
             var PageChart = true;
+
+            var card1 = "90px";
+
+            var card2 = 10;
+            var card3 = 20;
 
 
             // Data Table for View Partner List Page
@@ -371,7 +393,7 @@
                  e.preventDefault();
 
                 var id = '#' + e.currentTarget.id + '-main';
-                
+                var card = e.currentTarget.id;
                 
                 if ($(id).height() === 90) {
                     autoHeightAnimate($(id), 500);
@@ -412,7 +434,7 @@
 <!-- Slider for charts-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
-<!-- custom script for Index Page -->
+<!-- custom script for Index Page/Charts -->
 <script type="text/javascript">
     $(document).ready(function(){
 
