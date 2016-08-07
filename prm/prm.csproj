@@ -249,6 +249,7 @@
     <Content Include="Views\RP\ViewRP.cshtml" />
     <Content Include="Views\RMC\ViewRMC.cshtml" />
     <Content Include="Views\RP\ViewProfile.cshtml" />
+    <Content Include="Views\RMC\ViewProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
