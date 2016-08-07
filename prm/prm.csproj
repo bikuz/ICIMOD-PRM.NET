@@ -242,6 +242,8 @@
     <Content Include="Views\PartnershipInstrument\PartnerTracker.cshtml" />
     <Content Include="Views\PartnershipInstrument\ViewPartnershipsNew.cshtml" />
     <Content Include="Views\PartnershipInstrument\ViewPartnershipsOld.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewDonorList.cshtml" />
+    <Content Include="Views\Initiative\ViewInitiative.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

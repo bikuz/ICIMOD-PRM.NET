@@ -27,5 +27,9 @@ namespace prm.Controllers
         {
             return View();
         }
+        public ActionResult ViewDonorList()
+        {
+            return View();
+        }
     }
 }
