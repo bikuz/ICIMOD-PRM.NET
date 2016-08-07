@@ -23,5 +23,9 @@ namespace prm.Controllers
         {
             return View();
         }
+        public ActionResult ViewPartnerProfileRoster()
+        {
+            return View();
+        }
     }
 }
