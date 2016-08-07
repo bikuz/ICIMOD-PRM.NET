@@ -136,6 +136,7 @@
     <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
     <Compile Include="Controllers\PartnershipInstrument.cs" />
+    <Compile Include="Controllers\RPController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,6 +245,7 @@
     <Content Include="Views\PartnershipInstrument\ViewPartnershipsOld.cshtml" />
     <Content Include="Views\PartnershipInstrument\ViewDonorList.cshtml" />
     <Content Include="Views\Initiative\ViewInitiative.cshtml" />
+    <Content Include="Views\RP\ViewRP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
