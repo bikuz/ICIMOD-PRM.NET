@@ -13,6 +13,8 @@ namespace prm.Controllers
 
         public ActionResult AddPartner()
         {
+            ViewBag.Partners = "active";
+            ViewBag.AddPartner = "active";
             return View();
         }
 

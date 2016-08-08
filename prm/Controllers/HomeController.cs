@@ -13,6 +13,7 @@ namespace prm.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Home = "active";
             return View();
         }
 

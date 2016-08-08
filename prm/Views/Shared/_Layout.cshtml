@@ -34,117 +34,171 @@
             <div class="menu-list">
 
                 <ul id="menu-content" class="menu-content collapse out">
-                    <li class="active">
-                         
+                    <li class="@ViewBag.Home">
 
-                         <a href="http://icimod-prmnet.apphb.com/">
 
-                           <!--  <i class="fa fa-home fa-2x"></i> -->
-                           <i class="flag"></i>
-                           
+                        <a href='@Url.Action("Index","Home")'>
+
+                            <!--  <i class="fa fa-home fa-2x"></i> -->
+                            <i class="flag"></i>
+
                             <span class="menu-names">Dashboard</span>
 
                         </a>
-                        
+
 
 
                     </li>
 
-                    <li data-toggle="collapse" data-target="#products" id="productsLI" class="collapsed">
-                       
-                        <a href="" class="click">
+                    @{
+                        var partners = "collapsed";
+                        var Partner_aria = false;
+                        var Partner_visible = "";
+                        if (ViewBag.Partners != null & ViewBag.Partners=="active")
+                        {
+                            partners = ViewBag.Partners;
+                            Partner_aria = true;
+                            Partner_visible = "in";
+                        }
+                    }
+                    <li data-toggle="collapse" data-target="#partners" id="productsLI" class="@partners" aria-expanded="@Partner_aria">
+
+                        <a href="javascript:void(0)" class="click">
                             <!-- <i class="fa fa-users fa-2x"></i> -->
                             <i class="partner"></i>
                             <span class="menu-names">
                                 Partners
-                                
+
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
 
                     </li>
-                    <ul class="sub-menu collapse" id="products">
+                    <ul class="sub-menu collapse @Partner_visible" id="partners">
 
                         <li class="Title">Partner List</li>
-                        <li class="elem active"><a href="http://icimod-prmnet.apphb.com/Partner/ViewPartnerList">View Partner List</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/Partner/ViewPartnerProfile">View Profile</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/Partner/PartnerContact">Partner Contact</a></li>
+                        <li class="elem @ViewBag.ViewPartnerList"><a href='@Url.Action("ViewPartnerList", "Partner")'>View Partner List</a></li>
+                        <li class="elem @ViewBag.ViewPartnerProfile"><a href='@Url.Action("ViewPartnerProfile", "Partner")'>View Profile</a></li>
+                        <li class="elem @ViewBag.PartnerContact"><a href='@Url.Action("PartnerContact", "Partner")'>Partner Contact</a></li>
                         <li class="Title">Roaster Partner</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/InstitutionalProfile/AddPartner">+ Add Partner Information</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/Partner/ViewPartnerProfileRoster">View Partner List</a></li>
-                                                
+                        <li class="elem @ViewBag.AddPartner"><a href='@Url.Action("AddPartner", "InstitutionalProfile")'>+ Add Partner Information</a></li>
+                        <li class="elem @ViewBag.ViewPartnerProfileRoster"><a href='@Url.Action("ViewPartnerProfileRoster", "Partner")'>View Partner List</a></li>
+
                     </ul>
 
+                    @{
+                        var partnerInstrument = "collapsed";
+                        var partnerInstrument_aria = false;
+                        var partnerInstrument_visible = "";
+                        if (ViewBag.PartnershipInstrument != null & ViewBag.PartnershipInstrument == "active")
+                        {
+                            partnerInstrument = ViewBag.PartnershipInstrument;
+                            partnerInstrument_aria = true;
+                            partnerInstrument_visible = "in";
+                        }
+                    }
 
-
-                    <li data-toggle="collapse" data-target="#service" class="collapsed">
-                        <a href="javascript:void(0">
-                           <!--  <i class="fa fa-globe fa-2x"></i> -->
+                    <li data-toggle="collapse" data-target="#partnerInstrument" class="@partnerInstrument" aria-expanded="@partnerInstrument_aria">
+                        <a href="javascript:void(0)">
+                            <!--  <i class="fa fa-globe fa-2x"></i> -->
                             <i class="instrument"></i>
                             <span class="menu-names">
                                 Partnership Instruments
-                                
+
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
-                    <ul class="sub-menu collapse" id="service">
+                    <ul class="sub-menu collapse @partnerInstrument_visible" id="partnerInstrument">
                         <li class="Title">New Partnership Instrument</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/InitialAgreement/AddContract">Create New Partnership</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipInstrument/PartnerTracker">Partnership Tracker</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipInstrument/ViewPartnershipsNew">View Partnership</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipInstrument/PartnershipProfile">Partnership Profile</a></li>
+                        <li class="elem @ViewBag.PartnershipInstrument_AddContract"><a href='@Url.Action("AddContract", "InitialAgreement")'>Create New Partnership</a></li>
+                        <li class="elem @ViewBag.PartnerTracker"><a href='@Url.Action("PartnerTracker", "PartnershipInstrument")'>Partnership Tracker</a></li>
+                        <li class="elem @ViewBag.ViewPartnershipsNew"><a href='@Url.Action("ViewPartnershipsNew", "PartnershipInstrument")'>View Partnership</a></li>
+                        <li class="elem @ViewBag.PartnershipProfile"><a href='@Url.Action("PartnershipProfile", "PartnershipInstrument")'>Partnership Profile</a></li>
                         <li class="Title">Old Manual Partnership</li>
-                        <li class="elem"><a href="#">Create Partnership</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipInstrument/ViewPartnershipsOld">View Partnership</a></li>
+                        <li class="elem @ViewBag.PartnershipAgreement_AddContract"><a href='@Url.Action("AddContract", "PartnershipAgreement")'>Create Partnership</a></li>
+                        <li class="elem @ViewBag.ViewPartnershipsOld"><a href='@Url.Action("ViewPartnershipsOld", "PartnershipInstrument")'>View Partnership</a></li>
                         <li class="Title">Donor Agreement</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/InitialAgreement/AddDonor">+Add Donor</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipInstrument/ViewDonorList">View Donor List</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/PartnershipAgreement/ImportDeliverable">+ Add Deliverables</a></li>
+                        <li class="elem @ViewBag.PartnershipInstrument_AddDonor"><a href='@Url.Action("AddDonor", "InitialAgreement")'>+Add Donor</a></li>
+                        <li class="elem @ViewBag.ViewDonorList"><a href='@Url.Action("ViewDonorList", "PartnershipInstrument")'>View Donor List</a></li>
+                        <li class="elem @ViewBag.PartnershipAgreement_ImportDeliverable"><a href='@Url.Action("ImportDeliverable", "PartnershipAgreement")'>+ Add Deliverables</a></li>
                     </ul>
 
 
-                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    @{
+                        var Initiative = "collapsed";
+                        var Initiative_aria = false;
+                        var Initiative_visible = "";
+                        if (ViewBag.Initiative != null & ViewBag.Initiative == "active")
+                        {
+                            Initiative = ViewBag.Initiative;
+                            Initiative_aria = true;
+                            Initiative_visible = "in";
+                        }
+                    }
+                    <li data-toggle="collapse" data-target="#initiative" class="@Initiative" aria-expanded="@Initiative_aria">
                         <a href="javascript:void(0">
                             <!-- <i class="fa fa-car fa-2x"></i> -->
                             <i class="initiative"></i>
 
                             <span class="menu-names">
                                 Initiative
-                                
+
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
-                    <ul class="sub-menu collapse" id="new">
-                         <li class="Title">Initiative</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/Initiative/ViewInitiative">View Initiative</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/Initiative/ViewProfile">View Profile</a></li>
+                    <ul class="sub-menu collapse @Initiative_visible" id="initiative">
+                        <li class="Title">Initiative</li>
+                        <li class="elem @ViewBag.ViewInitiative"><a href='@Url.Action("ViewInitiative", "Initiative")'>View Initiative</a></li>
+                        <li class="elem @ViewBag.Initiative_ViewProfile"><a href='@Url.Action("ViewProfile", "Initiative")'>View Profile</a></li>
                     </ul>
 
 
-                    <li data-toggle="collapse" data-target="#RP" class="collapsed">
+                    @{
+                        var RP = "collapsed";
+                        var RP_aria = false;
+                        var RP_visible = "";
+                        if (ViewBag.RP != null & ViewBag.RP == "active")
+                        {
+                            RP = ViewBag.RP;
+                            RP_aria = true;
+                            RP_visible = "in";
+                        }
+                    }
+                    <li data-toggle="collapse" data-target="#RP" class="@RP" aria-expanded="@RP_aria">
                         <a href="javascript:void(0)">
                             <!-- <i class="fa fa-map fa-2x"></i> -->
                             <i class="RP"></i>
                             <span class="menu-names">
                                 RP
-                                
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
-                    <ul class="sub-menu collapse" id="RP">
+                    <ul class="sub-menu collapse @RP_visible" id="RP">
                         <li class="Title">Regional Programme</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/RP/ViewRP">View RP</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/RP/ViewProfile">View Profile</a></li>
+                        <li class="elem @ViewBag.ViewRP"><a href='@Url.Action("ViewRP", "RP")'>View RP</a></li>
+                        <li class="elem @ViewBag.RP_ViewProfile"><a href='@Url.Action("ViewProfile", "RP")'>View Profile</a></li>
                     </ul>
 
-                    <li data-toggle="collapse" data-target="#RMC" class="collapsed">
+
+                    @{
+                        var RMC = "collapsed";
+                        var RMC_aria = false;
+                        var RMC_visible = "";
+                        if (ViewBag.RMC != null & ViewBag.RMC == "active")
+                        {
+                            RP = ViewBag.RMC;
+                            RMC_aria = true;
+                            RMC_visible = "in";
+                        }
+                    }
+                    <li data-toggle="collapse" data-target="#RMC" class="@RMC" aria-expanded="@RMC_aria">
                         <a href="javascript:void(0">
                             <!-- <i class="fa fa-flag fa-2x"></i> -->
 
@@ -152,7 +206,7 @@
 
                             <span class="menu-names">
                                 RMC
-                                
+
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow">
@@ -160,37 +214,48 @@
 
                         </a>
                     </li>
-                    <ul class="sub-menu collapse" id="RMC">
+                    <ul class="sub-menu collapse @RMC_visible" id="RMC">
                         <li class="Title">Regional Member Country</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/RMC/ViewRMC">View RMC</a></li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/RMC/ViewProfile">View Profile</a></li>
+                        <li class="elem @ViewBag.ViewRMC"><a href='@Url.Action("ViewRMC", "RMC")'>View RMC</a></li>
+                        <li class="elem @ViewBag.RMC_ViewProfile"><a href='@Url.Action("ViewProfile", "RMC")'>View Profile</a></li>
                     </ul>
 
-
-                    <li data-toggle="collapse" data-target="#other" class="collapsed">
+                    @{
+                        var Other = "collapsed";
+                        var Other_aria = false;
+                        var Other_visible = "";
+                        if (ViewBag.Other != null & ViewBag.Other == "active")
+                        {
+                            Other = ViewBag.Other;
+                            Other_aria = true;
+                            Other_visible = "in";
+                        }
+                    }
+                    <li data-toggle="collapse" data-target="#other" class="@Other" aria-expanded="@Other_aria">
                         <a href="javascript:void(0">
                             <i class="fa fa-file fa-2x"></i><span class="menu-names">
                                 Other
-                                
+
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
                         </a>
                     </li>
-                    <ul class="sub-menu collapse" id="other">
-                         <li class="Title">Other</li>
-                        <li class="elem"><a href="http://icimod-prmnet.apphb.com/other/CustomizedReport">Customized Reports</a></li>
+                    <ul class="sub-menu collapse @Other_visible" id="other">
+                        <li class="Title">Other</li>
+                        <li class="elem @ViewBag.CustomizedReport"><a href='@Url.Action("CustomizedReport", "other")'>Customized Reports</a></li>
                         <li class="elem"><a href="#">Partner Landscape</a></li>
-                        <li class="elem"><a href="#">RP, RMC, Initiative Reports Upload</a></li>
+                        <li class="elem @ViewBag.RMC_RP_InitiativeReportsUpload"><a href='@Url.Action("RMC_RP_InitiativeReportsUpload", "other")'>RP, RMC, Initiative Reports Upload</a></li>
                         <li class="elem"><a href="#">Monthly Reports Upload</a></li>
                         <li class="elem"><a href="#">Infographics Upload</a></li>
                         <li class="elem"><a href="#">Other Reports Upload</a></li>
                         <li class="elem"><a href="#">Add News</a></li>
                         <li class="elem"><a href="#">Update Exchange Rate</a></li>
-                        <li class="elem"><a href="#">Add Clauses</a></li>
-                        <li class="elem"><a href="#">Recent Clauses List</a></li>
+                        <li class="elem @ViewBag.Other_AddClauses"><a href='@Url.Action("AddClauses", "InitialAgreement")'>Add Clauses</a></li>
+                        <li class="elem"><a href='#'>Recent Clauses List</a></li>
                     </ul>
                 </ul>
+
             </div>
 
 

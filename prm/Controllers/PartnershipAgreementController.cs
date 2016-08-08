@@ -13,8 +13,16 @@ namespace prm.Controllers
 
         public ActionResult ImportDeliverable()
         {
+            ViewBag.PartnershipInstrument = "active";
+            ViewBag.PartnershipAgreement_ImportDeliverable = "active";
             return View();
         }
 
+        public ActionResult AddContract()
+        {
+            ViewBag.PartnershipInstrument = "active";
+            ViewBag.PartnershipAgreement_AddContract = "active";
+            return View();
+        }
     }
 }

@@ -13,16 +13,22 @@ namespace prm.Controllers
 
         public ActionResult AddDonor()
         {
+            ViewBag.PartnershipInstrument = "active";
+            ViewBag.PartnershipInstrument_AddDonor = "active";
             return View();
         }
 
         public ActionResult AddClauses()
         {
+            ViewBag.Other = "active";
+            ViewBag.Other_AddClauses = "active";
             return View();
         }
 
         public ActionResult AddContract()
         {
+            ViewBag.PartnershipInstrument = "active";
+            ViewBag.PartnershipInstrument_AddContract = "active";
             return View();
         }
     }
