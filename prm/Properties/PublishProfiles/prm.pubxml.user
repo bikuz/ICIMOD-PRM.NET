@@ -284,7 +284,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/06/2016 21:06:42</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/07/2016 13:05:54</publishTime>
+      <publishTime>08/07/2016 19:04:38</publishTime>
     </File>
     <File Include="Views/InitialAgreement/AddClauses.cshtml">
       <publishTime>08/03/2016 03:40:05</publishTime>
