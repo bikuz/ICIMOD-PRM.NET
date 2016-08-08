@@ -23,7 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:01</publishTime>
     </File>
     <File Include="bin/prm.dll">
-      <publishTime>08/07/2016 13:20:08</publishTime>
+      <publishTime>08/07/2016 18:50:49</publishTime>
     </File>
     <File Include="bin/System.Net.Http.dll">
       <publishTime>07/09/2013 11:04:48</publishTime>
@@ -292,11 +292,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/InitialAgreement/AddDonor.cshtml">
       <publishTime>08/03/2016 03:40:05</publishTime>
     </File>
+    <File Include="Views/Initiative/ViewInitiative.cshtml">
+      <publishTime>08/07/2016 14:58:36</publishTime>
+    </File>
     <File Include="Views/Initiative/ViewProfile.cshtml">
-      <publishTime>08/06/2016 07:25:29</publishTime>
+      <publishTime>08/07/2016 15:30:37</publishTime>
     </File>
     <File Include="Views/InstitutionalProfile/AddPartner.cshtml">
       <publishTime>08/06/2016 03:52:53</publishTime>
+    </File>
+    <File Include="Views/Other/CustomizedReport.cshtml">
+      <publishTime>08/07/2016 15:51:23</publishTime>
     </File>
     <File Include="Views/Other/RMC_RP_InitiativeReportsUpload.cshtml">
       <publishTime>08/06/2016 19:53:28</publishTime>
@@ -322,14 +328,32 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/PartnershipInstrument/PartnerTracker.cshtml">
       <publishTime>08/07/2016 00:15:47</publishTime>
     </File>
+    <File Include="Views/PartnershipInstrument/ViewDonorList.cshtml">
+      <publishTime>08/07/2016 14:39:56</publishTime>
+    </File>
     <File Include="Views/PartnershipInstrument/ViewPartnershipsNew.cshtml">
-      <publishTime>08/07/2016 11:53:36</publishTime>
+      <publishTime>08/07/2016 14:08:22</publishTime>
+    </File>
+    <File Include="Views/PartnershipInstrument/ViewPartnershipsOld.cshtml">
+      <publishTime>08/07/2016 14:54:20</publishTime>
+    </File>
+    <File Include="Views/RMC/ViewProfile.cshtml">
+      <publishTime>08/07/2016 15:38:33</publishTime>
+    </File>
+    <File Include="Views/RMC/ViewRMC.cshtml">
+      <publishTime>08/07/2016 15:13:05</publishTime>
+    </File>
+    <File Include="Views/RP/ViewProfile.cshtml">
+      <publishTime>08/07/2016 15:27:10</publishTime>
+    </File>
+    <File Include="Views/RP/ViewRP.cshtml">
+      <publishTime>08/07/2016 15:07:30</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/30/2016 02:53:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/07/2016 12:54:00</publishTime>
+      <publishTime>08/07/2016 14:09:18</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/03/2016 07:42:46</publishTime>
