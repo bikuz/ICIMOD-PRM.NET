@@ -1,7 +1,36 @@
 ﻿@{
     ViewBag.Title = "ICIMOD-PRM";
 }
+<style type="text/css">
+  
+  #card1-main .card-content {
+    min-height: 300px;
+  }
 
+
+#card2-main .card-content {
+  min-height: 300px;
+}
+#card3-main .card-content {
+min-height: 450px;
+}
+
+#card4-main .card-content {
+  min-height: 450px;
+}
+.updatesCard-1 {
+text-align: center;
+padding-left: 50px;
+}
+
+.geoImage {
+height: 250px;
+width: 450px;
+margin-top: 40px;
+}
+
+ 
+</style>
 
 <div class="main-image">
     <!--Updating Content-->
@@ -25,10 +54,10 @@
     <div class="col-md-12 updatesRow3">
 
  
-    <div class="col-md-3">4% from last week</div>
-    <div class="col-md-3">4% from last week</div>
-    <div class="col-md-3">4% from last week</div>
-    <div class="col-md-3">4% from last week</div>
+    <div class="col-md-3">4% from last month</div>
+    <div class="col-md-3">4% from last month</div>
+    <div class="col-md-3">4% from last month</div>
+    <div class="col-md-3">4% from last month</div>
 
 
     </div>
@@ -50,11 +79,11 @@
             <div class="col-md-8">
 
             <!--Card-1 Starts-->
-                <div class="card" id="card-1-main">
+                <div class="card" id="card1-main">
                     <div class="card-header">
                     <!--Card Title-->
                         <span class="card-title">Overview</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-1"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card1"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     </div>
 
 
@@ -142,11 +171,11 @@
 
         <!--Card-2 Starts-->
             <div class="col-md-4">
-                <div class="card" id="card-2-main">
+                <div class="card" id="card2-main">
                     <div class="card-header">
                     <!--Card Title-->
                         <span class="card-title">Agreements</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-2"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card2"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     <!--Card-Header Ends-->  
                     </div>
 
@@ -256,17 +285,17 @@
 
         <!--Card-3 Starts-->
             <div class="col-md-6">
-                <div class="card" id="card-3-main">
+                <div class="card" id="card3-main">
                     <div class="card-header">
                     <!--Card Title-->
                         <span class="card-title">Updates- July, 2016</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     <!--Card-Header Ends--> 
                     </div>
 
                     <div class="card-content ">
                     <div class="row updateTab1">
-                       <h3 class="text-center" style="color:black">Implementation Partnership</h3>
+                       
                        <div class="col-md-1 chartArrows">
                         
                                  <div class="updatePrevious" style="padding-top:50px;">
@@ -277,22 +306,14 @@
                        <div class="col-md-10"> 
                         <div class="IP">
                            <div >
-                           <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">Nepal</span><br>1 Approved <br> 2 Completed</p>
-                           </div>
-                           </div>
-                           <div >
-                            <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p> <span class="heading">India</span><br>1 Approved <br> 2 Completed</p>
-                           </div>
+                           <h3 class="text-center" style="color:black">Implementation Partnership</h3>
+                            <div class="updatesCard-1"> <img class="img-responsive" src="https://s7.postimg.org/wtf104ym3/Update1.png"></div>
                            </div>
                            <div >
-                               
-                                <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading"> Bhutan </span><br>0 Approved <br> 1 Completed</p>
+                           <h3 class="text-center" style="color:black">Geographic Distribution</h3>
+                                <div class="updatesCard-2"> <img class=" geoImage" src="https://s8.postimg.org/6ok488479/update2.png"></div>
                            </div>
-
-                           </div>
+                        
                        </div>                 
                          </div>
 
@@ -307,105 +328,7 @@
 
 
 
-                          <div class="row updateTab2">
-                       <h3 class="text-center" style="color:black">Institutional Collaboration</h3>
-                       <div class="col-md-1 chartArrows">
-                        
-                                 <div class="updatePrevious" style="padding-top:50px;">
-                                <a href="#" id="previousUpdate2"><i class="fa fa-chevron-left fa-bold" style="color:black; " aria-hidden="true"></i></a>
-                                </div>
-                            
-                     </div>
-                       <div class="col-md-10"> 
-                        <div class="IC">
-                           <div >
-                           <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">Nepal</span><br>1 Approved</p>
-                           </div>
-                           </div>
-                           <div >
-                            <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">India</span><br>1 Approved</p>
-                           </div>
-                           </div>
-                           <div >
-                               
-                                <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">Bhutan</span><br>0 Approved</p>
-                           </div>
-
-                           </div>
-                       </div>                 
-                         </div>
-
-                         <div class="col-md-1 chartArrows">
-                        <div class="updateNext" style="float:right; text-align:center; padding-top:50px;">
-                        <a href="#" id="nextUpdate2"><i class="fa fa-chevron-right fa-bold" style="color:black;" aria-hidden="true"></i></a>
-                        </div>
-                        </div>
-                    
-                    <!-- Update Tab2 Ends -->
-                    </div> 
-
-
-
-
-                    <div class="row updateTab3">
-                       <h3 class="text-center" style="color:black">On-going Partnership</h3>
-                       <div class="col-md-1 chartArrows">
-                        
-                                 <div class="updatePrevious" style="padding-top:50px;">
-                                <a href="#" id="previousUpdate3"><i class="fa fa-chevron-left fa-bold" style="color:black; " aria-hidden="true"></i></a>
-                                </div>
-                            
-                     </div>
-                       <div class="col-md-10"> 
-                        <div class="OP">
-                           <div >
-                           <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">2</span><br>Nepal</p>
-                           </div>
-                           </div>
-                           <div >
-                            <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">5</span><br>India</p>
-                           </div>
-                           </div>
-                           <div >
-                               
-                                <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">10</span><br>Bhutan</p>
-                           </div>
-
-                           </div>
-                              <div >
-                           <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">8</span><br>Nepal</p>
-                           </div>
-                           </div>
-                           <div >
-                            <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">2</span><br>India</p>
-                           </div>
-                           </div>
-                           <div >
-                               
-                                <div class="updatesCardContent" style="width:100%; padding: 20px; text-align: center; ">
-                              <p><span class="heading">1</span><br>Bhutan</p>
-                           </div>
-
-                           </div>
-                       </div>                 
-                         </div>
-
-                         <div class="col-md-1 chartArrows">
-                        <div class="updateNext" style="float:right; text-align:center; padding-top:50px;">
-                        <a href="#" id="nextUpdate3"><i class="fa fa-chevron-right fa-bold" style="color:black;" aria-hidden="true"></i></a>
-                        </div>
-                        </div>
-                    
-                    <!-- Update Tab3 Ends -->
-                    </div> 
+             
 
                     <!--Card-content Ends-->
                     </div>
@@ -418,11 +341,11 @@
 
         <!--Card-4 Starts-->
             <div class="col-md-6">
-                <div class="card" id="card-4-main">
+                <div class="card" id="card4-main">
                     <div class="card-header">
                     <!--Card Title-->
                         <span class="card-title">Partners Landscape</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-4"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card4"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     <!--Card-Header Ends-->
                     </div>
 
@@ -442,7 +365,7 @@
 
                          <div class="form-group">
                                  
-                                  <select class="form-control" id="sel1">
+                                  <select class="selectpicker form-control">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -460,7 +383,7 @@
                         
                         <div class="form-group">
                                  
-                                  <select class="form-control" id="sel1">
+                                  <select class=" selectpicker form-control">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -477,7 +400,7 @@
                        
                        <div class="form-group">
                                  
-                                  <select class="form-control" id="sel1">
+                                  <select class="selectpicker form-control">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -508,11 +431,11 @@
 
         <!--Card-5 Starts-->
             <div class="col-md-12">
-                <div class="card" id="card-5-main">
+                <div class="card" id="card5-main">
                     <div class="card-header">
                      <!--Card Title-->
                         <span class="card-title">Chart View</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-5"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card5"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     <!--Card-Header Ends-->
                     </div>
 
@@ -584,7 +507,9 @@
                                  <div>
                                 <!-- Chart-7 -->
                                  <div class="chartHolder chart7"></div>
-                                 <div class="chartRadioContainer"><input class="cardRadio" id="chart7" type="radio" aria-label="..." name="chartGroup"></div>
+                                 <div class="chartRadioContainer">
+                                 <input class="cardRadio" id="chart7" type="radio" style="background-color:white" aria-label="..." name="chartGroup"/>
+                                 </div>
                                  <!-- Chart-7 Ends-->
                                  </div>
 
@@ -605,7 +530,7 @@
                         <!-- Chart View Row ends -->
 
                         </div>
-
+                        <h4 class="text-center">Click to Select</h4>
                      <!--Card-content Ends-->
                     </div>
 
@@ -616,11 +541,11 @@
 
         <!--Card-6 Starts-->
             <div class="col-md-12">
-                <div class="card" id="card-6-main">
+                <div class="card" id="card6-main">
                     <div class="card-header">
                      <!--Card Title-->
                         <span class="card-title">Maps</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-6"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
+                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card6"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                     <!--Card-Header Ends-->
                     </div>
 
@@ -637,7 +562,7 @@
 
                          <div class="form-group">
                                  
-                                  <select class="form-control" id="generalSelect">
+                                  <select class="selectpicker form-control" id="generalSelect">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -655,7 +580,7 @@
                         
                         <div class="form-group">
                                  
-                                  <select class="form-control" id="waSelect">
+                                  <select class=" selectpicker form-control" id="waSelect">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
