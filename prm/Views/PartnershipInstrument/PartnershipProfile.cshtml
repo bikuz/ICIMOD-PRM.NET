@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.Title = "Partnership Profile";
+}
+
+
+<div class="row">
+
+    <div class="container-fluid">
+        <!--Data Card Container Row-->
+        <div class="row" style="margin:10px;">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <!--Card Title-->
+                        <span class="card-title">Agreement Report</span>
+                        <span class="cardButton" style="margin-top:-4px;"><a href="#" class="icoPDF" id="card-3" ></a></span>
+                        <span class="cardButton" style="margin-top:-4px;"><a href="#" class="icoExcel" id="card-3"></a></span>
+                        <!--Card-Header Ends-->
+                    </div>
+                   
+                    <div class="card-content">
+                     
+                    <div class="tempAdvanceSearch">
+                    	
+                    	<div class="col-md-1 col-md-offset-5" style="margin-bottom:10px;">
+                    	<button type="submit" class="btn btn-primary" id="advanceSearchBtn">Advance Search</button>
+                    		
+                    	</div>
+                    	<div class="col-md-12" id="advanceSearchTab">
+                    		<div class="row advanceContent">
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Country</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Regional Programmes</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Initiatives</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Project Status</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Type of Agreement</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Budget</p>
+			                        	  <select class="form-control" style="width:100%">
+									        <option>All</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+									      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Agreement Start Date (From)</p>
+			                        	  <input type="text" class="form-control" aria-label="..." style="width:100%">
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Agreement End Date (From)</p>
+			                        	  <input type="text" class="form-control" aria-label="..." style="width:100%">
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Nature of Instution</p>
+						                        	  <select class="form-control" style="width:100%">
+												        <option>All</option>
+												        <option>2</option>
+												        <option>3</option>
+												        <option>4</option>
+												      </select>
+                    			</div>
+                    			<div class="col-md-4" style="padding:20px;">
+                    				<p class="text-center">Working Areas</p>
+			                        	   <select class="form-control" style="width:100%">
+												        <option>All</option>
+												        <option>2</option>
+												        <option>3</option>
+												        <option>4</option>
+												      </select>
+                    			</div>
+
+                    			<div class="col-md-12">
+                    				<p class="text-center">
+                    				<button type="submit" class="btn btn-primary" id="advanceClose"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
+                    				<button type="submit" class="btn btn-primary" id="advanceClose">Reset</i></button>
+                    		
+                    				
+
+                    				</p>
+                    			</div>
+                    			<!-- advance Content ends -->
+                    		</div>
+                    	</div>
+
+                    	<!-- TempAdvanceSearchEnds -->
+                    </div>
+
+                    <div class="tempColumnSH" style="display:block;">
+                    	<div class="col-md-12 " style="border: 1px solid #eeeeee; height: 110px;">
+                    	<h4 class="text-center">Show/Hide Columns</h4>
+                    	<div class="col-md-4 col-sm-4 col-xs-4">
+                    	
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="0" type="checkbox"> Requisition No.</label> </div><br>
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="3" type="checkbox"> Total Budget(USD)</label> </div><br>
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="6" type="checkbox"> Country</label> </div>
+                    	
+                    	
+                    	</div>
+                    	<div class="col-md-4 col-sm-4 col-xs-4">
+                    	<div class="checkbox"> <label> <input class="toggle-vis" data-column="1" type="checkbox"> Partner Name</label> </div> <br>
+
+
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="4" type="checkbox"> Initiative</label> </div><br>
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="7" type="checkbox"> Agreement Period</label> 
+                    	</div>
+
+                    	</div>
+
+
+                    	<div class="col-md-4 col-sm-4 col-xs-4">
+                    	<div class="checkbox"> <label> <input class="toggle-vis" data-column="2" type="checkbox"> Type of Partner</label> </div> <br>
+
+                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="5" type="checkbox"> Regional Program</label> </div><br>
+                    	</div>
+                    	
+                    	
+                    	
+                    	
+                    	 
+                    	</div>
+                    	<!-- Temp Ends -->
+                    </div>
+                       
+                            <h2 style="text-align:center">List of Agreements</h2>
+
+                            
+                         
+                           
+                                 <div class="table-responsive">
+                                 <table id="Agreement" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Requisition No.</th>
+                                            <th>Partner Name</th>
+                                            <th>Type of Partner</th>
+                                            <th>Total Budget(USD)</th>
+                                            <th>Initiative</th>
+                                            <th>Regional Program</th>
+                                            <th>Country</th>
+                                            <th>Agreement Period</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Requisition No.</th>
+                                            <th>Partner Name</th>
+                                            <th>Type of Partner</th>
+                                            <th>Total Budget(USD)</th>
+                                            <th>Initiative</th>
+                                            <th>Regional Program</th>
+                                            <th>Country</th>
+                                            <th>Agreement Period</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>United Nations Office for Outer Space Affairs</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>Austria</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aajeevika</td>
+                                            <td>On-going</td>
+                                            <td>Knowledge partners and networks</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>India</td>
+                                             <td>Edit Delete</td>
+                                             <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+
+                        <!--Card-content Ends-->
+                    </div>
+
+
+                    <!--Card Ends-->
+                </div>
+                <!--Column ends-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
