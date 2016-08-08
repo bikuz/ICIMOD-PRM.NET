@@ -129,8 +129,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitialAgreementController.cs" />
+    <Compile Include="Controllers\Initiative.cs" />
     <Compile Include="Controllers\InstitutionalProfileController.cs" />
+    <Compile Include="Controllers\Other.cs" />
+    <Compile Include="Controllers\PartnerController.cs" />
     <Compile Include="Controllers\PartnershipAgreementController.cs" />
+    <Compile Include="Controllers\PartnershipInstrument.cs" />
+    <Compile Include="Controllers\RMCController.cs" />
+    <Compile Include="Controllers\RPController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,10 +148,23 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\contract.ico" />
+    <Content Include="Content\images\Excel.ico" />
+    <Content Include="Content\images\flag.ico" />
+    <Content Include="Content\images\Home.png" />
     <Content Include="Content\images\icimodmap.jpg" />
+    <Content Include="Content\images\idea.ico" />
+    <Content Include="Content\images\initiative.png" />
+    <Content Include="Content\images\instrument.png" />
     <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\logoCollapsed.png" />
     <Content Include="Content\images\Mountain.png" />
+    <Content Include="Content\images\Partner.png" />
+    <Content Include="Content\images\PDF.ico" />
+    <Content Include="Content\images\RMC.png" />
+    <Content Include="Content\images\RP.png" />
+    <Content Include="Content\images\Update1.png" />
+    <Content Include="Content\images\update2.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -229,6 +248,21 @@
     <Content Include="Views\InitialAgreement\AddClauses.cshtml" />
     <Content Include="Views\Home\PartnershipMap.cshtml" />
     <Content Include="Views\InitialAgreement\AddContract.cshtml" />
+    <Content Include="Views\GeneralElements\DataCard.cshtml" />
+    <Content Include="Views\Initiative\ViewInitiative.cshtml" />
+    <Content Include="Views\Initiative\ViewProfile.cshtml" />
+    <Content Include="Views\Other\CustomizedReport.cshtml" />
+    <Content Include="Views\Other\RMC_RP_InitiativeReportsUpload.cshtml" />
+    <Content Include="Views\PartnershipInstrument\PartnershipProfile.cshtml" />
+    <Content Include="Views\PartnershipInstrument\PartnerTracker.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewDonorList.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewDonotList.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewPartnershipsNew.cshtml" />
+    <Content Include="Views\PartnershipInstrument\ViewPartnershipsOld.cshtml" />
+    <Content Include="Views\Partner\PartnerContact.cshtml" />
+    <Content Include="Views\Partner\ViewPartnerList.cshtml" />
+    <Content Include="Views\Partner\ViewPartnerProfile.cshtml" />
+    <Content Include="Views\Partner\ViewPartnerProfileRoster.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
