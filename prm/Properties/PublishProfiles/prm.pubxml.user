@@ -353,7 +353,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2016 02:53:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/07/2016 14:09:18</publishTime>
+      <publishTime>08/07/2016 19:43:26</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/03/2016 07:42:46</publishTime>
