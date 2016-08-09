@@ -269,6 +269,7 @@
     <Content Include="Views\RP\ViewProfile.cshtml" />
     <Content Include="Views\RP\ViewRP.cshtml" />
     <Content Include="Views\InitialAgreement\ClausesIndex.cshtml" />
+    <Content Include="Views\Other\PartnerLandscape.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

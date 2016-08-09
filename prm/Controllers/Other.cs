@@ -23,5 +23,11 @@ namespace prm.Controllers
             ViewBag.CustomizedReport = "active";
             return View();
         }
+        public ActionResult PartnerLandscape()
+        {
+            ViewBag.Other = "active";
+            ViewBag.PartnerLandscape = "active";
+            return View();
+        }
     }
 }
