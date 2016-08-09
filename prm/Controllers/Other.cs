@@ -35,5 +35,11 @@ namespace prm.Controllers
             ViewBag.AddNews = "active";
             return View();
         }
+        public ActionResult UpdateExchangeRate()
+        {
+            ViewBag.Other = "active";
+            ViewBag.UpdateExchangeRate = "active";
+            return View();
+        }
     }
 }

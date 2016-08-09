@@ -271,6 +271,7 @@
     <Content Include="Views\InitialAgreement\ClausesIndex.cshtml" />
     <Content Include="Views\Other\PartnerLandscape.cshtml" />
     <Content Include="Views\Other\AddNews.cshtml" />
+    <Content Include="Views\Other\UpdateExchangeRate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
