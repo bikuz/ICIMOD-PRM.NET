@@ -252,7 +252,7 @@
                         <li class="elem"><a href="#">Add News</a></li>
                         <li class="elem"><a href="#">Update Exchange Rate</a></li>
                         <li class="elem @ViewBag.Other_AddClauses"><a href='@Url.Action("AddClauses", "InitialAgreement")'>Add Clauses</a></li>
-                        <li class="elem"><a href='#'>Recent Clauses List</a></li>
+                        <li class="elem @ViewBag.ClausesIndex"><a href=' @Url.Action("ClausesIndex", "InitialAgreement") '>Recent Clauses List</a></li>
                     </ul>
                 </ul>
 

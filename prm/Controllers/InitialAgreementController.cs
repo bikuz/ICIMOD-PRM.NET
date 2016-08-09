@@ -31,5 +31,12 @@ namespace prm.Controllers
             ViewBag.PartnershipInstrument_AddContract = "active";
             return View();
         }
+
+        public ActionResult ClausesIndex()
+        {
+            ViewBag.Other = "active";
+            ViewBag.ClausesIndex = "active";
+            return View();
+        }
     }
 }
