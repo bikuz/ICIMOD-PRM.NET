@@ -29,5 +29,11 @@ namespace prm.Controllers
             ViewBag.PartnerLandscape = "active";
             return View();
         }
+        public ActionResult AddNews()
+        {
+            ViewBag.Other = "active";
+            ViewBag.AddNews = "active";
+            return View();
+        }
     }
 }
