@@ -5,47 +5,42 @@ div {
 }
 
 .right {
-    float: right;
+  float: right;
 }
-
 .left {
-    float: left;
+  float: left;
 }
 
 .DefaultPadding {
-    padding: 10px;
+padding: 10px;
 }
-
 .DefaultMargin {
-    margin: 10px;
+  margin: 10px;
 }
-
 .centered {
-    padding-left: 40%;
+  padding-left: 40%;
+  
 }
-
 .align {
-    text-align: center !important;
-    padding-right: 50%;
-    vertical-align: middle;
+  text-align: center !important;
+  padding-right: 50%;
+  vertical-align: middle;
 }
-
 .space {
-    padding: 0 1.5em 0 1.5em;
+   padding: 0 1.5em 0 1.5em;
 }
-
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
 .circle {
-    width: 30px;
-    height: 30px;
-    background: #0095da;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background: #0095da;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
 }
 .circle:hover{
     background: #5B76AD;
@@ -53,96 +48,141 @@ div {
 
 
 .intensity_dot {
-    border-radius: 50%;
+  border-radius: 50%;
     height: 14px;
     margin: auto;
     width: 14px;
 }
 
-.icoPDF {
+.icoPDF{
+    
     display: inline-block;
-    height: 40px; /*height of icon */
-    width: 40px; /*width of icon */
-    /*where to replace the icon */
+    height: 40px;  /*height of icon */
+    width: 40px;  /*width of icon */
+         /*where to replace the icon */
     top: 0px;
     text-align: center;
-    /*background */
-    background: url(images/pdf.png) no-repeat 0px 0px;
+    
+      /*background */
+    background: url(images/PDF.ico) no-repeat 0px 0px;
+   
 }
 
-.icoExcel {
+.icoExcel{
+    
     display: inline-block;
-    height: 40px; /*height of icon */
-    width: 40px; /*width of icon */
-    /*where to replace the icon */
+    height: 40px;  /*height of icon */
+    width: 40px;  /*width of icon */
+         /*where to replace the icon */
     top: 0px;
     text-align: center;
-    /*background */
-    background: url(images/excel.png) no-repeat 0px 0px;
+    
+      /*background */
+    background: url(images/Excel.ico) no-repeat 0px 0px;
+   
 }
 
-.flag {
+.flag{
+
+   
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
     text-align: center;
-    /*background */
+    
+      /*background */
+    
     background: url(images/Home.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
-.partner {
+.partner{
+
+    
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
     text-align: center;
-    /*background */
+    
+      /*background */
+    
     background: url(images/Partner.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
-.instrument {
+  .instrument{
+
+    
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
     text-align: center;
-    /*background */
+    
+      /*background */
+    
     background: url(images/instrument.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
-.initiative {
+     .initiative{
+
+    
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
-    /*background */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
+    
+    
+      /*background */
+    
     background: url(images/initiative.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
-.RP {
+     .RP{
+
+    
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
-    /*background */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
+    
+    
+      /*background */
+    
     background: url(images/RP.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
-.RMC {
+     .RMC{
+
+    
     display: inline-block;
-    height: 25px; /*height of icon */
-    width: 25px; /*width of icon */
-    /*where to replace the icon */
-    /*background */
+    height: 25px;  /*height of icon */
+    width: 25px;  /*width of icon */
+         /*where to replace the icon */
+   
+    
+    
+      /*background */
+    
     background: url(images/RMC.png) no-repeat center center;
     background-size: contain;
-}
+   
+   }
 
 
 
@@ -193,7 +233,7 @@ margin-top: 10px;
   display: none;
 }
 .nav-side-menu .toggle-btn {
-    display: none;
+  display: none;
 }
 .nav-side-menu ul,
 .nav-side-menu li {
@@ -219,31 +259,31 @@ margin-top: 10px;
 }
 
 
-    .nav-side-menu ul :not(collapsed) .arrow:before,
-    .nav-side-menu li :not(collapsed) .arrow:before {
-        font-family: FontAwesome;
-        content: "\f078";
-        display: inline-block;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        vertical-align: middle;
-        float: right;
-    }
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li :not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  vertical-align: middle;
+  float: right;
+}
 
 
-    .nav-side-menu ul :not(collapsed) .down-arrow:before,
-    .nav-side-menu li :not(collapsed) .down-arrow:before {
-        font-family: FontAwesome;
-        content: "\f054";
-        display: inline-block;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        vertical-align: middle;
-        float: right;
-        display: none;
-    }
+.nav-side-menu ul :not(collapsed) .down-arrow:before,
+.nav-side-menu li :not(collapsed) .down-arrow:before {
+  font-family: FontAwesome;
+  content: "\f054";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  vertical-align: middle;
+  float: right;
+  display: none;
+}
 
 
 .nav-side-menu ul .active,
@@ -274,40 +314,39 @@ margin-top: 10px;
 
 }
 
-        .nav-side-menu ul .sub-menu .elem:hover,
-        .nav-side-menu li .sub-menu .elem:hover {
-            background-color: #020203;
-        }
-
-        .nav-side-menu ul .sub-menu .elem:before,
-        .nav-side-menu li .sub-menu .elem:before {
-            font-family: FontAwesome;
-            content: "\f105";
-            display: inline-block;
-            padding-left: 10px;
-            padding-right: 10px;
-            vertical-align: middle;
-        }
-
-.nav-side-menu li {
-    padding-left: 0px;
-    border-left: 3px solid #2e353d;
-    border-bottom: 1px solid rgba(255, 255, 255,0.1);
+.nav-side-menu ul .sub-menu .elem:hover,
+.nav-side-menu li .sub-menu .elem:hover {
+  background-color: #020203;
 }
+.nav-side-menu ul .sub-menu .elem:before,
+.nav-side-menu li .sub-menu .elem:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
 
-    .nav-side-menu li a {
-        text-decoration: none;
-        color: #e1ffff;
-        overflow-x: visible;
-        margin-left: 10px;
-    }
+}
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid  rgba(255, 255, 255,0.1);
 
-        .nav-side-menu li a i {
-            margin-left: 10px;
-            margin-top: 10px;
-            margin-right: 10px;
-        }
-    /*.nav-side-menu li a i {
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff;
+  overflow-x: visible;
+  margin-left: 10px;
+}
+.nav-side-menu li a i {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+}
+/*.nav-side-menu li a i {
   padding-left: 25px;
   margin-top: 5px;
   width: 20px;
@@ -315,26 +354,27 @@ margin-top: 10px;
   padding-top: 3px;
    text-align: center;
 }*/
-    .nav-side-menu li:hover {
-        border-left: 3px solid #d19b3d;
-        background-color: #4f5b69;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        transition: all 1s ease;
-    }
-
-
-
-
-.nav-side-menu .menu-list .menu-content {
-    display: block;
+.nav-side-menu li:hover {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
+
+
+
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+
+  }
+
 body {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #prm-logo {
@@ -361,7 +401,7 @@ body {
 }
 
 .shadow {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .main-image {
@@ -488,68 +528,76 @@ select{
   }
 
 @media only screen and (min-width: 1001px) {
-    /*Wrapper toggle styling*/
-    #wrapper.toggled .content {
-        margin-left: 100px;
-    }
+/*Wrapper toggle styling*/
+#wrapper.toggled .content {
+   margin-left: 100px;
+   
+}
+#wrapper.toggled .main-image {
+   background-size: cover;
+   
+}
 
-    #wrapper.toggled .main-image {
-        background-size: cover;
-    }
+#wrapper.toggled .main-header {
+   margin-left: 100px;
+}
+#wrapper.toggled .nav-side-menu {
+   width: 100px;
+}
 
-    #wrapper.toggled .main-header {
-        margin-left: 100px;
-    }
-
-    #wrapper.toggled .nav-side-menu {
-        width: 100px;
-    }
-
-    /*Removed below property - handled by javascript*/
-    /*#wrapper.toggled .menu-names {
+/*Removed below property - handled by javascript*/
+/*#wrapper.toggled .menu-names {
   display: none;
 }*/
-    #wrapper.toggled .arrow {
-        display: none;
-    }
+#wrapper.toggled .arrow {
+  display: none;
+}
 
-    #wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
-    #wrapper.toggled .nav-side-menu li :not(collapsed) .down-arrow:before {
-        display: block;
-    }
+#wrapper.toggled .nav-side-menu ul :not(collapsed) .down-arrow:before,
+#wrapper.toggled .nav-side-menu li :not(collapsed) .down-arrow:before {
 
-
-    #wrapper.toggled #logo {
-        display: none;
-    }
-
-    #wrapper.toggled .nav-side-menu {
-        overflow: hidden;
-    }
-
-        #wrapper.toggled .nav-side-menu ul .sub-menu {
-        }
+  display: block;
+}
 
 
-    #wrapper.toggled #logoCollapsed {
-        display: block;
-        /*height: 35%;*/
-        padding-left: -10px;
-    }
+#wrapper.toggled #logo{
+
+display: none;
+
+}
+
+#wrapper.toggled .nav-side-menu {
+
+  overflow: hidden;
+}
+
+#wrapper.toggled .nav-side-menu ul .sub-menu {
+
+}
 
 
-    /*chart for expanded screen CSS*/
+#wrapper.toggled #logoCollapsed {
 
-    #wrapper.toggled .chartView {
-        width: 1100px;
-    }
+  display: block;
+  /*height: 35%;*/
+  padding-left: -10px;
+
+}
+
+
+/*chart for expanded screen CSS*/
+
+#wrapper.toggled .chartView {
+  width: 1100px;
+}
+
 }
 
 
 /* Data cards */
 
 .card {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card {
@@ -631,85 +679,79 @@ select{
   background-clip: padding-box;
   box-sizing: border-box;
 
-        .card .card-content p {
-            margin: 0;
-            color: inherit;
-        }
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
 
 
-        .card .card-content span.card-title {
-            line-height: 48px;
-        }
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
 
-    .card .card-action {
-        border-top: 1px solid rgba(160, 160, 160, 0.2);
-        padding: 16px;
-    }
-
-        .card .card-action a {
-            color: #ffab40;
-            margin-right: 16px;
-            transition: color 0.3s ease;
-            text-transform: uppercase;
-        }
-
-            .card .card-action a:hover {
-                color: #ffd8a6;
-                text-decoration: none;
-            }
-
-    /*card toggle styling*/
-    .card.visibility .card-content {
-        visibility: hidden;
-    }
-    /*.card.toggled {
+/*card toggle styling*/
+.card.visibility .card-content  {
+  visibility: hidden;
+}
+/*.card.toggled {
 
    max-height:100px;
     overflow:hidden;
     
 }*/
-    .card.visibility .card-header a .cardCollapseLink {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+.card.visibility .card-header a .cardCollapseLink {
+ -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  
+}
 
 
 
 /*Chart View*/
 
 .chartPrevious {
-    float: left;
-    text-align: center;
-    padding: 6px;
-    margin-top: 100px;
+  float:left; 
+  text-align: center;
+  padding: 6px;
+  margin-top: 100px;
 }
-
 .chartNext {
-    float: right;
-    text-align: center;
-    padding: 6px;
-    margin-top: 100px;
+  float:right; 
+  text-align: center;
+  padding: 6px;
+  margin-top: 100px;
 }
-
 .selectChartTitle {
-    height: 40px;
-    background-color: #eeeeee;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  height: 40px;
+  background-color:#eeeeee;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-
-    .selectChartTitle p {
-        text-align: center;
-        padding: 5px;
-        font-size: 20px;
-    }
-
+.selectChartTitle p {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
 .chartView {
-    height: 400px;
-    width: 900px;
-    text-align: center;
+  height: 400px;
+  width: 900px;
+  text-align: center;
 }
-
 .chartHolder {
     border: 1px solid #eeeeee;
     height: 290px;
@@ -718,59 +760,58 @@ select{
     padding-bottom:5px;
 }
 .chartRadioContainer {
-    width: 100%;
-    height: 50px;
-    background: #eeeeee;
-    border: 1px solid #A9A9A9;
-    text-align: center;
-    padding: 15px;
+  width:100%; 
+  height:50px; 
+  background:#eeeeee;
+  border: 1px solid #A9A9A9;
+  text-align: center;
+  padding: 15px;
 }
 
 
 /*Data table*/
 .dataTables_filter {
-  /*text-align: center !important;*/
+  text-align: center !important;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 .dataTables_length {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+  margin-top: 10px !important;
+margin-bottom: 10px !important;
 }
-
 .dataTables_paginate {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+ margin-top: 10px !important;
+margin-bottom: 10px !important;
 }
-
 .dataTables_info {
-    margin-bottom: 10px !important;
+ margin-bottom: 10px !important;
 }
 
 #advanceSearchTab {
-    border: 1px solid #eeeeee;
-}
+  border: 1px solid #eeeeee;
+  
 
+}
 .advanceContent {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+   -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
 }
-
-    .advanceContent:not(toggled) {
-        height: 0px;
-        overflow: hidden;
-    }
-
-    .advanceContent.toggled {
-        height: 430px;
-    }
+.advanceContent:not(toggled) {
+  height: 0px;
+  overflow: hidden;
+   
+ 
+}
+.advanceContent.toggled{
+  height: 430px;
+}
 /*Data table Ends*/
 
 /*Mobile View CSS*/
 @media only screen and (max-width: 1000px) {
-    /* .menu-list {
+ /* .menu-list {
        -webkit-transition:all 0.5s linear;
   -moz-transition:all 0.5s linear;
   -o-transition:all 0.5s linear;
@@ -807,32 +848,37 @@ select{
     display: block;
    }
 
-    #wrapper.toggled .nav-side-menu .menu-content {
-    }
-    /*Using height toggle to create animation*/
-    #wrapper.toggled .nav-side-menu {
-        height: auto;
-    }
+   #wrapper.toggled .nav-side-menu .menu-content {
+    
+    
+   }
+   /*Using height toggle to create animation*/
+   #wrapper.toggled .nav-side-menu  {
+    
+    height: auto;    
+   }
+  
+  /*Index Page CSS*/
+  .main-image .updates {
+  display: none;
+  }
 
-    /*Index Page CSS*/
-    .main-image .updates {
-        display: none;
-    }
+  .chartArrows {
+    display: none;
+  }
 
-    .chartArrows {
-        display: none;
-    }
+
 }
 /*Mobile View CSS Ends*/
 
 
 /*Link not active*/
 .Link-not-active {
-    pointer-events: none;
-    cursor: default;
-}
+   pointer-events: none;
+   cursor: default;
+ }
 
-
+ 
 
 
 /*Index Page CSS*/
@@ -843,7 +889,6 @@ select{
     -webkit-padding-start: 7px;
      
 }
-
 .card .card-content #highlights li {
   padding: 5px 10px 8px 25px;
   font-size:12px;
@@ -857,148 +902,147 @@ margin:0 10px 0 -22px;
 color: #23B7E5;
 }
 .card .card-content #downloads a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 .card .card-content #downloads table .DownloadsView a::before {
-    font-family: 'FontAwesome';
-    content: '\f06e';
-    font-size: 20px;
-    color: #FF6347;
-    padding-right: 5px;
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:  #FF6347;
+padding-right: 5px;
 }
 
 .card .card-content #downloads table .DownloadsDown a::before {
-    font-family: 'FontAwesome';
-    content: '\f019';
-    font-size: 20px;
-    color: green;
-    padding-right: 5px;
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:green;
+padding-right: 5px;
 }
-
 .card .card-content #downloads table .DownloadsViewDisabled a,
-.card .card-content #downloads table .DownloadsDownDisabled a {
+.card .card-content #downloads table .DownloadsDownDisabled a
+ {
+
     pointer-events: none;
-    cursor: default;
+   cursor: default;
+
 }
-
-    .card .card-content #downloads table .DownloadsViewDisabled a::before {
-        font-family: 'FontAwesome';
-        content: '\f06e';
-        font-size: 20px;
-        color: grey;
-        padding-right: 5px;
-    }
-
-    .card .card-content #downloads table .DownloadsDownDisabled a::before {
-        font-family: 'FontAwesome';
-        content: '\f019';
-        font-size: 20px;
-        color: grey;
-        padding-right: 5px;
-    }
+.card .card-content #downloads table .DownloadsViewDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f06e';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}
+.card .card-content #downloads table .DownloadsDownDisabled a::before {
+font-family: 'FontAwesome';
+content: '\f019';
+font-size: 20px;
+color:grey;
+padding-right: 5px;
+ 
+}
 
 #rcorners1 {
     border-radius: 25px;
     background: #fff;
     
     width: 150px;
-    height: 50px;
+    height: 50px; 
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
     vertical-align: middle;
 }
+#rcorners1 span {
+  color:red;
+  }
+#rcorners1:hover {
+  background: grey;
+  color: white;
 
-    #rcorners1 span {
-        color: red;
-    }
-
-    #rcorners1:hover {
-        background: grey;
-        color: white;
-    }
-
-        #rcorners1:hover p span {
-            color: #e5c028;
-        }
-
-#card-3-main p {
-    font-weight: bold;
 }
 
+#rcorners1:hover p span {
+  color: #e5c028;
+}
+
+#card-3-main p{
+  font-weight: bold;
+}
 #card-3-main .card-content span {
-    font-size: 22px;
+  font-size: 22px;
 }
-
 #card-3-main .rcorners2 {
     border-radius: 25px;
     background: blue;
+    
     width: 100px;
     height: 50px;
-    line-height: 50px;
+     line-height: 50px; 
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
     vertical-align: middle;
     display: inline-block;
+
 }
-
-    #card-3-main .rcorners2 span {
-        color: white;
-    }
-
-    #card-3-main .rcorners2 p {
-        color: white;
-    }
+#card-3-main .rcorners2 span {
+  color:white;
+  }
+#card-3-main .rcorners2 p {
+  color: white;
+}
 
 #card-3-main .rcorner2:hover {
+
 }
 
-.updates {
-    padding-top: 100px;
-    padding-left: 10px;
-    text-align: center;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+.updates  {
+  padding-top: 100px;
+  padding-left: 10px;
+  text-align: center;
+   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
+.updates .col-md-12 {
 
-    .updates .col-md-12 {
-        border-right: 2px solid;
-    }
-
+  border-right: 2px solid;
+}
 .updatesRow1 p {
-    color: #fff;
-    font-size: 15px;
-}
+  color:#fff;
+  font-size: 15px;
 
-#wrapper.toggled .updatesRow1 p {
-    font-size: 16px;
-}
 
+}
+#wrapper.toggled .updatesRow1 p{
+  font-size: 16px;
+}
 .updatesRow2 {
-    margin-top: -10px;
-    font-size: 35px;
-    color: #e5c028;
-    text-align: center;
-    margin-top: -15px;
+  margin-top: -10px;
+  font-size: 35px;
+  color: #e5c028;
+  text-align: center;
+  margin-top: -15px;
 }
 
 .updatesRow3 {
-    color: #A9A9A9;
-    margin-top: -10px;
+  color:#A9A9A9;
+  margin-top: -10px;
 }
 
 .
 /*Index Page CSS Ends*/
+
 /*View partner List Page CSS*/
-.dataBox:hover {
-    background-color: #eeeeee;
-    border: 2px solid #eeeeee;
-    height: 130px;
+ .dataBox:hover {
+  background-color: #eeeeee;
+  border: 2px solid #eeeeee; 
+  height: 130px;
 }
 
 
@@ -1006,46 +1050,29 @@ color: #23B7E5;
 
 /*View Partner Contact CSS*/
 .contactList {
-    padding: 5px;
-    background-color: #f9f9f9;
-    height: 500px;
-    overflow-y: auto;
+  padding: 5px;
+  background-color: #f9f9f9;
+  height: 500px;
+   overflow-y: auto;
 }
 
 
-    .contactList ul li {
-        margin-top: 20px;
-        margin-left: -20px;
-        margin-right: 20px;
-        list-style-type: none;
-        background-color: white;
-        min-height: 150px;
-        padding: 20px;
-        border: 1px solid #eeeeee;
-    }
+.contactList ul li {
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: 20px;
+  list-style-type: none;
+  background-color: white;
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid #eeeeee;
+
+}
 /*View Partner Contact CSS Ends*/
 
 /*PartnershipInstrument Partnership Profile*/
 
-.my:after {
-    content: "";
-}
+.my:after{
 
-/*Added by sajin*/
-div.contact-sheet-container {
-    width: 100%;
-    margin: 10px;
-    overflow: auto;
-}
-
-div.contact-sheet {
-    background: #fff none repeat scroll 0 0;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 2px #888888;
-    display: block;
-    float: left;
-    margin: 0 0 15px 15px;
-    min-height: 280px;
-    padding: 10px;
-    width: calc(50% - 25px);
+  content: ""
 }
