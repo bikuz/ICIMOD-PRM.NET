@@ -274,7 +274,13 @@
     <Content Include="Views\RP\ViewProfile.cshtml" />
     <Content Include="Views\RP\ViewRP.cshtml" />
     <Content Include="Views\InitialAgreement\ClausesIndex.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\Index.cshtml" />
+=======
+    <Content Include="Views\Other\PartnerLandscape.cshtml" />
+    <Content Include="Views\Other\AddNews.cshtml" />
+    <Content Include="Views\Other\UpdateExchangeRate.cshtml" />
+>>>>>>> 3448397ff9cd3b27b59e5d0e6632cca1afc7a4f0
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
