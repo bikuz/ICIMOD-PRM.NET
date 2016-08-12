@@ -6,9 +6,12 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.tabs-modified >li.active{
+.tabs-modified li.active{
     font-weight:bold;
+   
 }
+
+
 .guide-info{
     /*text-align:center;*/
     display: block;

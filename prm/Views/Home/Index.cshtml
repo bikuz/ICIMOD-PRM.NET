@@ -29,598 +29,537 @@
         width: 450px;
         margin-top: 40px;
     }
+
+
+
+    /*.zoom-modal:hover:before {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: #5B76AD;
+        border-radius: 9px;
+
+        padding: 4px;
+        position: relative;
+    }*/
 </style>
 
+
 <div class="main-image">
-    <!--Updating Content-->
-    <div class="row updates">
-
-        <div class="col-md-12 updatesRow1">
-            <div class="col-md-3"><p>Strategic Partnership</p></div>
-            <div class="col-md-3"><p>Implementation Partnership Agreement</p></div>
-            <div class="col-md-3"><p>Operational Implementation Partnership</p></div>
-            <div class="col-md-3"><p>Total institutional collaboration</p></div>
-        </div>
-        <div class="col-md-12 updatesRow2">
-
-            <div class="col-md-3">125</div>
-            <div class="col-md-3">228</div>
-            <div class="col-md-3">80</div>
-            <div class="col-md-3">0</div>
-
+    <div style="position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.2)">
+        <div style="color:white;position:absolute;bottom:0;left:0;padding:15px;font-size:20px; width:100%;height:65px;background-color:rgba(0,0,0,0.5)">
+            <img id="prm-logo" src=@Url.Content("~/Content/images/prm.png") />
+            <div style="font-size:10px;">PARTNERSHIP FOR SUSTAINABLE MOUNTAIN DEVELOPEMNT</div>
+            <div style="position: absolute; right: 20px; bottom: 8px"><img src='@Url.Content("~/Content/images/countries.png")' style="width:auto;height:20px;" /></div>
         </div>
 
-        <div class="col-md-12 updatesRow3">
-
-
-            <div class="col-md-3">4% from last month</div>
-            <div class="col-md-3">4% from last month</div>
-            <div class="col-md-3">4% from last month</div>
-            <div class="col-md-3">4% from last month</div>
-
-
-        </div>
-
-
-
-
-        <!--Main Image Row end-->
     </div>
-    <!--Main Image div end-->
+
 </div>
 
-<div class="row">
+<div class="row" id="main_content">
 
     <div class="container-fluid">
         <!--Data Card Container Row-->
-        <div class="row" style="margin:10px;">
+        <div class="row" style="margin:5px;">
             <!-- Card Projects -->
-            <div class="col-md-8">
 
-                <!--Card-1 Starts-->
-                <div class="card" id="card1-main">
-                    <div class="card-header">
-                        <!--Card Title-->
-                        <span class="card-title">Overview</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card1"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
-                    </div>
-
-
-                    <div class="card-content">
-                        <div class="innerContent">
-                            <!-- Nav tabs -->
-
-                            <ul class="nav nav-tabs nav-justified" role="tablist">
-                                <li role="presentation" class="active"><a href="#highlights" aria-controls="home" role="tab" data-toggle="tab">Highlights</a></li>
-                                <li role="presentation"><a href="#downloads" aria-controls="profile" role="tab" data-toggle="tab">Downloads</a></li>
-                            </ul>
-                            <br>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="highlights">
-                                    <div class="container-fluid">
-                                        <ul>
-                                            <li>
-                                                ICIMOD partnership with UNIDO for the establishment for a potential Himalayan Centre for LoA MoU IC
-                                                Renewable Energy and Energy Efficiency ( HCREEE) - UN SE4ALL Centre of Excellence
-                                            </li>
-                                            <li>Bilateral workshop between National Natural Science Foundation of China and ICIMOD</li>
-                                            <li>MoU with RECOFTC for sustainable natural resource management in Himalayan region in China, Myanmar and Nepal</li>
-                                        </ul>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4" style="padding-right:5px">
+                        <div class="row">
+                            @*Strategic Partnership*@
+                            <div class="col-md-6" style="padding-right:10px">
+                                <div class="card">
+                                    <div class="card-content main-info" style="text-align:center;">
+                                        <div class="innerContent">
+                                            <div style="color:#5B76AD;font-size:30px">112</div>
+                                            <div style="font-size:12px">Strategic Partnership</div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
 
-
-                                <div role="tabpanel" class="tab-pane" id="downloads">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <tr>
-                                                <td>RMC Report</td>
-                                                <td class="DownloadsView"><a href="#"></a></td>
-                                                <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>RP Report</td>
-                                                <td class="DownloadsViewDisabled"><a href="#"></a></td>
-                                                <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Initiative Report</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Partner Profile</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDownDisabled"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Development Partner</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Partner Distribution</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Monthly Report</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-                                            <td>Infographics</td>
-                                            <td class="DownloadsView"><a href="#"></a></td>
-                                            <td class="DownloadsDown"><a href="#"></a></td>
-                                            </tr>
-
-                                        </table>
-
-
-                                        <!--Table Div Ends-->
+                            @*Operational Partnership*@
+                            <div class="col-md-6" style="padding-left:10px">
+                                <div class="card">
+                                    <div class="card-content main-info" style="background-color:#23B7E5;text-align:center;">
+                                        <div class="innerContent">
+                                            <div style="color:white;font-size:30px">176</div>
+                                            <div style="color:white;font-size:12px">Operational Partnership</div>
+                                        </div>
                                     </div>
-
-                                    <!--Downloads-Tab Ends-->
                                 </div>
-
-                                <!--Tab-content Ends-->
                             </div>
                         </div>
-                        <!--Card-content Ends-->
+
+                        <div class="row">
+                            @*Implementation Partnership*@
+                            <div class="col-md-6" style="padding-right:10px">
+                                <div class="card">
+                                    <div class="card-content main-info" style="background-color:#5B76AD;text-align:center;">
+                                        <div class="innerContent">
+                                            <div style="color:white;font-size:30px">240</div>
+                                            <div style="color:white;font-size:12px">Implementation Partnership</div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*Institutional Partnership*@
+                            <div class="col-md-6" style="padding-left:10px">
+                                <div class="card">
+                                    <div class="card-content main-info" style="text-align:center;">
+                                        <div class="innerContent">
+                                            <div style="color:#23B7E5;font-size:30px">257</div>
+                                            <div style="font-size:12px">Institutional Collaboration</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!--Card Ends-->
+                    @*Highlights*@
+                    <div class="col-md-8" style="padding-right:5px">
+                        <div class="card">
+                            <div class="card-header2">
+                                <!--Card Title-->
+                                <span class="card-title">Highlights</span>
+                                <!--Card-Header Ends-->
+                            </div>
+                            <div class="card-content" style="padding:10px;height:201px;">
+                                <div class="innerContent" id="highlights" style="height:181px;overflow:auto">
+                                    <ul>
+                                        <li>
+                                            ICIMOD partnership with UNIDO for the establishment for a potential Himalayan Centre for LoA MoU IC
+                                            Renewable Energy and Energy Efficiency (HCREEE) - UN SE4ALL Centre of Excellence
+                                        </li>
+                                        <li>Bilateral workshop between National Natural Science Foundation of China and ICIMOD</li>
+                                        <li>MoU with RECOFTC for sustainable natural resource management in Himalayan region in China, Myanmar and Nepal</li>
+                                        <li>Bilateral workshop between National Natural Science Foundation of China and ICIMOD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--Column ends-->
+
+                <div class="row">
+                    @*Geographic Distribution*@
+                    <div class="col-md-6" style="padding-right:5px">
+
+                        <div class="card">
+                            <div class="card-header2">
+                                <!--Card Title-->
+                                <span class="card-title">UPDATES- JULY, 2016</span>
+                                <!--Card-Header Ends-->
+
+                                <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+
+                            </div>
+                            <div class="card-content" style="padding:10px;height:270px">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="implementPartnerMap" x="0px" y="0px"
+                                     width="100%" height="250px" viewBox="0 0 1164 722" enable-background="new 0 0 1164 722" xml:space="preserve">
+                                <image overflow="visible" width="1164" height="672" xlink:href="@Url.Content("~/Content/images/icimodmap.jpg")" transform="matrix(1 0 0 1 0 50.5)"></image>
+                                <line fill="none" stroke="#F15A24" x1="881.459" y1="328.983" x2="881.459" y2="167.58" />
+                                <line fill="none" stroke="#F15A24" x1="880.41" y1="167.58" x2="992.774" y2="167.58" />
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1160.709" y1="267.0186" x2="1327.5996" y2="267.0186" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#C8D3DC" />
+                                <stop offset="0.3413" style="stop-color:#E2E7EC" />
+                                <stop offset="0.7139" style="stop-color:#F7F9FA" />
+                                <stop offset="0.956" style="stop-color:#FFFFFF" />
+                                    </linearGradient>
+                                <rect x="998.109" y="117.707" fill="url(#SVGID_1_)" width="166.891" height="99.748" />
+                                <text transform="matrix(1 0 0 1 1004.7031 165.6641)" fill="#333" font-size="46.0376">12</text>
+                                <text transform="matrix(1 0 0 1 1008.541 202.1064)" fill="#333" font-size="26.8552">China</text>
+                                <circle fill="#F15A24" cx="881.459" cy="327.934" r="8.542" />
+                                <line fill="none" stroke="#F15A24" x1="924.556" y1="313.364" x2="996.332" y2="313.364" />
+                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1158.4316" y1="121.2339" x2="1325.3203" y2="121.2339" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#C8D3DC" />
+                                <stop offset="0.3413" style="stop-color:#E2E7EC" />
+                                <stop offset="0.7139" style="stop-color:#F7F9FA" />
+                                <stop offset="0.956" style="stop-color:#FFFFFF" />
+                                    </linearGradient>
+                                <rect x="995.831" y="263.492" fill="url(#SVGID_2_)" width="166.89" height="99.747" />
+                                <text transform="matrix(1 0 0 1 1002.4238 311.4492)" fill="#333" font-size="46.0376">9</text>
+                                <text transform="matrix(1 0 0 1 1006.2617 347.8936)" fill="#333" font-size="26.8552">Bhutan</text>
+                                <line fill="none" stroke="#F15A24" x1="645" y1="458.015" x2="998.774" y2="458.015" />
+                                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="1160.709" y1="-23.4175" x2="1327.5996" y2="-23.4175" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#C8D3DC" />
+                                <stop offset="0.3413" style="stop-color:#E2E7EC" />
+                                <stop offset="0.7139" style="stop-color:#F7F9FA" />
+                                <stop offset="0.956" style="stop-color:#FFFFFF" />
+                                    </linearGradient>
+                                <rect x="998.109" y="408.144" fill="url(#SVGID_3_)" width="166.891" height="99.747" />
+                                <text transform="matrix(1 0 0 1 1004.7031 456.0957)" fill="#333" font-size="46.0376">12</text>
+                                <text transform="matrix(1 0 0 1 1008.541 492.541)" fill="#333" font-size="26.8552">Bangladesh</text>
+                                <line fill="none" stroke="#F15A24" x1="673.666" y1="604.939" x2="998.771" y2="604.939" />
+                                <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="1160.707" y1="-170.3418" x2="1327.5957" y2="-170.3418" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#C8D3DC" />
+                                <stop offset="0.3413" style="stop-color:#E2E7EC" />
+                                <stop offset="0.7139" style="stop-color:#F7F9FA" />
+                                <stop offset="0.956" style="stop-color:#FFFFFF" />
+                                    </linearGradient>
+                                <rect x="998.106" y="555.068" fill="url(#SVGID_4_)" width="166.89" height="99.746" />
+                                <text transform="matrix(1 0 0 1 1004.6992 603.0234)" fill="#333" font-size="46.0376">12</text>
+                                <text transform="matrix(1 0 0 1 1008.5371 639.4668)" fill="#333" font-size="26.8552">Myanmar</text>
+                                <line fill="none" stroke="#F15A24" x1="168.564" y1="167.58" x2="309.702" y2="167.58" />
+                                <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="162.6001" y1="267.0181" x2="329.4888" y2="267.0181" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0.033" style="stop-color:#FFFFFF" />
+                                <stop offset="0.3383" style="stop-color:#F2F4F6" />
+                                <stop offset="0.9064" style="stop-color:#CED8E0" />
+                                <stop offset="1" style="stop-color:#C8D3DC" />
+                                    </linearGradient>
+                                <rect y="117.708" fill="url(#SVGID_5_)" width="166.889" height="99.747" />
+                                <line fill="none" stroke="#F15A24" x1="924.604" y1="427.87" x2="924.604" y2="314.167" />
+                                <line fill="none" stroke="#F15A24" x1="625.456" y1="427.87" x2="924.829" y2="427.87" />
+                                <path fill="#F15A24" d="M625.456,418.958c4.72,0,8.544,3.827,8.544,8.542c0,4.718-3.824,8.542-8.544,8.542  c-4.717,0-8.541-3.824-8.541-8.542C616.916,422.785,620.739,418.958,625.456,418.958z" />
+                                <path fill="#F15A24" d="M643.964,450.059c4.718,0,8.543,3.827,8.543,8.542c0,4.719-3.825,8.542-8.543,8.542  c-4.72,0-8.541-3.823-8.541-8.542C635.423,453.886,639.244,450.059,643.964,450.059z" />
+                                <line fill="none" stroke="#F15A24" x1="674.085" y1="605.508" x2="674.085" y2="531.046" />
+                                <path fill="#F15A24" d="M674.275,522.15c4.719,0,8.543,3.827,8.543,8.542c0,4.718-3.824,8.542-8.543,8.542  c-4.718,0-8.542-3.824-8.542-8.542C665.733,525.979,669.559,522.15,674.275,522.15z" />
+                                <rect x="7.585" y="133.081" fill="none" width="148.065" height="43.28" />
+                                <text transform="matrix(1 0 0 1 132.042 165.7598)" fill="#333" font-size="46.0253">2</text>
+                                <rect x="7.584" y="184.334" fill="none" width="148.063" height="36.444" />
+                                <text transform="matrix(1 0 0 1 34.8481 203.4023)" fill="#333" font-size="26.8566">Afganistan</text>
+                                <line fill="none" stroke="#F15A24" x1="169.708" y1="312.229" x2="282.07" y2="312.229" />
+                                <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="162.6001" y1="122.3677" x2="329.4888" y2="122.3677" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#FFFFFF" />
+                                <stop offset="1" style="stop-color:#C8D3DC" />
+                                    </linearGradient>
+                                <rect y="262.358" fill="url(#SVGID_6_)" width="166.889" height="99.747" />
+                                <rect x="7.585" y="277.731" fill="none" width="148.063" height="43.277" />
+                                <text transform="matrix(1 0 0 1 132.0386 310.4102)" fill="#333" font-size="46.0253">8</text>
+                                <rect x="7.584" y="328.985" fill="none" width="148.064" height="36.443" />
+                                <text transform="matrix(1 0 0 1 62.1631 348.0527)" fill="#333" font-size="26.8566">Pakistan</text>
+                                <line fill="none" stroke="#F15A24" x1="166.174" y1="458.015" x2="436.184" y2="458.015" />
+                                <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="162.6001" y1="-23.4175" x2="329.4888" y2="-23.4175" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#FFFFFF" />
+                                <stop offset="1" style="stop-color:#C8D3DC" />
+                                    </linearGradient>
+                                <rect y="408.144" fill="url(#SVGID_7_)" width="166.889" height="99.747" />
+                                <rect x="7.585" y="423.517" fill="none" width="148.063" height="43.276" />
+                                <text transform="matrix(1 0 0 1 108.4292 456.1943)" fill="#333" font-size="46.0253">25</text>
+                                <rect x="7.584" y="474.77" fill="none" width="148.064" height="36.444" />
+                                <text transform="matrix(1 0 0 1 99.9502 493.8398)" fill="#333" font-size="26.8566">India</text>
+                                <line fill="none" stroke="#F15A24" x1="165.667" y1="602.664" x2="567.663" y2="602.664" />
+                                <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="162.6001" y1="-168.0659" x2="329.4888" y2="-168.0659" gradientTransform="matrix(1 0 0 -1 -162.6001 434.5996)">
+                                <stop offset="0" style="stop-color:#FFFFFF" />
+                                <stop offset="1" style="stop-color:#C8D3DC" />
+                                    </linearGradient>
+                                <rect y="552.793" fill="url(#SVGID_8_)" width="166.889" height="99.745" />
+                                <rect x="7.585" y="568.165" fill="none" width="148.063" height="43.278" />
+                                <text transform="matrix(1 0 0 1 108.4292 600.8447)" fill="#333" font-size="46.0253">22</text>
+                                <rect x="7.584" y="619.42" fill="none" width="148.064" height="36.442" />
+                                <text transform="matrix(1 0 0 1 89.96 638.4883)" fill="#333" font-size="26.8566">Nepal</text>
+                                <line fill="none" stroke="#F15A24" x1="309.702" y1="281.147" x2="309.702" y2="166.442" />
+                                <line fill="none" stroke="#F15A24" x1="281.09" y1="330.838" x2="281.09" y2="312.563" />
+                                <line fill="none" stroke="#F15A24" x1="281.09" y1="330.204" x2="353.631" y2="330.204" />
+                                <path fill="#F15A24" d="M309.61,276.109c4.718,0,8.541,3.828,8.541,8.542c0,4.718-3.823,8.542-8.541,8.542  c-4.719,0-8.543-3.824-8.543-8.542C301.067,279.938,304.893,276.109,309.61,276.109z" />
+                                <path fill="#F15A24" d="M354.372,321.083c4.719,0,8.543,3.828,8.543,8.542c0,4.718-3.824,8.542-8.543,8.542  c-4.718,0-8.541-3.824-8.541-8.542C345.831,324.91,349.654,321.083,354.372,321.083z" />
+                                <path fill="#F15A24" d="M436.08,379.767c4.719,0,8.541,3.828,8.541,8.543c0,4.719-3.822,8.541-8.541,8.541s-8.543-3.822-8.543-8.541  C427.537,383.595,431.361,379.767,436.08,379.767z" />
+                                <line fill="none" stroke="#F15A24" x1="436.184" y1="458.021" x2="436.184" y2="393.431" />
+                                <line fill="none" stroke="#F15A24" x1="566.939" y1="602.664" x2="566.939" y2="405.764" />
+                                <path fill="#F15A24" d="M567.03,393.184c4.718,0,8.541,3.827,8.541,8.542c0,4.719-3.823,8.543-8.541,8.543  c-4.719,0-8.543-3.824-8.543-8.543C558.487,397.011,562.313,393.184,567.03,393.184z" />
+                                <rect x="0.052" y="6.198" fill="none" width="1163.948" height="39.013" />
+                                <text transform="matrix(1 0 0 1 50.874 31.7578)" fill="#333" font-size="36">Geographic Distribution of On-Going Implementation Partnership</text>               
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Partnership Landscape*@
+                    <div class="col-md-6" style="padding-right:5px">
+                        <div class="card">
+                            <div class="card-header2">
+                                <!--Card Title-->
+                                <span class="card-title">PARTNERS LANDSCAPE</span>
+                                <!--Card-Header Ends-->
+                                <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                            </div>
+                            <div style="float:right;margin:10px 10px 0 0 ;">
+
+                                <select class="selPartnerLandscape" id="selRMC" style="max-width:150px;">
+                                    <option value="1">Afghanistan</option>
+                                    <option value="2">Bangladesh</option>
+                                    <option value="3">Bhutan</option>
+                                    <option value="4">China</option>
+                                    <option value="5">India</option>
+                                    <option value="6">Myanmar</option>
+                                    <option value="7">Nepal</option>
+                                    <option value="8">Pakistan</option>
+                                </select>
+
+                                <select class="selPartnerLandscape" id="selRp" style="max-width:150px;display:none;">
+                                    <option value="1">Adaptation to Change</option>
+                                    <option value="2">Transboundary Landscapes</option>
+                                    <option value="3">River Basins</option>
+                                    <option value="4">Cryosphere and Atmosphere</option>
+                                    <option value="5">Mountain Environment Regional Information System (MENRIS)</option>
+                                    <option value="6">Himalayan University Consortium (HUC)</option>
+                                </select>
+
+                                <select class="selPartnerLandscape" id="selInitiative" style="max-width:115px;display:none;">
+                                    <optgroup label="Adaptation to Change">
+                                        <option value="1">AdaptHimal</option>
+                                        <option value="2">HICAP</option>
+                                        <option value="3">Himalica</option>
+                                    </optgroup>
+                                    <optgroup label="Transboundary Landscapes">
+                                        <option value="5">Cherrapunjee-Chittagong</option>
+                                        <option value="4">HI-LIFE</option>
+                                        <option value="6">Kailash</option>
+                                        <option value="7">Kangchenjunga</option>
+                                        <option value="8">Karakoram-Pamir</option>
+                                        <option value="36">REDD+</option>
+                                        <option value="30">WCLCDI</option>
+                                    </optgroup>
+                                    <optgroup label="River Basins">
+                                        <option value="22">HI-AWARE</option>
+                                        <option value="10">HYCOS</option>
+                                        <option value="12">Indus</option>
+                                        <option value="11">Koshi</option>
+                                    </optgroup>
+                                    <optgroup label="Cryosphere and Atmosphere">
+                                        <option value="13">Atmosphere</option>
+                                        <option value="14">Cryosphere</option>
+                                    </optgroup>
+                                    <optgroup label="Mountain Environment Regional Information System (MENRIS)">
+                                        <option value="16">Regional Database</option>
+                                        <option value="15">SERVIR Himalaya</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="card-content" style="padding:10px;height:270px">
+                                <ul class="nav nav-tabs tabs-modified" role="tablist">
+                                    <li role="presentation" class="partnerLandscape active"><a href="#RMC1" aria-controls="selRMC" role="tab" data-toggle="tab">RMC</a></li>
+                                    <li role="presentation" class="partnerLandscape"><a href="#RP1" aria-controls="selRp" role="tab" data-toggle="tab">RP</a></li>
+                                    <li role="presentation" class="partnerLandscape"><a href="#Initiative1" aria-controls="selInitiative" role="tab" data-toggle="tab">Initiative</a></li>
+                                </ul>
+
+
+
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active DefaultPadding" id="RMC1" style="text-align:center;">
+                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/1d364f50-a74e-4802-8073-603f43267e43Bhutan.jpg" style="width:auto;height:168px;">
+                                        <!--LOA-Tab Ends-->
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane DefaultPadding" id="RP1" style="text-align:center;">
+                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/4f8e2862-33ea-438f-84ca-c36803f8ce73RP1-1024x1024.jpg" style="width:auto;height:168px;">
+                                        <!--MOU-Tab Ends-->
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane DefaultPadding" id="Initiative1" style="text-align:center;">
+                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/622c39ad-94a8-4ca5-bff0-f22766ef86d0RP1-AdaptHimal-1024x1024.jpg" style="width:auto;height:168px;">
+                                        <!--IC-Tab Ends-->
+                                    </div>
+
+                                    <!-- Container-Fluid Ends -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <!--Card-2 Starts-->
-            <div class="col-md-4">
-                <div class="card" id="card2-main">
-                    <div class="card-header">
+
+            @*Agreements*@
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header2">
                         <!--Card Title-->
                         <span class="card-title">Agreements</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card2"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                         <!--Card-Header Ends-->
                     </div>
-
-                    <div class="card-content">
-
-                        <!--Accordation Starts-->
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                            Recently Initiated
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-
-
-                                        <ul class="nav nav-tabs nav-justified" role="tablist">
-                                            <li role="presentation" class="active"><a href="#LOA-1" aria-controls="home" role="tab" data-toggle="tab">LoA</a></li>
-                                            <li role="presentation"><a href="#MOU-1" aria-controls="profile" role="tab" data-toggle="tab">MoU</a></li>
-                                            <li role="presentation"><a href="#IC-1" aria-controls="profile" role="tab" data-toggle="tab">IC</a></li>
-                                        </ul>
-
-                                        <!-- Tab panes -->
-                                        <div class="tab-content" style="font-size:11px;">
-                                            <div role="tabpanel" class="tab-pane active" id="LOA-1">
-
-                                                <table class="table table-striped">
-                                                    <tr><td>Research Centre for Applied Science and Technology</td></tr>
-                                                    <tr><td>SAARC Business Association of Home Based Workers</td></tr>
-                                                    <tr><td>Research Centre for Applied Science and Technology</td></tr>
-                                                </table>
-
-
-
-
-                                                <!--LOA-Tab Ends-->
-                                            </div>
-
-
-                                            <div role="tabpanel" class="tab-pane" id="MOU-1">
-                                                <p>2</p>
-
-                                                <!--MOU-Tab Ends-->
-                                            </div>
-
-                                            <div role="tabpanel" class="tab-pane" id="IC-1">
-                                                <p>3</p>
-
-                                                <!--IC-Tab Ends-->
-                                            </div>
-
-                                            <!--Tab-content Ends-->
-                                        </div>
-
-
-
-
-
-
-
-
-                                        <!--Panel Body Ends-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Upcoming Closing
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-
-
-                                        <ul class="nav nav-tabs nav-justified" role="tablist">
-                                            <li role="presentation" class="active"><a href="#" aria-controls="home" role="tab" data-toggle="tab">LoA</a></li>
-                                            <li role="presentation"><a href="#" aria-controls="profile" role="tab" data-toggle="tab">MoU</a></li>
-                                            <li role="presentation"><a href="#" aria-controls="profile" role="tab" data-toggle="tab">IC</a></li>
-                                        </ul>
-
-
-                                        <!--Panel Body Ends-->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!--Accordation Ends-->
-                        </div>
-
-
-                        <!--Card-content Ends-->
-                    </div>
-
-                    <!--Card Ends-->
-                </div>
-                <!--Column ends-->
-            </div>
-
-
-            <!--Card-3 Starts-->
-            <div class="col-md-6">
-                <div class="card" id="card3-main">
-                    <div class="card-header">
-                        <!--Card Title-->
-                        <span class="card-title">Updates- July, 2016</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
-                        <!--Card-Header Ends-->
-                    </div>
-
-                    <div class="card-content ">
-                        <div class="row updateTab1">
-
-                            <div class="col-md-1 chartArrows">
-
-                                <div class="updatePrevious" style="padding-top:50px;">
-                                    <a href="#" id="previousUpdate1"><i class="fa fa-chevron-left fa-bold" style="color:black; " aria-hidden="true"></i></a>
-                                </div>
-
-                            </div>
-                            <div class="col-md-10">
-                                <div class="IP">
-                                    <div>
-                                        <h3 class="text-center" style="color:black">Implementation Partnership</h3>
-                                        <div class="updatesCard-1"> <img class="img-responsive" src="https://s7.postimg.org/wtf104ym3/Update1.png"></div>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-center" style="color:black">Geographic Distribution of on-going Implementation Partnership</h3>
-                                        <div class="updatesCard-2">
-                                            <svg version="1.1" id="icimodPartnerMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                 width="100%" height="100%" viewBox="0 0 1165 672" enable-background="new 0 0 1165 672" xml:space="preserve">
-                                            <image overflow="visible" width="1164" height="672" xlink:href="@Url.Content("~/Content/images/icimodmap.jpg")"></image>
-                                            <line fill="none" stroke="#F15A24" x1="881.459" y1="278.483" x2="881.459" y2="117.08" />
-                                            <line fill="none" stroke="#F15A24" x1="880.411" y1="117.08" x2="992.775" y2="117.08" />
-                                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="998.1104" y1="117.0806" x2="1165" y2="117.0806">
-                                            <stop offset="0" style="stop-color:#C8D3DC" />
-                                            <stop offset="0.3413" style="stop-color:#E2E7EC" />
-                                            <stop offset="0.7139" style="stop-color:#F7F9FA" />
-                                            <stop offset="0.956" style="stop-color:#FFFFFF" />
-                                                </linearGradient>
-                                            <rect x="998.11" y="67.207" fill="url(#SVGID_1_)" width="166.89" height="99.748" />
-                                            <text transform="matrix(1 0 0 1 1004.7031 115.1636)" font-family="'MyriadPro-Regular'" font-size="46.0376" id="partnerChina">12</text>
-                                            <text transform="matrix(1 0 0 1 1008.541 151.606)" font-family="'MyriadPro-Regular'" font-size="26.8552">China</text>
-                                            <circle fill="#F15A24" cx="881.459" cy="277.433" r="8.542" />
-                                            <line fill="none" stroke="#F15A24" x1="924.556" y1="262.864" x2="996.333" y2="262.864" />
-                                            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="995.832" y1="262.8652" x2="1162.7207" y2="262.8652">
-                                            <stop offset="0" style="stop-color:#C8D3DC" />
-                                            <stop offset="0.3413" style="stop-color:#E2E7EC" />
-                                            <stop offset="0.7139" style="stop-color:#F7F9FA" />
-                                            <stop offset="0.956" style="stop-color:#FFFFFF" />
-                                                </linearGradient>
-                                            <rect x="995.832" y="212.992" fill="url(#SVGID_2_)" width="166.889" height="99.747" />
-                                            <text transform="matrix(1 0 0 1 1002.4238 260.9487)" font-family="'MyriadPro-Regular'" font-size="46.0376">9</text>
-                                            <text transform="matrix(1 0 0 1 1006.2617 297.3931)" font-family="'MyriadPro-Regular'" font-size="26.8552">Bhutan</text>
-                                            <line fill="none" stroke="#F15A24" x1="645" y1="407.514" x2="998.775" y2="407.514" />
-                                            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="998.1104" y1="407.5156" x2="1165" y2="407.5156">
-                                            <stop offset="0" style="stop-color:#C8D3DC" />
-                                            <stop offset="0.3413" style="stop-color:#E2E7EC" />
-                                            <stop offset="0.7139" style="stop-color:#F7F9FA" />
-                                            <stop offset="0.956" style="stop-color:#FFFFFF" />
-                                                </linearGradient>
-                                            <rect x="998.11" y="357.643" fill="url(#SVGID_3_)" width="166.89" height="99.747" />
-                                            <text transform="matrix(1 0 0 1 1004.7031 405.5957)" font-family="'MyriadPro-Regular'" font-size="46.0376">12</text>
-                                            <text transform="matrix(1 0 0 1 1008.541 442.041)" font-family="'MyriadPro-Regular'" font-size="26.8552">Bangladesh</text>
-                                            <line fill="none" stroke="#F15A24" x1="673.667" y1="554.439" x2="998.772" y2="554.439" />
-                                            <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="998.1074" y1="554.4414" x2="1164.9971" y2="554.4414">
-                                            <stop offset="0" style="stop-color:#C8D3DC" />
-                                            <stop offset="0.3413" style="stop-color:#E2E7EC" />
-                                            <stop offset="0.7139" style="stop-color:#F7F9FA" />
-                                            <stop offset="0.956" style="stop-color:#FFFFFF" />
-                                                </linearGradient>
-                                            <rect x="998.107" y="504.568" fill="url(#SVGID_4_)" width="166.89" height="99.746" />
-                                            <text transform="matrix(1 0 0 1 1004.6992 552.5234)" font-family="'MyriadPro-Regular'" font-size="46.0376">12</text>
-                                            <text transform="matrix(1 0 0 1 1008.5371 588.9668)" font-family="'MyriadPro-Regular'" font-size="26.8552">Myanmar</text>
-                                            <line fill="none" stroke="#F15A24" x1="168.565" y1="117.08" x2="309.703" y2="117.08" />
-                                            <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="0" y1="117.0811" x2="166.8892" y2="117.0811">
-                                            <stop offset="0.033" style="stop-color:#FFFFFF" />
-                                            <stop offset="0.3383" style="stop-color:#F2F4F6" />
-                                            <stop offset="0.9064" style="stop-color:#CED8E0" />
-                                            <stop offset="1" style="stop-color:#C8D3DC" />
-                                                </linearGradient>
-                                            <rect y="67.208" fill="url(#SVGID_5_)" width="166.889" height="99.747" />
-                                            <line fill="none" stroke="#F15A24" x1="924.604" y1="377.37" x2="924.604" y2="263.667" />
-                                            <line fill="none" stroke="#F15A24" x1="625.457" y1="377.37" x2="924.83" y2="377.37" />
-                                            <path fill="#F15A24" d="M625.457,368.458c4.719,0,8.543,3.827,8.543,8.542c0,4.718-3.824,8.542-8.543,8.542
-	                                                c-4.717,0-8.541-3.824-8.541-8.542C616.916,372.285,620.74,368.458,625.457,368.458z" />
-                                            <path fill="#F15A24" d="M643.964,399.558c4.718,0,8.543,3.827,8.543,8.542c0,4.719-3.825,8.542-8.543,8.542
-	                                                c-4.719,0-8.541-3.823-8.541-8.542C635.423,403.385,639.245,399.558,643.964,399.558z" />
-                                            <line fill="none" stroke="#F15A24" x1="674.085" y1="555.007" x2="674.085" y2="480.545" />
-                                            <path fill="#F15A24" d="M674.276,471.65c4.719,0,8.543,3.827,8.543,8.542c0,4.718-3.824,8.542-8.543,8.542
-	                                                c-4.718,0-8.542-3.824-8.542-8.542C665.734,475.478,669.559,471.65,674.276,471.65z" />
-                                            <rect x="7.585" y="82.581" fill="none" width="148.066" height="43.28" />
-                                            <text transform="matrix(1 0 0 1 132.0425 115.2593)" font-family="'MyriadPro-Regular'" font-size="46.0253">2</text>
-                                            <rect x="7.584" y="133.834" fill="none" width="148.063" height="36.444" />
-                                            <text transform="matrix(1 0 0 1 34.8486 152.9023)" font-family="'MyriadPro-Regular'" font-size="26.8566">Afganistan</text>
-                                            <line fill="none" stroke="#F15A24" x1="169.708" y1="261.729" x2="282.071" y2="261.729" />
-                                            <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="0" y1="261.7314" x2="166.8892" y2="261.7314">
-                                            <stop offset="0" style="stop-color:#FFFFFF" />
-                                            <stop offset="1" style="stop-color:#C8D3DC" />
-                                                </linearGradient>
-                                            <rect y="211.858" fill="url(#SVGID_6_)" width="166.889" height="99.747" />
-                                            <rect x="7.585" y="227.231" fill="none" width="148.063" height="43.278" />
-                                            <text transform="matrix(1 0 0 1 132.0391 259.9097)" font-family="'MyriadPro-Regular'" font-size="46.0253">8</text>
-                                            <rect x="7.584" y="278.485" fill="none" width="148.065" height="36.443" />
-                                            <text transform="matrix(1 0 0 1 62.1636 297.5527)" font-family="'MyriadPro-Regular'" font-size="26.8566">Pakistan</text>
-                                            <line fill="none" stroke="#F15A24" x1="166.174" y1="407.514" x2="436.184" y2="407.514" />
-                                            <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="0" y1="407.5156" x2="166.8892" y2="407.5156">
-                                            <stop offset="0" style="stop-color:#FFFFFF" />
-                                            <stop offset="1" style="stop-color:#C8D3DC" />
-                                                </linearGradient>
-                                            <rect y="357.643" fill="url(#SVGID_7_)" width="166.889" height="99.747" />
-                                            <rect x="7.585" y="373.016" fill="none" width="148.063" height="43.277" />
-                                            <text transform="matrix(1 0 0 1 108.4297 405.6934)" font-family="'MyriadPro-Regular'" font-size="46.0253">25</text>
-                                            <rect x="7.584" y="424.269" fill="none" width="148.065" height="36.444" />
-                                            <text transform="matrix(1 0 0 1 99.9507 443.3389)" font-family="'MyriadPro-Regular'" font-size="26.8566">India</text>
-                                            <line fill="none" stroke="#F15A24" x1="165.667" y1="552.164" x2="567.664" y2="552.164" />
-                                            <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="0" y1="552.165" x2="166.8892" y2="552.165">
-                                            <stop offset="0" style="stop-color:#FFFFFF" />
-                                            <stop offset="1" style="stop-color:#C8D3DC" />
-                                                </linearGradient>
-                                            <rect y="502.292" fill="url(#SVGID_8_)" width="166.889" height="99.746" />
-                                            <rect x="7.585" y="517.665" fill="none" width="148.063" height="43.278" />
-                                            <text transform="matrix(1 0 0 1 108.4297 550.3438)" font-family="'MyriadPro-Regular'" font-size="46.0253">22</text>
-                                            <rect x="7.584" y="568.919" fill="none" width="148.065" height="36.443" />
-                                            <text transform="matrix(1 0 0 1 89.9604 587.9883)" font-family="'MyriadPro-Regular'" font-size="26.8566">Nepal</text>
-                                            <line fill="none" stroke="#F15A24" x1="309.703" y1="230.647" x2="309.703" y2="115.942" />
-                                            <line fill="none" stroke="#F15A24" x1="281.09" y1="280.338" x2="281.09" y2="262.062" />
-                                            <line fill="none" stroke="#F15A24" x1="281.09" y1="279.704" x2="353.631" y2="279.704" />
-                                            <path fill="#F15A24" d="M309.611,225.609c4.718,0,8.541,3.828,8.541,8.542c0,4.718-3.823,8.542-8.541,8.542
-	                                                c-4.719,0-8.543-3.824-8.543-8.542C301.068,229.437,304.893,225.609,309.611,225.609z" />
-                                            <path fill="#F15A24" d="M354.373,270.583c4.718,0,8.543,3.828,8.543,8.542c0,4.718-3.825,8.542-8.543,8.542
-	                                                s-8.541-3.824-8.541-8.542C345.832,274.41,349.655,270.583,354.373,270.583z" />
-                                            <path fill="#F15A24" d="M436.081,329.266c4.718,0,8.541,3.828,8.541,8.543c0,4.719-3.823,8.541-8.541,8.541
-	                                                c-4.719,0-8.543-3.822-8.543-8.541C427.538,333.094,431.362,329.266,436.081,329.266z" />
-                                            <line fill="none" stroke="#F15A24" x1="436.184" y1="407.52" x2="436.184" y2="342.93" />
-                                            <line fill="none" stroke="#F15A24" x1="566.94" y1="552.164" x2="566.94" y2="355.263" />
-                                            <path fill="#F15A24" d="M567.031,342.683c4.718,0,8.541,3.827,8.541,8.542c0,4.719-3.823,8.543-8.541,8.543
-	                                                c-4.719,0-8.543-3.824-8.543-8.543C558.488,346.51,562.313,342.683,567.031,342.683z" />
-                                                </svg>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-1 chartArrows">
-                                <div class="updateNext" style="float:right; text-align:center; padding-top:50px;">
-                                    <a href="#" id="nextUpdate1"><i class="fa fa-chevron-right fa-bold" style="color:black;" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-
-                            <!-- Update Tab1 Ends -->
-                        </div>
-
-
-
-
-
-                        <!--Card-content Ends-->
-                    </div>
-
-
-                    <!--Card Ends-->
-                </div>
-                <!--Column ends-->
-            </div>
-
-            <!--Card-4 Starts-->
-            <div class="col-md-6">
-                <div class="card" id="card4-main">
-                    <div class="card-header">
-                        <!--Card Title-->
-                        <span class="card-title">Partners Landscape</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card4"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
-                        <!--Card-Header Ends-->
-                    </div>
-
-                    <div class="card-content">
-
-                        <div class="container-fluid">
-
-
-                            <ul class="nav nav-tabs nav-justified" role="tablist">
-                                <li role="presentation" class="active"><a href="#RMC1" aria-controls="RMC1" role="tab" data-toggle="tab">RMC</a></li>
-                                <li role="presentation"><a href="#RP1" aria-controls="RP1" role="tab" data-toggle="tab">RP</a></li>
-                                <li role="presentation"><a href="#Initiative" aria-controls="Initiative" role="tab" data-toggle="tab">Initiative</a></li>
+                    <div class="card-content" style="padding:10px;height:526px">
+                        <div class="innerContent">
+                            <ul class="nav nav-tabs nav-justified tabs-modified" role="tablist">
+                                <li role="presentation" class="active"><a href="#LOA-1" aria-controls="home" role="tab" data-toggle="tab">LoA</a></li>
+                                <li role="presentation"><a href="#MOU-1" aria-controls="profile" role="tab" data-toggle="tab">MoU</a></li>
+                                <li role="presentation"><a href="#IC-1" aria-controls="profile" role="tab" data-toggle="tab">IC</a></li>
                             </ul>
 
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active DefaultPadding" id="RMC1">
-
-                                    <div class="form-group">
-
-                                        <select class="selectpicker form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                @*LoA tab*@
+                                <div role="tabpanel" class="tab-pane active" id="LOA-1">
+                                    <div style="margin-bottom:10px;">
+                                        <div class="card-header">
+                                            <span style="color:white">Recently Initiated</span>
+                                        </div>
+                                        <div style="height:180px;overflow:auto;">
+                                            <table class="table table-striped" style="font-size:12px;">
+                                                <tr><td>Research Centre for Applied Science and Technology</td></tr>
+                                                <tr><td>SAARC Business Association of Home Based Workers</td></tr>
+                                                <tr><td>Research Centre for Applied Science and Technology</td></tr>
+                                            </table>
+                                        </div>
                                     </div>
 
-                                    <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/1d364f50-a74e-4802-8073-603f43267e43Bhutan.jpg">
-
-                                    <!--LOA-Tab Ends-->
+                                    <div style="margin-bottom:0;">
+                                        <div class=" card-header">
+                                            <span style="color:white">Upcoming Closing</span>
+                                        </div>
+                                        <div style="height:182px;overflow:auto;">
+                                            <table class="table table-striped" style="font-size:12px;">
+                                                <tr><td> Center for International Climate and Environment Research-Oslo</td></tr>
+                                                <tr><td>United Nations Environment Programme (UNEP)/GRID-ARENDAL</td></tr>
+                                                <tr><td>UNEP- World Conservation Monitoring Center</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--LoA-Tab Ends-->
                                 </div>
 
-
-                                <div role="tabpanel" class="tab-pane DefaultPadding" id="RP1">
-
-                                    <div class="form-group">
-
-                                        <select class=" selectpicker form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                @*MoU tab*@
+                                <div role="tabpanel" class="tab-pane" id="MOU-1">
+                                    <div class="card-header">
+                                        <span style="color:white">Recently Initiated</span>
+                                    </div>
+                                    <div style="height:182px;overflow:auto;">
+                                        <table class="table table-striped" style="font-size:12px;">
+                                            <tr><td>1</td></tr>
+                                            <tr><td>2</td></tr>
+                                            <tr><td>3</td></tr>
+                                        </table>
                                     </div>
 
-                                    <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/4f8e2862-33ea-438f-84ca-c36803f8ce73RP1-1024x1024.jpg">
+                                    <div class="card-header">
+                                        <span style="color:white">Upcoming Closing</span>
+                                    </div>
+                                    <div style="height:191px;overflow:auto;">
+                                        <table class="table table-striped" style="font-size:12px;">
+                                            <tr><td>1</td></tr>
+                                            <tr><td>2</td></tr>
+                                            <tr><td>3</td></tr>
+                                        </table>
+                                    </div>
 
                                     <!--MOU-Tab Ends-->
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane DefaultPadding" id="Initiative">
-
-                                    <div class="form-group">
-
-                                        <select class="selectpicker form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                @*IC tab*@
+                                <div role="tabpanel" class="tab-pane" id="IC-1">
+                                    <div class="card-header">
+                                        <span style="color:white">Recently Initiated</span>
+                                    </div>
+                                    <div style="height:182px;overflow:auto;">
+                                        <table class="table table-striped" style="font-size:12px;">
+                                            <tr><td>4</td></tr>
+                                            <tr><td>5</td></tr>
+                                            <tr><td>6</td></tr>
+                                        </table>
                                     </div>
 
-                                    <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/622c39ad-94a8-4ca5-bff0-f22766ef86d0RP1-AdaptHimal-1024x1024.jpg">
+                                    <div class="card-header">
+                                        <span style="color:white">Upcoming Closing</span>
+                                    </div>
+                                    <div style="height:191px;overflow:auto;">
+                                        <table class="table table-striped" style="font-size:12px;">
+                                            <tr><td>4</td></tr>
+                                            <tr><td>5</td></tr>
+                                            <tr><td>6</td></tr>
+                                        </table>
+                                    </div>
 
                                     <!--IC-Tab Ends-->
                                 </div>
 
-                                <!-- Container-Fluid Ends -->
                             </div>
-                            <!--Tab-content Ends-->
+
                         </div>
-
-
-                        <!--Card-content Ends-->
                     </div>
-
-
-
-                    <!--Card Ends-->
                 </div>
-                <!--Column ends-->
             </div>
 
-            <!--Card-5 Starts-->
-            <div class="col-md-12">
-                <div class="card" id="card5-main">
-                    <div class="card-header">
+
+            <div class="col-md-9" style="padding-right:5px;">
+                <div class="card">
+                    <div class="card-header2">
                         <!--Card Title-->
                         <span class="card-title">Chart View</span>
-                        <span class="cardButton"><a href="#" class="cardCollapseLink" id="card5"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
                         <!--Card-Header Ends-->
                     </div>
-
-                    <div class="card-content">
-                        <div class="row container-fluid">
-                            <div class="col-md-12 chartView">
-
-
-                                <!-- ChartView Ends -->
+                    <div class="card-content" style="text-align:center;">
+                        <div class="innerContent">
+                            <div class="col-md-1 chartArrows" style="text-align: center;padding:0;width:35px;">
+                                <a href="#" id="previousChart">
+                                    <div class="circle chartPrevious">
+                                        <i class="fa fa-chevron-left fa-bold" style="color:#fff;" aria-hidden="true"></i>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="col-md-12 selectChartTitle">
-                                <p>Select Charts</p>
-                                <!-- SelectChartTitle Ends -->
-                            </div>
+                            <div class="col-md-10 col-sm-12" style="padding:0;width: calc(100% - 70px);">
 
 
+                                <div class="chartsSelect" style="padding-bottom:15px;">
 
-                            <div class="col-md-1 chartArrows" style="text-align: center;">
-                                <div class="circle chartPrevious">
-                                    <a href="#" id="previousChart"><i class="fa fa-chevron-left fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-md-10 col-sm-12">
-
-
-                                <div class="chartsSelect">
                                     <div>
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                        </div>
                                         <!-- Chart-1 -->
-                                        <div class="chartHolder chart1"></div>
-                                        <div class="chartRadioContainer"><input id="chart1" type="radio" aria-label="..." name="chartGroup" checked="checked"></div>
+                                        <div class="chartHolder chart1">
+
+                                        </div>
                                     </div>
                                     <div>
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                        </div>
                                         <!-- Chart-2 -->
-                                        <div class="chartHolder chart2"></div>
-                                        <div class="chartRadioContainer"><input class="cardRadio" id="chart2" type="radio" aria-label="..." name="chartGroup"></div>
+                                        <div class="chartHolder chart2" style="display:none;"></div>
                                         <!-- Chart-2 Ends-->
                                     </div>
 
                                     <div>
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                        </div>
                                         <!-- Chart-3 -->
-                                        <div class="chartHolder chart3"></div>
-                                        <div class="chartRadioContainer"><input class="cardRadio" id="chart3" type="radio" aria-label="..." name="chartGroup"></div>
+                                        <div class="chartHolder chart3" style="display:none;"></div>
                                         <!-- Chart-3 Ends-->
                                     </div>
 
                                     <div>
-                                        <!-- Chart-4 -->
-                                        <div class="chartHolder chart4"></div>
-                                        <div class="chartRadioContainer">
-                                            <input class="cardRadio" id="chart4" type="radio" aria-label="..." name="chartGroup">
-
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
                                         </div>
+                                        <!-- Chart-4 -->
+                                        <div class="chartHolder chart4" style="display:none;"></div>
+
                                         <!-- Chart-4 Ends -->
                                     </div>
 
                                     <div>
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                        </div>
                                         <!-- Chart-5 -->
-                                        <div class="chartHolder chart5"></div>
-                                        <div class="chartRadioContainer"><input class="cardRadio" id="chart5" type="radio" aria-label="..." name="chartGroup"></div>
+                                        <div class="chartHolder chart5" style="display:none;"></div>
                                         <!-- Chart-5 Ends-->
                                     </div>
                                     <!-- Chart-6 -->
                                     <div>
-                                        <div class="chartHolder chart6"></div>
-                                        <div class="chartRadioContainer"><input class="cardRadio" id="chart6" type="radio" aria-label="..." name="chartGroup"></div>
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                        </div>
+                                        <div class="chartHolder chart6" style="display:none;"></div>
                                         <!-- Chart-6 Ends-->
                                     </div>
 
                                     <div>
-                                        <!-- Chart-7 -->
-                                        <div class="chartHolder chart7"></div>
-                                        <div class="chartRadioContainer">
-                                            <input class="cardRadio" id="chart7" type="radio" style="background-color:white" aria-label="..." name="chartGroup" />
+                                        <div class="chart-zoom">
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
                                         </div>
+                                        <!-- Chart-7 -->
+                                        <div class="chartHolder chart7" style="display:none;"></div>
+
                                         <!-- Chart-7 Ends-->
                                     </div>
 
@@ -631,29 +570,103 @@
 
                             </div>
 
-                            <div class="col-md-1 chartArrows">
-                                <div class="circle chartNext">
-                                    <a href="#" id="nextChart"><i class="fa fa-chevron-right fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
-                                </div>
+                            <div class="col-md-1 chartArrows" style="padding:0;width:35px;position:absolute;right:20px;">
+                                <a href="#" id="nextChart">
+                                    <div class="circle chartNext">
+                                        <i class="fa fa-chevron-right fa-bold" style="color:#fff;" aria-hidden="true"></i>
+                                    </div>
+                                </a>
                             </div>
-
-
-                            <!-- Chart View Row ends -->
-
                         </div>
-                        <h4 class="text-center">Click to Select</h4>
-                        <!--Card-content Ends-->
                     </div>
-
-                    <!--Card Ends-->
                 </div>
-                <!--Column ends-->
             </div>
+
+            <div class="col-md-3">
+                <div class="card" id="card-downloads">
+                    <div class="card-header2">
+                        <!--Card Title-->
+                        <span class="card-title">Downloads</span>
+                        <!--Card-Header Ends-->
+                    </div>
+                    <div class="card-content" style="text-align:center;height:350px;">
+                        <div class="innerContent">
+                            <div class="download-menu-holder" style="width:600px;height:100%">
+                                <div class="download-menu menu-card" style="width:300px;">
+                                    <div class="items" data-controlid="#rmc-report">
+                                        <span>
+                                            <i class="fa fa-globe icon"></i>
+                                            RMC Report
+                                        </span>
+
+                                    </div>
+
+                                    <div class="items" data-controlid="#rc-report">
+                                        <span>
+                                            <i class="fa fa-bullseye icon"></i>
+                                            RP Report
+                                        </span>
+                                    </div>
+
+                                    <div class="items">
+                                        <span>
+                                            <i class="fa fa-users icon" style="font-size: 30px;"></i>
+                                            Partner Profile
+                                        </span>
+
+                                    </div>
+
+                                    <div class="items">
+                                        <span>
+                                            <i class="fa fa-calendar icon"></i>
+                                            Monthly Report
+                                        </span>
+
+                                    </div>
+
+                                    <div class="items">
+                                        <span>
+                                            <i class="fa fa-pie-chart icon"></i>
+                                            Infographics
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="download-submenu menu-card" id="rmc-report" style="width:300px;display:none;">
+                                    <div><i class="fa fa-chevron-left fa-bold menu-back"></i></div>
+                                    <div class="items"><a href="#">Afganistan</a></div>
+                                    <div class="items"><a href="#">Bangladesh</a></div>
+                                    <div class="items"><a href="#">Bhutan</a></div>
+                                    <div class="items"><a href="#">China</a></div>
+                                    <div class="items"><a href="#">India</a></div>
+                                    <div class="items"><a href="#">Myanmar</a></div>
+                                    <div class="items"><a href="#">Nepal</a></div>
+                                    <div class="items"><a href="#">Pakistan</a></div>
+                                </div>
+
+                                <div class="download-submenu menu-card" id="rc-report" style="width:300px; display:none;">
+                                    <div><i class="fa fa-chevron-left fa-bold menu-back"></i></div>
+                                    <div class="items"><a href="#">Adaptation to Change</a></div>
+                                    <div class="items"><a href="#">Transboundary Landscapes</a></div>
+                                    <div class="items"><a href="#">River Basins</a></div>
+                                    <div class="items"><a href="#">Cryosphere & Atmosphere</a></div>
+                                    <div class="items"><a href="#">MENRIS</a></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!--Card-6 Starts-->
             <div class="col-md-12">
                 <div class="card" id="card6-main">
-                    <div class="card-header">
+                    <div class="card-header2">
                         <!--Card Title-->
                         <span class="card-title">Maps</span>
                         <span class="cardButton"><a href="#" class="cardCollapseLink" id="card6"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span>
@@ -661,50 +674,56 @@
                     </div>
 
                     <div class="card-content">
-                        <ul class="nav nav-tabs nav-justified" role="tablist">
-                            <li role="presentation" class="active"><a href="#General" aria-controls="General" role="tab" data-toggle="tab">RMC</a></li>
-                            <li role="presentation"><a href="#WA" aria-controls="WA" role="tab" data-toggle="tab">Working area</a></li>
+                        <div style="z-index: 9999; position: absolute; right: 40px; width: 170px; bottom: 295px;font-size:13px">
+                            <div style="margin-bottom:10px;">
+                                <select id="generalSelect" style=" width: 100%; border: 1px solid #a5a5a5; border-radius: 3px; padding: 4px; font-size: 12px;">
+                                    <option>HICAP</option>
+                                    <option>HI-AWARE</option>
+                                    <option>Hi-LIFE</option>
+                                    <option>4</option>
+                                </select>
 
-                        </ul>
-
-
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active DefaultPadding" id="General">
-
-                                <div class="form-group">
-
-                                    <select class="selectpicker form-control" id="generalSelect">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
+                                
+                            </div>
+                            <div style="margin-bottom:10px;">
+                                <select id="workAreaSelect" style=" width: 100%; border: 1px solid #a5a5a5; border-radius: 3px; padding: 4px; font-size: 12px;">
+                                    <option>HKH</option>
+                                    <option>Karakoram</option>
+                                    <option>Kailash</option>
+                                    <option>Kanchenjunga</option>
+                                </select>
+                            </div>
+                            <div style="padding:10px;border-radius:3px;border:1px solid #a5a5a5; background-color:rgba(255,255,255,0.9);">
+                                <div >
+                                    <span><input type="checkbox" style="margin-right:8px;" />Focal Agencies</span>
                                 </div>
+                                <div>
+                                    <span><input type="checkbox" style="margin-right:8px;" />HKH Outline</span>
+                                </div>
+                                <div>
+                                    <span><input type="checkbox" style="margin-right:8px;" />Major River Basins</span>
+                                </div>
+                            </div>
+                        </div>
 
-                                <p>Add Map Chart</p>
+                        <div id="generalMap" style="width:100%;height:450px;">
 
-                                <!--LOA-Tab Ends-->
+                        </div>
+
+                        <div style="z-index: 9999; position: absolute; left: 40px; width: 200px; bottom: 24px; padding:10px;  border: 1px solid #a5a5a5; background-color: rgba(255,255,255,0.9); border-radius:3px">
+                            <div style="margin-bottom:10px;font-size:15px;font-weight:bold">Legends</div>
+
+                            <div style="margin:0 0 4px 10px;">
+                                <span style="font-size:13px"><img src='@Url.Content("~/Content/Images/focalPoint.png")' st="" style="width:16px;height:auto;margin-right:10px;" title="Country Focal Agency">Country Focal Agency</span>
+                            </div>
+
+                            <div style="margin:0 0 4px 10px;">
+                                <span style="font-size:13px"><img src='@Url.Content("~/Content/Images/red-point.png")' st="" style="width:12px;height:auto;margin-right:15px;" title="Partners">Partners</span>
                             </div>
 
 
-                            <div role="tabpanel" class="tab-pane DefaultPadding" id="WA">
-
-                                <div class="form-group">
-
-                                    <select class=" selectpicker form-control" id="waSelect">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </div>
-
-                                <p>Add Map Chart</p>
-                                <!--MOU-Tab Ends-->
-                            </div>
 
 
-                            <!-- Container-Fluid Ends -->
                         </div>
                         <!--Tab-content Ends-->
                     </div>
@@ -734,6 +753,87 @@
 <!--Content row ends-->
 </div>
 
+@section scripts{
 
+    <script>
+        $(document).ready(function () {
+            $('.partnerLandscape').click(function () {
+                $('.selPartnerLandscape').hide();
+                $('#' + $('a', this).attr('aria-controls')).show();
+            })
+
+
+
+            $('.download-menu .items').click(function () {
+                var w = $('.download-menu').width() + 20;
+                $('.download-submenu').hide();
+                $($(this).attr('data-controlid')).show();
+                $('.download-menu-holder').css('transform', 'translate(-' + w + 'px,0px)');
+            })
+
+            $('.download-submenu .menu-back').click(function () {
+                $('.download-menu-holder').css('transform', 'translate(0,0px)');
+
+            })
+
+            chart1('.chart7');
+            chart2('.chart6');
+            chart3('.chart3');
+            chart4('.chart4');
+            chart5('.chart5');
+            chart6('.chart2');
+            chart7('.chart1');
+
+
+
+            $('.chartsSelect').slick({
+                centerMode: false,
+                infinite: false,
+                variableWidth: true,
+                //autoplay: true,
+                prevArrow: $('#previousChart'),
+                nextArrow: $('#nextChart'),
+
+                slidesToShow: 3,
+
+                responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+                ]
+
+            });
+            $('.chartHolder').show();
+            $('.chart-zoom').show();
+
+            map = new google.maps.Map(document.getElementById('generalMap'), {
+                center: { lat: 27.6965, lng: 85.3288 },
+                zoom: 4
+            });
+        })
+    </script>
+}
 
 

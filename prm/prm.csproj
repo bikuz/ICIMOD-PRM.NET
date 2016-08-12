@@ -20,7 +20,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -149,26 +148,28 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\banner2.jpg" />
     <Content Include="Content\images\contract.ico" />
+    <Content Include="Content\images\countries.png" />
     <Content Include="Content\images\Excel.ico" />
-    <Content Include="Content\images\excel.png" />
     <Content Include="Content\images\flag.ico" />
+    <Content Include="Content\images\focalPoint.png" />
+    <Content Include="Content\images\for-mountain.png" />
     <Content Include="Content\images\Home.png" />
+    <Content Include="Content\images\icimod-logo-m.png" />
+    <Content Include="Content\images\icimod-prm.png" />
     <Content Include="Content\images\icimodmap.jpg" />
     <Content Include="Content\images\idea.ico" />
     <Content Include="Content\images\initiative.png" />
     <Content Include="Content\images\instrument.png" />
-    <Content Include="Content\images\Logo.png" />
-    <Content Include="Content\images\logoCollapsed.png" />
-    <Content Include="Content\images\Mountain.png" />
+    <Content Include="Content\images\logo-icimod.png" />
     <Content Include="Content\images\Partner.png" />
     <Content Include="Content\images\PDF.ico" />
-    <Content Include="Content\images\Pdf.png" />
+    <Content Include="Content\images\prm.png" />
+    <Content Include="Content\images\red-point.png" />
     <Content Include="Content\images\RMC.png" />
     <Content Include="Content\images\RP.png" />
-    <Content Include="Content\images\Update1.png" />
-    <Content Include="Content\images\update2.png" />
-    <Content Include="Content\images\Word_Icon.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -234,9 +235,7 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -247,7 +246,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\oldIndex.cshtml" />
     <Content Include="Views\InstitutionalProfile\AddPartner.cshtml" />
     <Content Include="Views\InitialAgreement\AddDonor.cshtml" />
     <Content Include="Views\PartnershipAgreement\ImportDeliverable.cshtml" />
@@ -275,9 +274,7 @@
     <Content Include="Views\RP\ViewProfile.cshtml" />
     <Content Include="Views\RP\ViewRP.cshtml" />
     <Content Include="Views\InitialAgreement\ClausesIndex.cshtml" />
-    <Content Include="Views\Other\PartnerLandscape.cshtml" />
-    <Content Include="Views\Other\AddNews.cshtml" />
-    <Content Include="Views\Other\UpdateExchangeRate.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

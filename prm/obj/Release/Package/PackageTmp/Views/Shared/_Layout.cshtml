@@ -4,33 +4,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
-  
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    
 
-    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+
+
     <!-- Slider for charts CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-   
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 
     @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 </head>
 <body>
- 
+
     <div class="wrapper" id="wrapper">
         <div class="nav-side-menu">
 
-            <div class="brand" id='logo'><img src=@Url.Content("~/Content/images/Logo.png") style="width: 290px;height: 178px;" /></div>
-            <div class="brand" id='logoCollapsed'><img src=@Url.Content("~/Content/images/logoCollapsed.png") style="width: 108px;height: 178px;" /></div>
+            <div class="brand" id='logo'>
+                <div style="position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.2)">
+                    <img src='@Url.Content("~/Content/images/logo-icimod.png")' style="width:185px;height: 65px;" />
+                    <div style="margin-top: 90px;">
+                        <img src='@Url.Content("~/Content/images/for-mountain.png")' style="width: 220px;height: 35px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="brand" id='logoCollapsed'><img src='@Url.Content("~/Content/images/icimod-logo-vertical.png")' style="width: 65px;height: 208px;" /></div>
 
-           
-           
+
+
             <div class="menu-list">
 
                 <ul id="menu-content" class="menu-content collapse out">
@@ -54,7 +62,7 @@
                         var partners = "collapsed";
                         var Partner_aria = false;
                         var Partner_visible = "";
-                        if (ViewBag.Partners != null & ViewBag.Partners=="active")
+                        if (ViewBag.Partners != null & ViewBag.Partners == "active")
                         {
                             partners = ViewBag.Partners;
                             Partner_aria = true;
@@ -67,7 +75,7 @@
                             <!-- <i class="fa fa-users fa-2x"></i> -->
                             <i class="partner"></i>
                             <span class="menu-names">
-                                Partners
+                                Partner Information
 
                             </span>
                             <span class="arrow"></span>
@@ -174,7 +182,7 @@
                             <!-- <i class="fa fa-map fa-2x"></i> -->
                             <i class="RP"></i>
                             <span class="menu-names">
-                                RP
+                                Regional Programme
                             </span>
                             <span class="arrow"></span>
                             <span class="down-arrow"></span>
@@ -205,7 +213,7 @@
                             <i class="RMC"></i>
 
                             <span class="menu-names">
-                                RMC
+                                Regional Member Country
 
                             </span>
                             <span class="arrow"></span>
@@ -234,7 +242,7 @@
                     <li data-toggle="collapse" data-target="#other" class="@Other" aria-expanded="@Other_aria">
                         <a href="javascript:void(0">
                             <i class="fa fa-file fa-2x"></i><span class="menu-names">
-                                Other
+                                Customized Reporting
 
                             </span>
                             <span class="arrow"></span>
@@ -252,7 +260,7 @@
                         <li class="elem"><a href="#">Add News</a></li>
                         <li class="elem"><a href="#">Update Exchange Rate</a></li>
                         <li class="elem @ViewBag.Other_AddClauses"><a href='@Url.Action("AddClauses", "InitialAgreement")'>Add Clauses</a></li>
-                        <li class="elem"><a href='#'>Recent Clauses List</a></li>
+                        <li class="elem @ViewBag.ClausesIndex"><a href=' @Url.Action("ClausesIndex", "InitialAgreement") '>Recent Clauses List</a></li>
                     </ul>
                 </ul>
 
@@ -270,13 +278,24 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" id="menu-toggle">
+                        <a href="#menu-toggle" id="menu-toggle" style="color:white;" class="header-btn">
                             <span style="float: left;">
                                 <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                             </span>
                         </a>
+
+                        <div id="head-prm" style="color:white;position:absolute;top: 0;left: 63px;font-size:20px;width: auto;height: auto;display:none;">
+                            <img id="prm-logo" src='@Url.Content("~/Content/images/prm.png")'>
+                            <div style="font-size:10px;margin-top: -6px;">PARTNERSHIP FOR SUSTAINABLE MOUNTAIN DEVELOPEMNT</div>
+                        </div>
+
                         <!--Signout Button (To be added)-->
-                        <a href="#"><span style="float: right;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></span></a>
+                        <a href="#" class="header-btn" style="color:white;float: right;">
+                            <label id="userID">PRM</label>
+                            <span>
+                                <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                            </span>
+                        </a>
 
                     </div>
 
@@ -289,7 +308,7 @@
         </div>
 
 
-        <div class="content" style="position:relative;top:55px;">
+        <div class="content" style="position:relative;">
             @RenderBody()
         </div>
 
@@ -299,311 +318,157 @@
     </div>
 
 
-    
+
 
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
     @Scripts.Render("~/Scripts/CustomChart.js")
-    @RenderSection("scripts", required: false)
+
+   
 
     <script>
         $(document).ready(function () {
-            
-
-            var PageChart = true;
-
-            // Data Table for View Partner List Page
-            
-            $('#example').DataTable({
-
-                "dom": '<"row"<"col-md-12"f><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
-            });
-
-             $('#example2').DataTable({
-
-                "dom": '<"row"<"col-md-12"f><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
-            });
-                
-                
 
 
+            var scroll_start = 0;
+            var startchange = $("#main_content");
+            var offset = startchange.offset();
 
-            // Data Table for PartnershipInstrument/PartnershipProfile Page
-
-
-
-              var AgreementTable = $('#Agreement').DataTable({
-
-                "dom": '<"row"<"col-md-12"f><"advanceSearch"><"ColumnSH"><"col-md-12"i><"col-md-6"l><"col-md-6"p>t>'
-            });
-
-             $( ".tempColumnSH" ).appendTo( ".ColumnSH" );
-              $( ".tempAdvanceSearch" ).appendTo( ".advanceSearch" );
-
-               $('.toggle-vis').on( 'click', function (e) {
-        
- 
-        // Get the column API object
-        var column = AgreementTable.column( $(this).attr('data-column') );
- 
-        // Toggle the visibility
-        column.visible( ! column.visible() );
-    } );
-                
-
-                $('#advanceSearchBtn').click(function(e) {
-                        e.preventDefault();
-                        console.log("I am awesome");
-                        $(".advanceContent").toggleClass("toggled");
-
-                });
-
-                $('#advanceClose').click(function(e){
-                    e.preventDefault();
-                    $(".advanceContent").removeClass("toggled");
-                });
-         // Data Table for PartnershipInstrument/PartnershipProfile Page Ends
-
-
-            //Function for adding box shadow effect while scrolling 
-            $(window).scroll(function () {
-                var sc = $(window).scrollTop()
-                    if (sc > 5) {
-                        $("#header").addClass('shadow')
+            if (startchange.length) {
+                $(document).scroll(function () {
+                    scroll_start = $(this).scrollTop();
+                    if (scroll_start > (offset.top - 65)) {
+                        $(".main-header").css('background-color', '#061456');
+                        $('.header-btn').css('color', 'white');
+                        $('#head-prm').show();
+                        $("#header").addClass('shadow');
                     } else {
-                        $("#header").removeClass('shadow')
+                        $('.main-header').css('background-color', 'transparent');
+                        $('.header-btn').css('color', 'white');
+                        $('#head-prm').hide();
+                        $("#header").removeClass('shadow');
                     }
-            });
+                });
+            }
 
 
+            resize_Elements();
 
+            function resize_Elements() {
+                resize_downloadcard_menu();
+
+            }
+
+            function resize_downloadcard_menu() {
+                //resize download menu and submenu
+                var oldWidth = $('#card-downloads .menu-card').width();
+                var newWidth = $('#card-downloads').width() - 30;
+                var delWidth = newWidth - oldWidth;
+                $('#card-downloads .menu-card').width(newWidth);
+                $('.download-menu-holder').width(newWidth * 3);
+                //fix download menu and submenu translate value while resize
+                var elem_transform = $('.download-menu-holder').css('-transform');
+                if (elem_transform != 'none' & elem_transform != undefined) {
+                    var currTrans = $('.download-menu-holder').css('transform').split(/[()]/)[1];
+                    var posx = currTrans.split(',')[4];
+                    if (posx < 0) {
+                        $('.download-menu-holder').addClass('notransition');
+                        $('.download-menu-holder').css('transform', 'translate(' + (posx - delWidth) + 'px,0px)');
+                        $('.download-menu-holder').removeClass('notransition');
+                    }
+                    else {
+                        $('.download-submenu').hide();
+                    }
+                }
+
+
+            }
 
             //handling side menu-names when the screen is resized
-                $(window).resize(function(){
-                   if((Modernizr.mq('(max-width: 1001px)')))
-                        {   
+            $(window).resize(function () {
+                resize_Elements();
+                if ((Modernizr.mq('(max-width: 1001px)'))) {
+                    $('.menu-names').css('display', 'inherit');
 
-                       $('.menu-names').css('display', 'inherit');   
+                } else {
+                    $("#wrapper").removeClass('toggled');
+                }
 
-                    } else {        
-                                  
-                        $("#wrapper").removeClass('toggled'); 
-
-                    } 
-                
-                });
+            });
 
             //Handling menu toggle click
-                $("#menu-toggle").click(function (e) {
+            $("#menu-toggle").click(function (e) {
                 e.preventDefault();
-               
-                //switching the  display to none when the screen size is of a desktop
-                if((Modernizr.mq('(min-width: 1001px)')))
-                {   
 
-                       $('.menu-names').css('display', 'none');           
-                } 
-                
+                //switching the  display to none when the screen size is of a desktop
+                if ((Modernizr.mq('(min-width: 1001px)'))) {
+
+                    $('.menu-names').css('display', 'none');
+                }
 
                 $('.collapse').collapse('hide');
                 $("#wrapper").toggleClass("toggled");
 
-               
-                $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
-                function(e) {
+                resize_Elements();
+                $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+                function (e) {
+                    resize_Elements();
                     //after the animation ends switching display for menu-names based on it's state
-                if((Modernizr.mq('(min-width: 1001px)')))
-                {   
-                    if ($('.nav-side-menu').width() == 300) {
-                    $('.menu-names').css('display', 'inherit');
-                } else {
-                    $('.menu-names').css('display', 'none');
-                }
-            }                     
-                   
+                    if ((Modernizr.mq('(min-width: 1001px)'))) {
+                        if ($('.nav-side-menu').width() == 250) {
+                            $('.menu-names').css('display', 'inherit');
+                        } else {
+                            $('.menu-names').css('display', 'none');
+                        }
+                    }
 
-                    });
 
-                if(PageChart){
-                    //Rerendering of chart on toggle- To be updated to suit all charts
-                chart1('.chartView'); 
-                }
-               
-
+                });
 
             });
 
-        //Handling when user tries to open the menu item when the side bar is collapsed
+            //Handling when user tries to open the menu item when the side bar is collapsed
             $(".collapsed").click(function (e) {
                 console.log($('.nav-side-menu').width());
                 if ($('.nav-side-menu').width() == 100) {
                     $('.menu-names').css('display', 'none');
                     $("#wrapper").toggleClass("toggled");
-                     $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
-                        function(e) {
+                    $('.nav-side-menu').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+                       function (e) {
 
-                        $('.menu-names').css('display', 'inherit');
-                    
-                    });
+                           $('.menu-names').css('display', 'inherit');
+
+                       });
                 };
             });
 
-        //Collapse card hieght
-            $('.cardCollapseLink').click(function (e) {
-
-                
-                 e.preventDefault();
-
-                var id = '#' + e.currentTarget.id + '-main';
-                var card = e.currentTarget.id;
-                
-                if ($(id).height() === 90) {
-                    autoHeightAnimate($(id), 500);
-                    
-                } else {
-                     $(id).animate({height: "90px"}, 500, function(){
-                        $(id).addClass('visibility');
-                     });
-
-                }
-
-                
-                
-
-            });
-
-        // handling Radio Card Change Event
-            $('input[type=radio][name=chartGroup]').change(function() {
-                    window[this.id]('.chartView');
-
-            });
+            
         })
-        //Function to animate the auto-height from collapsed height
-        function autoHeightAnimate(element, time){
-            var curHeight = element.height(), // Get Default Height
-            autoHeight = element.css('height', 'auto').height(); // Get Auto Height
-            element.height(curHeight); // Reset to Default Height
-            element.stop().animate({ height: autoHeight }, time, function() {
-                //after the animation completes change the height to auto
-                
-                element.removeClass('visibility');
-                element.height('auto');
 
-            }); // Animate to Auto Height
-            }
 
     </script>
 
-<!-- Slider for charts-->
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-
-<!-- custom script for Index Page/Charts -->
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        chart1('.chart1');
-        chart1('.chartView');
-        chart2('.chart2');
-        chart3('.chart3');
-        chart4('.chart4');
-        chart5('.chart5');
-        chart6('.chart6');
-        chart7('.chart7');
-
-
-
-      $('.chartsSelect').slick({
-    centerMode: true,
-    infinite: true,
-    variableWidth: true,
-    prevArrow: $('#previousChart'),
-    nextArrow: $('#nextChart'),
+    @RenderSection("scripts", required: false)
     
-    slidesToShow: 3,
-
-    responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-
-      });
-
-
-     $('.IP').slick({
-   
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true,
-  autoplay: true,
-  prevArrow: $('#previousUpdate1'),
-    nextArrow: $('#nextUpdate1'),
-}); 
-
-     $('.IC').slick({
-   
-  infinite: true,
-  speed: 300,
-  slidesToShow: 2,
-  adaptiveHeight: true,
-  autoplay: true,
-  prevArrow: $('#previousUpdate2'),
-    nextArrow: $('#nextUpdate2'),
-}); 
-
-     $('.OP').slick({
-   
-  infinite: true,
-  speed: 300,
-  slidesToShow: 3,
-  adaptiveHeight: true,
-  autoplay: true,
-  prevArrow: $('#previousUpdate3'),
-    nextArrow: $('#nextUpdate3'),
-}); 
-    });
-  </script>
-
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
 
 
-<!-- Temporary Chart Script -->
-<script type="text/javascript">
-  // Each function to load multiple charts  
 
-
-</script>
 </body>
 </html>
+

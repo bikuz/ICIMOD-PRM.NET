@@ -1,10 +1,18 @@
   function chart1(ChartName) {
-    $(ChartName).highcharts({
+      $(ChartName).highcharts({
+          credits: {
+              enabled: false
+          },
+          exporting: {
+              enabled: false
+          },
         chart: {
             zoomType: 'xy'
         },
         title: {
-            text: 'Temperature vs Rainfall'
+            text: 'Temperature vs Rainfall',
+            style: {"font-size":"14px","font-weight":"normal"}
+
         },
         xAxis: [{
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -72,7 +80,10 @@
             tooltip: {
                 pointFormat: '(error range: {point.low}-{point.high}°C)<br/>'
             }
-        }]
+        }],
+        legend: {
+            itemStyle: { 'fontWeight': 'normal' }
+        }
     });
 };
 
@@ -82,6 +93,12 @@
 
 function chart2(chartName) {
     $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 0,
@@ -91,7 +108,8 @@ function chart2(chartName) {
             text: 'Browser<br>shares<br>2015',
             align: 'center',
             verticalAlign: 'middle',
-            y: 40
+            y: 40,
+            style: { "font-size": "14px", "font-weight": "normal" }
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -130,7 +148,10 @@ function chart2(chartName) {
                     }
                 }
             ]
-        }]
+        }],
+        legend: {
+            itemStyle: { 'fontWeight': 'normal' }
+        }
     });
 };
 
@@ -139,11 +160,18 @@ function chart2(chartName) {
 // chart2
 function chart3(chartName) {
     $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
         chart: {
             type: 'spline'
         },
         title: {
-            text: 'Snow depth at Vikjafjellet, Norway'
+            text: 'Snow depth at Vikjafjellet, Norway',
+            style: { "font-size": "14px", "font-weight": "normal" }
         },
         subtitle: {
             text: 'Irregular time data in Highcharts JS'
@@ -245,19 +273,29 @@ function chart3(chartName) {
                 [Date.UTC(1971, 5, 15), 1.49],
                 [Date.UTC(1971, 5, 23), 1.08]
             ]
-        }]
+        }],
+        legend: {
+            itemStyle: { 'fontWeight': 'normal' }
+        }
     });
 };
 
 
 function chart4(chartName) {
     $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
         chart: {
             type: 'scatter',
             zoomType: 'xy'
         },
         title: {
-            text: 'Height Versus Weight of 507 Individuals by Gender'
+            text: 'Height Versus Weight of 507 Individuals by Gender',
+            style: { "font-size": "14px", "font-weight": "normal" }
         },
         subtitle: {
             text: 'Source: Heinz  2003'
@@ -419,7 +457,10 @@ function chart4(chartName) {
                 [180.3, 73.2], [167.6, 76.3], [183.0, 65.9], [183.0, 90.9], [179.1, 89.1],
                 [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
                 [180.3, 83.2], [180.3, 83.2]]
-        }]
+        }],
+        legend: {
+            itemStyle: { 'fontWeight': 'normal' }
+        }
     });
 };
 
@@ -431,12 +472,19 @@ function chart5(chartName) {
             '70-74', '75-79', '80-84', '85-89', '90-94',
             '95-99', '100 + '];
     
-        $(chartName).highcharts({
+    $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
             chart: {
                 type: 'bar'
             },
             title: {
-                text: 'Population pyramid for Germany, 2015'
+                text: 'Population pyramid for Germany, 2015',
+                style: { "font-size": "14px", "font-weight": "normal" }
             },
             subtitle: {
                 text: 'Source: <a href="http://populationpyramid.net/germany/2015/">Population Pyramids of the World from 1950 to 2100</a>'
@@ -490,7 +538,10 @@ function chart5(chartName) {
                 data: [2.1, 2.0, 2.2, 2.4, 2.6, 3.0, 3.1, 2.9,
                     3.1, 4.1, 4.3, 3.6, 3.4, 2.6, 2.9, 2.9,
                     1.8, 1.2, 0.6, 0.1, 0.0]
-            }]
+            }],
+            legend: {
+                itemStyle: { 'fontWeight': 'normal' }
+            }
         });
     
 
@@ -503,7 +554,13 @@ function chart6(chartName) {
     
 
         // Build the chart
-        $(chartName).highcharts({
+    $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
@@ -511,7 +568,8 @@ function chart6(chartName) {
                 type: 'pie'
             },
             title: {
-                text: 'Browser market shares January, 2015 to May, 2015'
+                text: 'Browser market shares January, 2015 to May, 2015',
+                style: { 'font-size': '14px' }
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -550,20 +608,30 @@ function chart6(chartName) {
                     name: 'Proprietary or Undetectable',
                     y: 0.2
                 }]
-            }]
+            }],
+            legend: {
+                itemStyle: { 'fontWeight': 'normal' }
+            }
         });
 };
 
 
 function chart7(chartName) {
     $(chartName).highcharts({
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
 
         chart: {
             type: 'column'
         },
 
         title: {
-            text: 'Total fruit consumtion, grouped by gender'
+            text: 'Total fruit consumtion, grouped by gender',
+            style: { 'font-size': '14px' }
         },
 
         xAxis: {
@@ -608,7 +676,10 @@ function chart7(chartName) {
             name: 'Janet',
             data: [3, 0, 4, 4, 3],
             stack: 'female'
-        }]
+        }],
+        legend: {
+            itemStyle: { 'fontWeight': 'normal' }
+        }
     });
 };
 
