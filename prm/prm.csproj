@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,6 +151,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\contract.ico" />
     <Content Include="Content\images\Excel.ico" />
+    <Content Include="Content\images\excel.png" />
     <Content Include="Content\images\flag.ico" />
     <Content Include="Content\images\Home.png" />
     <Content Include="Content\images\icimodmap.jpg" />
@@ -161,10 +163,12 @@
     <Content Include="Content\images\Mountain.png" />
     <Content Include="Content\images\Partner.png" />
     <Content Include="Content\images\PDF.ico" />
+    <Content Include="Content\images\Pdf.png" />
     <Content Include="Content\images\RMC.png" />
     <Content Include="Content\images\RP.png" />
     <Content Include="Content\images\Update1.png" />
     <Content Include="Content\images\update2.png" />
+    <Content Include="Content\images\Word_Icon.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -230,7 +234,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

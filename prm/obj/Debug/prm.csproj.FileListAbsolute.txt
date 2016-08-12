@@ -64,3 +64,36 @@ D:\WORKING\PROGRAMMING\ASP.NET\ICIMOD\icimod project\PRM\gitRepo\ICIMOD-PRM.NET\
 D:\WORKING\PROGRAMMING\ASP.NET\ICIMOD\icimod project\PRM\gitRepo\ICIMOD-PRM.NET\prm\obj\Debug\prm.csprojResolveAssemblyReference.cache
 D:\WORKING\PROGRAMMING\ASP.NET\ICIMOD\icimod project\PRM\gitRepo\ICIMOD-PRM.NET\prm\obj\Debug\prm.dll
 D:\WORKING\PROGRAMMING\ASP.NET\ICIMOD\icimod project\PRM\gitRepo\ICIMOD-PRM.NET\prm\obj\Debug\prm.pdb
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\prm.dll.config
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\prm.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\prm.pdb
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\Antlr3.Runtime.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\Microsoft.Web.Infrastructure.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\Newtonsoft.Json.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.Formatting.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.WebRequest.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Http.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Http.WebHost.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Mvc.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Optimization.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Providers.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Razor.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Deployment.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Razor.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\WebGrease.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\Newtonsoft.Json.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.Formatting.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Net.Http.WebRequest.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Http.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Http.WebHost.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Mvc.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.Razor.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Deployment.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Razor.xml
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\obj\Debug\prm.csprojResolveAssemblyReference.cache
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\obj\Debug\prm.dll
+F:\Files From Bikram ji\ICIMOD-PRM.NET\prm\obj\Debug\prm.pdb
