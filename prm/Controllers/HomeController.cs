@@ -22,5 +22,11 @@ namespace prm.Controllers
             return View();
         }
 
+        public ActionResult newIndex()
+        {
+            ViewBag.Home = "active";
+            return View();
+        }
+
     }
 }
