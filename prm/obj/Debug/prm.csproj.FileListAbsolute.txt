@@ -18,6 +18,7 @@ E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.dll
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Razor.dll
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\WebGrease.dll
+E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\EntityFramework.dll
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\Newtonsoft.Json.xml
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Net.Http.xml
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Net.Http.Formatting.xml
@@ -28,6 +29,7 @@ E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Web.Razor.xml
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Deployment.xml
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\System.Web.WebPages.Razor.xml
+E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\bin\EntityFramework.xml
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\obj\Debug\prm.csprojResolveAssemblyReference.cache
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\obj\Debug\prm.dll
 E:\Projects\Saurabh's Projects\UX design\FinalCode\ICIMOD-PRM.NET\prm\obj\Debug\prm.pdb

@@ -23,23 +23,5 @@ namespace prm.Controllers
             ViewBag.CustomizedReport = "active";
             return View();
         }
-        public ActionResult PartnerLandscape()
-        {
-            ViewBag.Other = "active";
-            ViewBag.PartnerLandscape = "active";
-            return View();
-        }
-        public ActionResult AddNews()
-        {
-            ViewBag.Other = "active";
-            ViewBag.AddNews = "active";
-            return View();
-        }
-        public ActionResult UpdateExchangeRate()
-        {
-            ViewBag.Other = "active";
-            ViewBag.UpdateExchangeRate = "active";
-            return View();
-        }
     }
 }
