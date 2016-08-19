@@ -1,53 +1,12 @@
 ﻿@{
     ViewBag.Title = "ICIMOD-PRM";
 }
-<style type="text/css">
-    #card1-main .card-content {
-        min-height: 300px;
-    }
-
-
-    #card2-main .card-content {
-        min-height: 300px;
-    }
-
-    #card3-main .card-content {
-        min-height: 450px;
-    }
-
-    #card4-main .card-content {
-        min-height: 450px;
-    }
-
-    .updatesCard-1 {
-        text-align: center;
-        padding-left: 50px;
-    }
-
-    .geoImage {
-        height: 250px;
-        width: 450px;
-        margin-top: 40px;
-    }
 
 
 
-    /*.zoom-modal:hover:before {
-        display: block;
-        width: 18px;
-        height: 18px;
-        background-color: #5B76AD;
-        border-radius: 9px;
-
-        padding: 4px;
-        position: relative;
-    }*/
-</style>
-
-
-<div class="main-image">
+<div id="main-image" class="main-image">
     <div style="position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.2)">
-        <div style="color:white;position:absolute;bottom:0;left:0;padding:15px;font-size:20px; width:100%;height:65px;background-color:rgba(0,0,0,0.5)">
+        <div id="prm_img"style="color:white;position:absolute;bottom:0;left:0;padding:15px;font-size:20px; width:100%;height:65px;background-color:rgba(0,0,0,0.5)">
             <img id="prm-logo" src=@Url.Content("~/Content/images/prm.png") />
             <div style="font-size:10px;">PARTNERSHIP FOR SUSTAINABLE MOUNTAIN DEVELOPEMNT</div>
             <div style="position: absolute; right: 20px; bottom: 8px"><img src='@Url.Content("~/Content/images/countries.png")' style="width:auto;height:20px;" /></div>
@@ -158,10 +117,10 @@
                                 <span class="card-title">UPDATES- JULY, 2016</span>
                                 <!--Card-Header Ends-->
 
-                                <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="icimod_partnerMap" style="float:right;"></span>
 
                             </div>
-                            <div class="card-content" style="padding:10px;height:270px">
+                            <div id="icimod_partnerMap" class="card-content" style="padding:10px;height:270px">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="implementPartnerMap" x="0px" y="0px"
                                      width="100%" height="250px" viewBox="0 0 1164 722" enable-background="new 0 0 1164 722" xml:space="preserve">
                                 <image overflow="visible" width="1164" height="672" xlink:href="@Url.Content("~/Content/images/icimodmap.jpg")" transform="matrix(1 0 0 1 0 50.5)"></image>
@@ -278,84 +237,82 @@
                                 <!--Card Title-->
                                 <span class="card-title">PARTNERS LANDSCAPE</span>
                                 <!--Card-Header Ends-->
-                                <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                <span id="zoom-partnerLandscape" class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="RMC1" style="float:right;"></span>
                             </div>
                             <div style="float:right;margin:10px 10px 0 0 ;">
 
                                 <select class="selPartnerLandscape" id="selRMC" style="max-width:150px;">
-                                    <option value="1">Afghanistan</option>
-                                    <option value="2">Bangladesh</option>
-                                    <option value="3">Bhutan</option>
-                                    <option value="4">China</option>
-                                    <option value="5">India</option>
-                                    <option value="6">Myanmar</option>
-                                    <option value="7">Nepal</option>
-                                    <option value="8">Pakistan</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/Afghanistan.jpg")'>Afghanistan</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/Bangladesh.jpg")'>Bangladesh</option>
+                                    <option selected value='@Url.Content("~/Content/images/partnerLandscape/rmc/Bhutan.jpg")'>Bhutan</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/China.jpg")'>China</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/India.jpg")'>India</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/Myanmar.jpg")'>Myanmar</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/Nepal.jpg")'>Nepal</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rmc/Pakistan.jpg")'>Pakistan</option>
                                 </select>
 
                                 <select class="selPartnerLandscape" id="selRp" style="max-width:150px;display:none;">
-                                    <option value="1">Adaptation to Change</option>
-                                    <option value="2">Transboundary Landscapes</option>
-                                    <option value="3">River Basins</option>
-                                    <option value="4">Cryosphere and Atmosphere</option>
-                                    <option value="5">Mountain Environment Regional Information System (MENRIS)</option>
-                                    <option value="6">Himalayan University Consortium (HUC)</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rp/adaptation.jpg")'>Adaptation to Change</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rp/transboundary.jpg")'>Transboundary Landscapes</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rp/river.jpg")'>River Basins</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rp/cryosphere.jpg")'>Cryosphere and Atmosphere</option>
+                                    <option value='@Url.Content("~/Content/images/partnerLandscape/rp/menris.jpg")'>Mountain Environment Regional Information System (MENRIS)</option>
+                                    <option value='@Url.Content("~/Content/images/no-image.png")'>Himalayan University Consortium (HUC)</option>
                                 </select>
 
                                 <select class="selPartnerLandscape" id="selInitiative" style="max-width:115px;display:none;">
                                     <optgroup label="Adaptation to Change">
-                                        <option value="1">AdaptHimal</option>
-                                        <option value="2">HICAP</option>
-                                        <option value="3">Himalica</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/AdaptHimal.jpg")'>AdaptHimal</option>
+                                        <option selected value='@Url.Content("~/Content/images/partnerLandscape/initiative/HICAP.jpg")'>HICAP</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Himalica.jpg")'>Himalica</option>
                                     </optgroup>
                                     <optgroup label="Transboundary Landscapes">
-                                        <option value="5">Cherrapunjee-Chittagong</option>
-                                        <option value="4">HI-LIFE</option>
-                                        <option value="6">Kailash</option>
-                                        <option value="7">Kangchenjunga</option>
-                                        <option value="8">Karakoram-Pamir</option>
-                                        <option value="36">REDD+</option>
-                                        <option value="30">WCLCDI</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/CCHTLCDI.jpg")'>Cherrapunjee-Chittagong</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/HiLIFE.jpg")'>HI-LIFE</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Kailash.jpg")'>Kailash</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Kangchenjunga.jpg")'>Kangchenjunga</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Karakoram.jpg")'>Karakoram-Pamir</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/REDD.jpg")'>REDD+</option>
+                                        <option value='@Url.Content("~/Content/images/no-image.png")'>WCLCDI</option>
                                     </optgroup>
                                     <optgroup label="River Basins">
-                                        <option value="22">HI-AWARE</option>
-                                        <option value="10">HYCOS</option>
-                                        <option value="12">Indus</option>
-                                        <option value="11">Koshi</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/HIAWARE.jpg")'>HI-AWARE</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/HYCOS.jpg")'>HYCOS</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Indus.jpg")'>Indus</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Koshi.jpg")'>Koshi</option>
                                     </optgroup>
                                     <optgroup label="Cryosphere and Atmosphere">
-                                        <option value="13">Atmosphere</option>
-                                        <option value="14">Cryosphere</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Atmosphere.jpg")'>Atmosphere</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/Cryosphere.jpg")'>Cryosphere</option>
                                     </optgroup>
                                     <optgroup label="Mountain Environment Regional Information System (MENRIS)">
-                                        <option value="16">Regional Database</option>
-                                        <option value="15">SERVIR Himalaya</option>
+                                        <option value='@Url.Content("~/Content/images/no-image.png")'>Regional Database</option>
+                                        <option value='@Url.Content("~/Content/images/partnerLandscape/initiative/SERVIR.jpg")'>SERVIR Himalaya</option>
                                     </optgroup>
                                 </select>
                             </div>
 
                             <div class="card-content" style="padding:10px;height:270px">
                                 <ul class="nav nav-tabs tabs-modified" role="tablist">
-                                    <li role="presentation" class="partnerLandscape active"><a href="#RMC1" aria-controls="selRMC" role="tab" data-toggle="tab">RMC</a></li>
-                                    <li role="presentation" class="partnerLandscape"><a href="#RP1" aria-controls="selRp" role="tab" data-toggle="tab">RP</a></li>
-                                    <li role="presentation" class="partnerLandscape"><a href="#Initiative1" aria-controls="selInitiative" role="tab" data-toggle="tab">Initiative</a></li>
+                                    <li id="tab-RMC" role="presentation" class="partnerLandscape active"><a href="#RMC1" aria-controls="selRMC" role="tab" data-toggle="tab">RMC</a></li>
+                                    <li id="tab-RP" role="presentation" class="partnerLandscape"><a href="#RP1" aria-controls="selRp" role="tab" data-toggle="tab">RP</a></li>
+                                    <li id="tab-Initiative" role="presentation" class="partnerLandscape"><a href="#Initiative1" aria-controls="selInitiative" role="tab" data-toggle="tab">Initiative</a></li>
                                 </ul>
-
-
 
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active DefaultPadding" id="RMC1" style="text-align:center;">
-                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/1d364f50-a74e-4802-8073-603f43267e43Bhutan.jpg" style="width:auto;height:168px;">
+                                        <img id="img-RMC" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/1d364f50-a74e-4802-8073-603f43267e43Bhutan.jpg" style="width:auto;height:168px;">
                                         <!--LOA-Tab Ends-->
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane DefaultPadding" id="RP1" style="text-align:center;">
-                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/4f8e2862-33ea-438f-84ca-c36803f8ce73RP1-1024x1024.jpg" style="width:auto;height:168px;">
+                                        <img id="img-RP" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/4f8e2862-33ea-438f-84ca-c36803f8ce73RP1-1024x1024.jpg" style="width:auto;height:168px;">
                                         <!--MOU-Tab Ends-->
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane DefaultPadding" id="Initiative1" style="text-align:center;">
-                                        <img src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/622c39ad-94a8-4ca5-bff0-f22766ef86d0RP1-AdaptHimal-1024x1024.jpg" style="width:auto;height:168px;">
+                                        <img id="img-Initiative" src="http://prmdemo.icimod.org/Content/Uploads/Images/LandscapeMaps/622c39ad-94a8-4ca5-bff0-f22766ef86d0RP1-AdaptHimal-1024x1024.jpg" style="width:auto;height:168px;">
                                         <!--IC-Tab Ends-->
                                     </div>
 
@@ -501,19 +458,23 @@
 
                                     <div>
                                         <div class="chart-zoom">
-                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="chart1" style="float:right;"></span>
                                         </div>
                                         <!-- Chart-1 -->
-                                        <div class="chartHolder chart1">
-
+                                        <div class="chartHolder" id="chart1">
+                                            <div class="chart1" style="width:100%;height:100%">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="chart-zoom">
-                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="" style="float:right;"></span>
+                                            <span class="fa fa-search-plus zoom-modal" aria-hidden="true" modal-title="" modal-content="chart2" style="float:right;"></span>
                                         </div>
                                         <!-- Chart-2 -->
-                                        <div class="chartHolder chart2" style="display:none;"></div>
+                                        <div id="chart2" class="chartHolder chart2" style="display:none;">
+                                            <div class="chart2" style="width:100%;height:100%">
+                                            </div>
+                                        </div>
                                         <!-- Chart-2 Ends-->
                                     </div>
 
@@ -593,7 +554,7 @@
                         <div class="innerContent">
                             <div class="download-menu-holder" style="width:600px;height:100%">
                                 <div class="download-menu menu-card" style="width:300px;">
-                                    <div class="items" data-controlid="#rmc-report">
+                                    <div class="items has-submenu" childcard="#rmc-report">
                                         <span>
                                             <i class="fa fa-globe icon"></i>
                                             RMC Report
@@ -601,14 +562,14 @@
 
                                     </div>
 
-                                    <div class="items" data-controlid="#rc-report">
+                                    <div class="items has-submenu" childcard="#rc-report">
                                         <span>
                                             <i class="fa fa-bullseye icon"></i>
-                                            RP Report
+                                            RP/Initiative Report
                                         </span>
                                     </div>
 
-                                    <div class="items">
+                                    <div class="items has-submenu" childcard="#pp-report">
                                         <span>
                                             <i class="fa fa-users icon" style="font-size: 30px;"></i>
                                             Partner Profile
@@ -616,15 +577,15 @@
 
                                     </div>
 
-                                    <div class="items">
+                                    <div class="items has-submenu" childcard="#mon-report">
                                         <span>
                                             <i class="fa fa-calendar icon"></i>
-                                            Monthly Report
+                                            Monthly Report 2016
                                         </span>
 
                                     </div>
 
-                                    <div class="items">
+                                    <div class="items has-submenu" childcard="#infographics-report">
                                         <span>
                                             <i class="fa fa-pie-chart icon"></i>
                                             Infographics
@@ -633,28 +594,154 @@
                                     </div>
                                 </div>
 
+                                @*---->> RMC Report-------*@
                                 <div class="download-submenu menu-card" id="rmc-report" style="width:300px;display:none;">
-                                    <div><i class="fa fa-chevron-left fa-bold menu-back"></i></div>
-                                    <div class="items"><a href="#">Afganistan</a></div>
-                                    <div class="items"><a href="#">Bangladesh</a></div>
-                                    <div class="items"><a href="#">Bhutan</a></div>
-                                    <div class="items"><a href="#">China</a></div>
-                                    <div class="items"><a href="#">India</a></div>
-                                    <div class="items"><a href="#">Myanmar</a></div>
-                                    <div class="items"><a href="#">Nepal</a></div>
-                                    <div class="items"><a href="#">Pakistan</a></div>
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#rmc-report"></i>
+                                        <span>RMC Report</span>
+                                    </div>
+                                    <div class="items">Afganistan<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Bangladesh<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Bhutan<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">China<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">India<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Myanmar<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Nepal<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Pakistan<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
                                 </div>
+                                @*----END >> RMC Report-------*@
 
+                                @*---->> RP/Initiative Report-------*@
                                 <div class="download-submenu menu-card" id="rc-report" style="width:300px; display:none;">
-                                    <div><i class="fa fa-chevron-left fa-bold menu-back"></i></div>
-                                    <div class="items"><a href="#">Adaptation to Change</a></div>
-                                    <div class="items"><a href="#">Transboundary Landscapes</a></div>
-                                    <div class="items"><a href="#">River Basins</a></div>
-                                    <div class="items"><a href="#">Cryosphere & Atmosphere</a></div>
-                                    <div class="items"><a href="#">MENRIS</a></div>
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#rc-report"></i>
+                                        <span>RP/Initiative Report</span>
+                                    </div>
+
+                                    <div class="items has-submenu" childcard="#adaptation">Adaptation to Change<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items has-submenu" childcard="#transboundary">Transboundary Landscapes<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items has-submenu" childcard="#riverbasins">River Basins<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items has-submenu" childcard="#cyosphere">Cryosphere & Atmosphere<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items has-submenu" childcard="#menris">MENRIS<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+
+                                </div>
+                                @*----END >> RP/Initiative Report-------*@
+
+                                @*---->> RP/Initiative Report >> Adaptation-------*@
+                                <div class="download-submenu menu-card" id="adaptation" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#adaptation"></i>
+                                        <span>Adaptation to Change</span>
+                                    </div>
+                                    <div class="items">Adapt Himal<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">HICAP<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Himalica<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+
                                 </div>
 
+                                @*---->> RP/Initiative Report >> Transboundary-------*@
+                                <div class="download-submenu menu-card" id="transboundary" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#transboundary"></i>
+                                        <span>Transboundary Landscapes</span>
+                                    </div>
+                                    <div class="items">Hi-LIFE<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">CCHTLCDI<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">KSLCDI<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">KLCDI<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">KPLCDI<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">WCLCDI<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">REDD+<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
 
+                                @*---->> RP/Initiative Report >> River Basin-------*@
+                                <div class="download-submenu menu-card" id="riverbasins" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#riverbasins"></i>
+                                        <span>River Basins</span>
+                                    </div>
+                                    <div class="items">HKH-HYCOS<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Koshi River Basin<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Indus River Basin<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">HI-AWARE<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
+
+                                @*---->> RP/Initiative Report >> Cryosphere-------*@
+                                <div class="download-submenu menu-card" id="cyosphere" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#cyosphere"></i>
+                                        <span>Cryosphere & Atmosphere</span>
+                                    </div>
+                                    <div class="items">Cryosphere<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Atmosphere<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
+
+                                @*---->> RP/Initiative Report >> Cryosphere-------*@
+                                <div class="download-submenu menu-card" id="menris" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#menris"></i>
+                                        <span>MENRIS</span>
+                                    </div>
+                                    <div class="items">SERVIR Himalaya<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Regional Database<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
+
+                                @*---->> RP/Initiative Report >> MENRIS-------*@
+                                <div class="download-submenu menu-card" id="menris" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#menris"></i>
+                                        <span>MENRIS</span>
+                                    </div>
+                                    <div class="items">SERVIR Himalaya<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Regional Database<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
+
+                                @*---->> Partner Profile-------*@
+                                <div class="download-submenu menu-card" id="pp-report" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#pp-report"></i>
+                                        <span>Partner Profile</span>
+                                    </div>
+                                    <div class="items">Strategic & Policy Partner<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Implementation Partner<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Development Partner<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">Knowledge partner & Networks<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
+
+                                @*---->> Monthly Report -------*@
+                                <div class="download-submenu menu-card" id="mon-report" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#mon-report"></i>
+                                        <span>Monthly Report 2016</span>
+                                    </div>
+                                    <div style="height:285px;overflow:auto;">
+                                        <div class="items">January<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">February<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">March<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">April<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">May<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">June<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">July<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">August<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">September<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">October<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">November<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                        <div class="items">December<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    </div>
+
+                                </div>
+
+                                @*---->> Infographics -------*@
+                                <div class="download-submenu menu-card" id="infographics-report" style="width:300px;display:none;">
+                                    <div class="menu-card-heading">
+                                        <i class="fa fa-chevron-left fa-bold menu-back" parentcard="#infographics-report"></i>
+                                        <span>Infographics</span>
+                                    </div>
+                                    <div class="items">Overall ICIMOD<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">RMC<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">RP<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                    <div class="items">ICIMOD in Global Process<a href="#" style="float:right;"><i class="fa fa-download"></i></a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -674,34 +761,53 @@
                     </div>
 
                     <div class="card-content">
-                        <div style="z-index: 9999; position: absolute; right: 40px; width: 170px; bottom: 295px;font-size:13px">
+                        <div style="z-index: 9999; position: absolute; left: 78px; width: 170px; bottom: 430px;font-size:13px">
+                            <select id="basemap" style="border: 1px solid #a5a5a5;">
+                                <option value="googleStreets">Streets</option>
+                                <option value="googleTerrain">Terrain</option>
+                                <option value="gray">Grayscale</option>
+                                <option value="googleSat">Satellite</option>
+                                <option value="googleHybrid">Hybrid</option>
+                                <option selected value="osm">OSM</option>
+                            </select>
+                        </div>
+                        <div style="z-index: 9999; position: absolute; right: 40px; width: 197px; bottom: 307px;font-size:13px">
+                            
                             <div style="margin-bottom:10px;">
-                                <select id="generalSelect" style=" width: 100%; border: 1px solid #a5a5a5; border-radius: 3px; padding: 4px; font-size: 12px;">
-                                    <option>HICAP</option>
-                                    <option>HI-AWARE</option>
-                                    <option>Hi-LIFE</option>
-                                    <option>4</option>
-                                </select>
-
-                                
-                            </div>
-                            <div style="margin-bottom:10px;">
-                                <select id="workAreaSelect" style=" width: 100%; border: 1px solid #a5a5a5; border-radius: 3px; padding: 4px; font-size: 12px;">
-                                    <option>HKH</option>
-                                    <option>Karakoram</option>
-                                    <option>Kailash</option>
-                                    <option>Kanchenjunga</option>
+                                <select id="workAreaSelect" style="border: 1px solid #a5a5a5">
+                                    <option value="null">-- Working Area --</option>
+                                    <option value="karakoram">Karakoram-Pamir-Wakhan Landscape</option>
+                                    <option value="kailash">Kailash Landscape</option>
+                                    <option value="kangchenjunga">Kangchenjunga Landscape</option>
+                                    <option value="cherrapunjee">Cherrapunjee-Chittagong Basin</option>
+                                    <option value="hilife">Brahmaputra-Salween Landscape</option>
+                                    <!--<option value="HICAP">HICAP</option>-->
+                                    <option value="koshi">Koshi Basin</option>
+                                    <option value="indus">Indus</option>
                                 </select>
                             </div>
                             <div style="padding:10px;border-radius:3px;border:1px solid #a5a5a5; background-color:rgba(255,255,255,0.9);">
-                                <div >
-                                    <span><input type="checkbox" style="margin-right:8px;" />Focal Agencies</span>
+                                <div>
+                                    <span><input type="checkbox" checked style="margin-right:8px;" id="HKHOutline" />HKH Outline</span>
                                 </div>
                                 <div>
-                                    <span><input type="checkbox" style="margin-right:8px;" />HKH Outline</span>
+                                    <span><input type="checkbox"  style="margin-right:8px;" id="HKHbasin" />Major River Basins</span>
                                 </div>
                                 <div>
-                                    <span><input type="checkbox" style="margin-right:8px;" />Major River Basins</span>
+                                    <span><input type="checkbox" checked style="margin-right:8px;" id="focal" />Country Focal Agency</span>
+                                </div>
+
+                                <div>
+                                    <span>
+                                        <input type="checkbox" style="margin-right:8px;" />Partners
+                                        <select id="generalSelect" style="border: 1px solid #a5a5a5;width:100px;">
+                                            <option>HICAP</option>
+                                            <option>HI-AWARE</option>
+                                            <option>Hi-LIFE</option>
+                                            <option>4</option>
+                                        </select>
+                                    </span>
+
                                 </div>
                             </div>
                         </div>
@@ -745,15 +851,46 @@
         <!--Row Ends-->
     </div>
 
-    <br><br>
-
 
     <!--Content Container ends-->
 </div>
 <!--Content row ends-->
-</div>
+@section styles
+{
+    @*@Styles.Render("~/Content/jadexui")*@
+    @*<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />*@
+
+    <!-- Load esri Leaflet from CDN-->
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />
+
+    <style>
+        .leaflet-popup-content {
+            width: auto !important;
+        }
+
+        .leaflet-popup-content-wrapper {
+            min-width: 300px;
+            max-width: 400px;
+            height: auto;
+        }
+    </style>
+
+ 
+}
 
 @section scripts{
+   <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script>
+
+<!-- Load Esri Leaflet from CDN -->
+<script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script>
+
+@*<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.3/esri-leaflet.js"></script>*@
+
+ 
+ 
+
 
     <script>
         $(document).ready(function () {
@@ -762,27 +899,89 @@
                 $('#' + $('a', this).attr('aria-controls')).show();
             })
 
-
-
-            $('.download-menu .items').click(function () {
-                var w = $('.download-menu').width() + 20;
+            $('.has-submenu a').click(function (e) { e.stopPropagation(); })
+            $('.has-submenu').click(function () {
+                var posx = 0;
+                var elem_transform = $('.download-menu-holder').css('-transform');
+                if (elem_transform != 'none' & elem_transform != undefined) {
+                    var currTrans = elem_transform.split(/[()]/)[1];
+                    posx = parseInt(currTrans.split(',')[4], 10);
+                }
+                posx = posx - $('.menu-card').width() - 20;
                 $('.download-submenu').hide();
-                $($(this).attr('data-controlid')).show();
-                $('.download-menu-holder').css('transform', 'translate(-' + w + 'px,0px)');
+                $($(this).attr('childCard')).addClass('active');
+                $('.download-submenu.active').show();
+
+                $('.download-menu-holder').css('transform', 'translate(' + posx + 'px,0px)');
             })
 
             $('.download-submenu .menu-back').click(function () {
-                $('.download-menu-holder').css('transform', 'translate(0,0px)');
+                var elem_transform = $('.download-menu-holder').css('-transform');
+                var currTrans = elem_transform.split(/[()]/)[1];
+                var posx = parseInt(currTrans.split(',')[4], 10);
+
+                $($(this).attr('parentCard')).removeClass('active');
+                posx = posx + $('.download-menu').width() + 20;
+                $('.download-menu-holder').css('transform', 'translate(' + posx + 'px,0px)');
 
             })
+
+
+            $('#zoomModalForm').modelForm({ width: $(window).width() - 300, height: $(window).height() - 200 });
+
+            $('.zoom-modal').click(function () {
+                var objID = $(this).attr('modal-content');
+                var self = $('#zoomModalForm .modelForm-content');;
+                self.html('');
+                self.html($('#' + $(this).attr('modal-content')).html());
+
+                if (self.find(" svg").length>
+     0) {
+                    $('#zoomModalForm .modelForm-content svg').css({ width: '100%', height: '100%' });
+                }
+                if (self.find(".highcharts-container").length > 0) {
+                    self.html('');
+
+                    self.append('<div id="' + objID + '" style="width:' + $('#zoomModalForm').width() + 'px;height:' + $('#zoomModalForm').height() + 'px"></div>')
+                    graph[objID](objID);
+
+                }
+                if (self.find("img").length > 0) {
+                    $('img', self).height($('#zoomModalForm').height());
+                }
+
+                self.css({ 'text-align': 'center' ,'overflow':'hidden'});
+
+                $('*', self).each(function () {
+                    $(this).attr('id', '');
+                });
+
+
+            });
+
+
+            $('#selRMC').change(function () {
+                $('#img-RMC').attr('src', $(this).val());
+            });
+            $('#tab-RMC').click(function () { $('#zoom-partnerLandscape').attr('modal-content', 'RMC1'); });
+
+            $('#selRp').change(function () {
+                $('#img-RP').attr('src', $(this).val());
+            });
+            $('#tab-RP').click(function () { $('#zoom-partnerLandscape').attr('modal-content', 'RP1'); });
+
+            $('#selInitiative').change(function () {
+                $('#img-Initiative').attr('src', $(this).val());
+            });
+            $('#tab-Initiative').click(function () { $('#zoom-partnerLandscape').attr('modal-content', 'Initiative1'); });
 
             chart1('.chart7');
             chart2('.chart6');
             chart3('.chart3');
             chart4('.chart4');
             chart5('.chart5');
-            chart6('.chart2');
-            chart7('.chart1');
+            graph['chart2']('chart2');
+            graph['chart1']('chart1');
 
 
 
@@ -828,12 +1027,274 @@
             $('.chartHolder').show();
             $('.chart-zoom').show();
 
-            map = new google.maps.Map(document.getElementById('generalMap'), {
-                center: { lat: 27.6965, lng: 85.3288 },
-                zoom: 4
+            //map = new google.maps.Map(document.getElementById('generalMap'), {
+            //    center: { lat: 27.6965, lng: 85.3288 },
+            //    zoom: 4
+            //});
+
+            var basemap = {}
+            basemap['googleSat'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
             });
+            basemap['googleTerrain'] = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+            basemap['googleHybrid'] = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+            basemap['googleStreets'] = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+
+
+            var map = L.map('generalMap').setView([27.6965, 87.9288], 4);
+
+            basemap['gray'] = L.esri.basemapLayer('Gray');
+     
+            //basemap['osm'] = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+            //    maxZoom: 18,
+            //    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            //        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            //        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            //    id: 'mapbox.streets'
+            //}).addTo(map);
+            basemap['osm']=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var previous = '';
+            $("#basemap").on('focus', function () {
+                previous = this.value;
+            }).change(function () {
+                map.removeLayer(basemap[previous]);
+                map.addLayer(basemap[this.value]);
+                // Make sure the previous value is updated
+                previous = this.value;
+            });
+
+            var mapLayers = {};
+
+            mapLayers['karakoram'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/0',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity:0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['hilife'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/1',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['cherrapunjee'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/2',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['kailash'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/3',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['kangchenjunga'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/4',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['koshi'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/5',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+            mapLayers['indus'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/MISC/WorkingArea/MapServer/6',
+                color: '#00AA7F', fillColor: '#00AA7F', weight: 1,
+                opacity: 0,
+                fillOpacity: 0,
+                useCors: false
+            }).addTo(map);
+
+            //mapLayers['hilife'].once("load", function (evt) {
+            //    map.fitBounds(mapLayers['hilife'].getFeature(1).getBounds());
+            //});
+            function hideWorkArea()
+            {
+                mapLayers['karakoram'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['hilife'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['cherrapunjee'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['kailash'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['kangchenjunga'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['koshi'].setStyle({ opacity: 0, fillOpacity: 0 });
+                mapLayers['indus'].setStyle({ opacity: 0, fillOpacity: 0 });
+            }
+            $('#workAreaSelect').change(function () {
+                var mapid = $(this).val();
+                hideWorkArea();
+                if (mapid == 'null') {
+                    resetView();
+                }
+                else {
+                    mapLayers[mapid].setStyle({
+                        opacity: 1,
+                        fillOpacity: 0.2
+                    });
+                    map.fitBounds(mapLayers[mapid].getFeature(1).getBounds());
+                }
+            })
+
+            mapLayers['HKHbasin'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/Cryosphere/BasinGlacier/MapServer/0',
+                color: '#5B76AD', fillColor: '#CBD3E6',
+                weight:1,
+                opacity: 0,
+                fillOpacity: 0,
+                //opacity: 1,
+                //layers: [0],
+                useCors: false
+            }).addTo(map);
+            
+            $('#HKHbasin').change(function () {
+                if ($(this).is(":checked"))
+                   // mapLayers['HKHbasin'].setOpacity(0.8);
+                    mapLayers['HKHbasin'].setStyle({ opacity: 1, fillOpacity: 0.2 });
+                else
+                mapLayers['HKHbasin'].setStyle({ opacity: 0, fillOpacity: 0 });
+                    
+            })
+
+            mapLayers['HKHOutline'] = L.esri.featureLayer({
+                url: 'http://apps.geoportal.icimod.org/ArcGIS/rest/services/HKH/Outline/MapServer/0',
+                color: '#333', fillColor: '#ddd',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0,
+                //layers: [0],
+                useCors: false
+            }).addTo(map);
+            mapLayers['HKHOutline'].once("load", function (evt) {
+                mapLayers['HKHOutline'].bringToFront();
+            });
+            //mapLayers['HKHbasin'].once("load", function (evt) {
+            //    mapLayers['HKHbasin'].bringToBack();
+            //});
+
+            $('#HKHOutline').change(function () {
+                if ($(this).is(":checked"))
+                    // mapLayers['HKHbasin'].setOpacity(0.8);
+                    mapLayers['HKHOutline'].setStyle({ opacity: 1, fillOpacity: 0 });
+                else
+                    mapLayers['HKHOutline'].setStyle({ opacity: 0, fillOpacity: 0 });
+            })
+
+
+            var reset = $('<a class="leaflet-control-zoom-in zoom-reset" href="javascript:void(0)" title="Zoom in"></a>').insertAfter($('.leaflet-control-zoom-in'));
+            reset.click(function () {
+                resetView();
+            });
+            function resetView() {
+                map.setView([27.6965, 87.9288], 4);
+            }
+
+
+            var greenIcon = L.icon({
+                iconUrl: '@Url.Content("~/Content/images/focalPoint.png")',
+                // shadowUrl: 'leaf-shadow.png',
+
+                iconSize: [16, 25], // size of the icon
+                // shadowSize: [50, 64], // size of the shadow
+                iconAnchor: [8, 12], // point of the icon which will correspond to marker's location
+                //shadowAnchor: [4, 62],  // the same for the shadow
+                popupAnchor: [0, -25] // point from which the popup should open relative to the iconAnchor
+            });
+
+
+
+            var marker = [];
+            marker[0] = L.marker([27.6965, 85.3288], { icon: greenIcon }).bindPopup(
+                "<div style='font-size:14px;font-weight:bold'>National Planning Commission </div><div style='font-size:12px;'> Kathmandu, Nepal</div>", {
+                    'minWidth': '500',
+                    'className': 'custom'
+                }).addTo(map);//Kathmandu
+
+
+
+            marker[1] = L.marker([28.6139, 77.2090], { icon: greenIcon }).addTo(map).bindPopup(
+                "<div style='font-size:14px;font-weight:bold'>Ministry of Environment, Forests and Climate Change</div><div style='font-size:12px;'>Delhi, India</div>", {
+                    'minWidth': '500',
+                    'className': 'custom'
+                });//New Delhi
+            marker[2] = L.marker([34.5553, 69.2075], { icon: greenIcon }).addTo(map);//Kabul
+            marker[3] = L.marker([33.7294, 73.0931], { icon: greenIcon }).addTo(map);//Islamabad
+            marker[4] = L.marker([27.4728, 89.6393], { icon: greenIcon }).addTo(map);//Thimpu
+            marker[5] = L.marker([23.8103, 90.4125], { icon: greenIcon }).addTo(map);//Dhaka
+            marker[6] = L.marker([16.8661, 96.1951], { icon: greenIcon }).addTo(map);//Rangoon
+            marker[7] = L.marker([39.9042, 116.4074], { icon: greenIcon }).addTo(map);//Beijing
+
+
+
+            mapLayers['focal'] = {
+                setOpacity: function (opacity) {
+                    if(opacity==0)
+                    {
+                        for (var i = 0; i <= 7; i++) {
+                            marker[i]._icon.style.display = 'none';
+                            //marker[i]._icon.style.width = 200;
+                        }
+                    }
+                    else
+                    {
+                        for (var i = 0; i <= 7; i++) {
+                            marker[i]._icon.style.display = 'block';
+                        }
+                    }
+
+                }
+            }
+
+            $('#focal').change(function () {
+                if ($(this).is(":checked"))
+                    mapLayers['focal'].setOpacity(1);
+                else
+                    mapLayers['focal'].setOpacity(0);
+            })
+
+            //Partners
+            var partnerIcon = L.icon({
+                iconUrl: '@Url.Content("~/Content/images/red-point.png")',
+                // shadowUrl: 'leaf-shadow.png',
+
+                iconSize: [9, 9], // size of the icon
+                // shadowSize: [50, 64], // size of the shadow
+                iconAnchor: [4, 4], // point of the icon which will correspond to marker's location
+                //shadowAnchor: [4, 62],  // the same for the shadow
+                popupAnchor: [0, -8] // point from which the popup should open relative to the iconAnchor
+            });
+
+            var partnerMark = [];
+            //$.post('http://prm.icimod.org/Home/PopulateAllRmcPartners',  function (data) {
+            //    $.each(data, function (i, item) {
+            //        L.marker([item.latitude, item.longitude], { icon: partnerIcon }).addTo(map);
+            //    })
+            //})
+
+
         })
-    </script>
+</script>
+
 }
 
 

@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    @*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">*@
 
-
-
+    <link href='@Url.Content("~/Content/font-awesome-4.6.3/font-awesome-4.6.3/css/font-awesome.min.css")' rel="stylesheet" />
 
     <!-- Slider for charts CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">*@
 
     @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 </head>
 <body>
-
+    <div id="zoomModalForm" data-controlid=".zoom-modal" style="display:none;"></div>
     <div class="wrapper" id="wrapper">
         <div class="nav-side-menu">
 
             <div class="brand" id='logo'>
                 <div style="position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,0.2)">
                     <img src='@Url.Content("~/Content/images/logo-icimod.png")' style="width:185px;height: 65px;" />
-                    <div style="margin-top: 90px;">
+                    <div style="margin-top:70px;">
                         <img src='@Url.Content("~/Content/images/for-mountain.png")' style="width: 184px;height: 33px;" />
                     </div>
                 </div>
@@ -333,12 +333,13 @@
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>*@
 
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    @*<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>*@
+    
 
     @Scripts.Render("~/Scripts/CustomChart.js")
-
+    @Scripts.Render("~/Scripts/jdx.ui.modelform.min.js")
 
 
     <script>
@@ -354,7 +355,7 @@
         
 
             var scroll_start = 0;
-            var startchange = $("#main_content");
+            var startchange = $("#prm_img");
             var offset = startchange.offset();
 
             function squeezeHeader()
@@ -362,6 +363,7 @@
                 $(".main-header").css('background-color', '#061456');
                 $('.header-btn').css('color', 'white');
                 $('#head-prm').show();
+                $("#prm_img").hide();
                 $("#header").addClass('shadow');
             }
             function plainHeader()
@@ -369,12 +371,13 @@
                 $('.main-header').css('background-color', 'transparent');
                 $('.header-btn').css('color', 'white');
                 $('#head-prm').hide();
+                $("#prm_img").show();
                 $("#header").removeClass('shadow');
             }
             if (startchange.length) {
                 $(document).scroll(function () {
                     scroll_start = $(this).scrollTop();
-                    if (scroll_start > (offset.top - 65)) {
+                    if (scroll_start > (offset.top - 55)) {
                         squeezeHeader();
                     } else {
                         plainHeader();
@@ -396,15 +399,16 @@
                 var newWidth = $('#card-downloads').width() - 30;
                 var delWidth = newWidth - oldWidth;
                 $('#card-downloads .menu-card').width(newWidth);
-                $('.download-menu-holder').width(newWidth * 3);
+                $('.download-menu-holder').width(newWidth * 4);
                 //fix download menu and submenu translate value while resize
                 var elem_transform = $('.download-menu-holder').css('-transform');
                 if (elem_transform != 'none' & elem_transform != undefined) {
-                    var currTrans = $('.download-menu-holder').css('transform').split(/[()]/)[1];
+                    var currTrans = elem_transform.split(/[()]/)[1];
+                    var slideCount = $('.download-menu-holder').find('.active').length;
                     var posx = currTrans.split(',')[4];
                     if (posx < 0) {
                         $('.download-menu-holder').addClass('notransition');
-                        $('.download-menu-holder').css('transform', 'translate(' + (posx - delWidth) + 'px,0px)');
+                        $('.download-menu-holder').css('transform', 'translate(' + (posx - delWidth * slideCount) + 'px,0px)');
                         $('.download-menu-holder').removeClass('notransition');
                     }
                     else {

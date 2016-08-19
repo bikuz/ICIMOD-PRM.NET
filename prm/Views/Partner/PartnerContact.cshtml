@@ -1,234 +1,522 @@
 ﻿@{
-    ViewBag.Title = "Partner Contact";
+    ViewBag.Title = "Search Partner Contacts";
 }
-<style>
-.cardButton {
-    margin-top:-4px;
-}
-</style>
+@*<div class="card" style="margin-top:55px;position:fixed;width:100%;">
+        <div class="card-header"><span class="card-title">Partner Information: View Profile</span></div>
+    </div>*@
 
-<div class="row">
+<div class="row" style="margin-top:55px;">
 
     <div class="container-fluid">
+
         <!--Data Card Container Row-->
         <div class="row" style="margin:10px;">
 
             <div class="col-md-12">
-                <div class="card" >
-                    <div class="card-header">
+                <div class="card">
+                    <div class="profile-header">
                         <!--Card Title-->
-                        <span class="card-title">List of Contacts</span>
-                        <span class="cardButton"><a href="#" class="icoPDF" id="card-3" ></a></span>
-                        <span class="cardButton"><a href="#" class="icoExcel" id="card-3"></a></span>
+                        @*<div id="profile_logo" class="img-frame">
+                            <div class="img-holder">
+                                <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/CompanyLogos/3b229328-eace-4d92-9632-ef7f98713bcf1.ANSISS.jpg" style="height:90px;width:auto;">
+                            </div>
+                            <div class="down-btn">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </div>*@
+                       
+
+
+                        <div class="profile-header-info">
+                            <div style="font-size:24px; ">
+                                <span>
+                                    List of Partner Contacts
+                                    <a href="#" style="margin-left:10px;color:white"><i class="icon-pdf" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                             
+                             
+                                <div class="input-group" style="width:500px;margin-top:50px;">
+                                    <input type="text" class="form-control" placeholder="Free Text Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </span>
+                                </div><!-- /input-group -->
+                             
+
+
+                        </div>
+
+                        <div id="btnsearch_Partner" class="profile-header-btn">
+                            <span style="font-size:40px;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+
+                            </span>
+                            Advance Search
+                        </div>
+                        <div id="search_Partner" class="profile-header-btn-dropholder" style="width:250px;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selRMC" style="font-weight:normal;font-size:13px;">Country:</label>
+                                        <select id="selRMC">
+                                            <optgroup label="Regional Member Countries">
+                                                <option value="1">Afghanistan</option>
+                                                <option value="2">Bangladesh</option>
+                                                <option value="3">Bhutan</option>
+                                                <option value="4">China</option>
+                                                <option selected value="5">India</option>
+                                                <option value="6">Myanmar</option>
+                                                <option value="7">Nepal</option>
+                                                <option value="8">Pakistan</option>
+                                            </optgroup>
+                                            <optgroup label="Other Countries">
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Nepl">Nepl</option>
+                                                <option value="Netherland">Netherland</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selRP" style="font-weight:normal;font-size:13px;">Regional Programme:</label>
+                                        <select id="selRP">
+                                            <option value="1">Adaptation to Change</option>
+                                            <option value="2">Transboundary Landscapes</option>
+                                            <option selected value="3">River Basins</option>
+                                            <option value="4">Cryosphere and Atmosphere</option>
+                                            <option value="5">Mountain Environment Regional Information System (MENRIS)</option>
+                                            <option value="6">Himalayan University Consortium (HUC)</option>
+                                            <option value="11">Non-RP/Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selInitiative" style="font-weight:normal;font-size:13px;">Initiative:</label>
+                                        <select id="selInitiative">
+                                            <option value="undefined">Koshi River Basin</option>
+                                            <option value="undefined">Hindu Kush-Himalayan Hydrological Cycle Observation System (HKH-HYCOS)</option>
+                                            <option value="undefined">Himalayan Adaptation, Water and Resilience  Research (HI-AWARE)</option>
+                                            <option value="undefined">Other</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Typology of Partner:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="2">Implementation partner</option>
+                                            <option value="1">Strategic &amp; Policy partner</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Type of Agreement:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="4">Donor Agreement</option>
+                                            <option value="1">LoA</option>
+                                            <option value="2">MoU</option>
+                                            <option value="3">None</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
                         <!--Card-Header Ends-->
                     </div>
-                   
-                    <div class="card-content" >
-           
-                    		<div class="row" >
-                    				
-                    				<div class="col-md-3" style="border-right: 1px solid #eeeeee;">
-                    					
-                    				<h3 class="text-center">Search Contact</h3>
 
-                    				<p class="text-center">Select Partner</p>
-			                        	  <select class="form-control" id="PartnerSelect">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-									      <br>
-									<p class="text-center">Regional Programmes</p>
-			                        	  <select class="form-control" id="ProgrammeSelect">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-									      <br>
-									<p class="text-center">Initiatives</p>
-			                        	  <select class="form-control" id="InitiativesSelect">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-									      <br>
-									<p class="text-center">Type of Partner</p>
-			                        	  <select class="form-control" id="InitiativesSelect">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-									 <br>
-									 <p class="text-center">Type of Agreement</p>
-			                        	  <select class="form-control" id="InitiativesSelect">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
+                    <div class="card-content">
 
-									<br><br>
-									<p class="text-center">
-									<button type="button" class="btn btn-primary">Reset</button>
-									<button type="button" class="btn btn-primary">Search</button>
-									</p>
+                       
 
-                    					<!-- col-3 ends -->
-                    				</div>
-                    				<div class="col-md-9" style="height:300px;">
-									    <div class="contactList">                					
-                    					<ul>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Kathmandu University</h3>
-                    									<p>Rijan Bhakta Kayastha <br>D.Sc.</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                        <div class="tab-content" style="overflow-x:hidden;overflow-y:auto;">
+                            <div role="tabpanel" class="tab-pane active" id="selfAssessment">
 
-                    								<p>
-                    								<b>Address:</b> P.O.Box - 6250, Dhulikhel, Nepal
-													<br><b>Phone:</b> +977-011 - 661399
-													<br><b>Mobile:</b> 9851135959; Fax: 977-011- 661443 
-													<br><b>Email:</b> rijan@ku.edu.np; rijankayastha@gmail.com
-													<br><b>Website:</b> http://www.ku.edu.np
-                    								</p>
+                                <table class="col-md-12">
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Institute of Geographic Sciences and Natural Resources Research</h3>
-                    									<p>Prof Liu Suxia and Dr Zhao Chagsen<br>Professor</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
 
-                    								<p>
-                    								<b>Address:</b>11A, Datun Road, Chaoyang District, Beijing, 100101, China
-													<br><b>Phone:</b>+86-10-6488-9749 
-													<br><b>Mobile:</b>+86 13439205618
-													<br><b>Email:</b>liusx@igsnrr.ac.cn and hzjohnson@gmail.com
-													<br><b>Website:</b> http://english.igsnrr.cas.cn/
-                    								</p>
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Kathmandu University</h3>
-                    									<p>Rijan Bhakta Kayastha <br>D.Sc.</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
 
-                    								<p>
-                    								<b>Address:</b> P.O.Box - 6250, Dhulikhel, Nepal
-													<br><b>Phone:</b> +977-011 - 661399
-													<br><b>Mobile:</b> 9851135959; Fax: 977-011- 661443 
-													<br><b>Email:</b> rijan@ku.edu.np; rijankayastha@gmail.com
-													<br><b>Website:</b> http://www.ku.edu.np
-                    								</p>
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Institute of Geographic Sciences and Natural Resources Research</h3>
-                    									<p>Prof Liu Suxia and Dr Zhao Chagsen<br>Professor</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
 
-                    								<p>
-                    								<b>Address:</b>11A, Datun Road, Chaoyang District, Beijing, 100101, China
-													<br><b>Phone:</b>+86-10-6488-9749 
-													<br><b>Mobile:</b>+86 13439205618
-													<br><b>Email:</b>liusx@igsnrr.ac.cn and hzjohnson@gmail.com
-													<br><b>Website:</b> http://english.igsnrr.cas.cn/
-                    								</p>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Kathmandu University</h3>
-                    									<p>Rijan Bhakta Kayastha <br>D.Sc.</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
 
-                    								<p>
-                    								<b>Address:</b> P.O.Box - 6250, Dhulikhel, Nepal
-													<br><b>Phone:</b> +977-011 - 661399
-													<br><b>Mobile:</b> 9851135959; Fax: 977-011- 661443 
-													<br><b>Email:</b> rijan@ku.edu.np; rijankayastha@gmail.com
-													<br><b>Website:</b> http://www.ku.edu.np
-                    								</p>
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    						<li>
-                    							<div class="row">
-                    								<div class="col-md-6">
-                    									<div class="col-md-12">
-                    									<p>Requisition Number: <a href="#">PNREQ000000</a></p>
-                    									<h3>Institute of Geographic Sciences and Natural Resources Research</h3>
-                    									<p>Prof Liu Suxia and Dr Zhao Chagsen<br>Professor</p>
-                    									</div>                    									
-                    								</div>
-                    								<div class="col-md-6">
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
 
-                    								<p>
-                    								<b>Address:</b>11A, Datun Road, Chaoyang District, Beijing, 100101, China
-													<br><b>Phone:</b>+86-10-6488-9749 
-													<br><b>Mobile:</b>+86 13439205618
-													<br><b>Email:</b>liusx@igsnrr.ac.cn and hzjohnson@gmail.com
-													<br><b>Website:</b> http://english.igsnrr.cas.cn/
-                    								</p>
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
 
-                    								</div>
-                    							</div>
-                    						</li>
-                    					</ul>
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
 
-                    					<!-- contact List Ends -->
-                    					</div>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
 
-                    					<!-- col-9 ends -->
-                    				</div>
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
 
-                    			<!-- Row ends -->
-                    		</div>
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
 
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="col-md-4">
+                                            <table class="visiting-card col-md-12">
+                                                <tr>
+                                                    <th>
+                                                        <div class="card-heading">Department of Foreign Affairs and Trade</div>
+                                                        <div class="card-Rno">Requisition Number: G1402</div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr><td class="card-name">Stuart Kinsella</td></tr>
+                                                <tr><td class="card-designation">Program Manager</td></tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table class="card-address">
+                                                            <tr><td>R.G Casey Building,</td></tr>
+                                                            <tr><td>John Mc-Ewen Cresecent,</td></tr>
+                                                            <tr><td>Barton ACT-0221,</td></tr>
+                                                            <tr><td>Australia</td></tr>
+                                                            <tr><td><i class="fa fa-phone" aria-hidden="true"><i> +61 2 6178 5523</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-envelope-o" aria-hidden="true"><i> stuart.kinsella@dfat.gov.au</i></i></td></tr>
+                                                            <tr><td><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.dfat.gov.au" target="_blank"><i> http://www.dfat.gov.au</i></a></td></tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+
+
+                        </div>
                         <!--Card-content Ends-->
                     </div>
-
-
                     <!--Card Ends-->
                 </div>
                 <!--Column ends-->
@@ -238,3 +526,77 @@
     </div>
 </div>
 
+@section styles{
+    <link href='@Url.Content("~/Content/Page_css/profile.css")' rel="stylesheet" />
+    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />*@
+}
+
+@section scripts{
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    @*<script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script>*@
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFXyyQuzLEkptS7OLFOUvDCIxngtijNJc&callback=initialize"
+        async defer></script>*@
+
+
+    <script>
+        $(document).ready(function () {
+
+            resizeElements();
+            function resizeElements() {
+                $('.tab-content').height($(window).height() - 285);
+            }
+
+            $(window).resize(function () { resizeElements(); })
+            var mouse_is_inside = false;
+            $('#profile_logo').click(function (e) {
+                e.stopPropagation();
+                $('#profile_info').fadeToggle(300);
+                $('#profile_info').toggleClass('active');
+            })
+            $('#profile_logo').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('#btnsearch_Partner').click(function (e) {
+                e.stopPropagation();
+                $('#search_Partner').toggleClass('active');
+                $('#search_Partner').fadeToggle(300);
+            })
+            $('#btnsearch_Partner').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('body').mouseup(function (e) {
+                if (mouse_is_inside)
+                    return;
+                hideform(e, $('#profile_info'));
+                hideform(e, $('#search_Partner'));
+            });
+
+            function hideform(e, container) {
+                //var container = $('#profile_info');
+                //e.preventDefault();
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    if (container.hasClass("active")) {
+                        container.fadeToggle(300);
+                        container.toggleClass('active');
+                    }
+                }
+            }
+
+            //var map = L.map('profile_map').setView([27.6965, 87.9288], 4);
+            //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            //}).addTo(map);
+
+            var map = new google.maps.Map(document.getElementById('profile_map'), {
+                center: { lat: 27.6965, lng: 85.3288 },
+                zoom: 4
+            });
+
+
+        })
+    </script>
+}

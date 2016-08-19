@@ -29,6 +29,13 @@ namespace prm.Controllers
             ViewBag.PartnerContact = "active";
             return View();
         }
+        public ActionResult PartnerContacts()
+        {
+            ViewBag.Partners = "active";
+            ViewBag.PartnerContact = "active";
+            return View();
+        }
+
         public ActionResult ViewPartnerProfileRoster()
         {
             ViewBag.Partners = "active";

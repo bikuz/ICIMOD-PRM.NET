@@ -15,37 +15,35 @@
 }
 </Style>
 
-<div class="row" >
+<div class="row" style="margin-top: 55px;padding:0">
 
-    <div class="container-fluid">
-        <!--Data Card Container Row-->
-        <div class="row" style="margin:10px;">
+    <div class=" container-fluid">
+    <!--Data Card Container Row-->
+    <div class="row" style="margin:10px;">
 
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <!--Card Title-->
-                        <span class="card-title">View Partner List</span>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <!--Card Title-->
+                    <span class="card-title">View Partner List</span>
 
-                        <!-- Removed Collapsed Button -->
+                    <!-- Removed Collapsed Button -->
+                    <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
+                    <!--Card-Header Ends-->
+                </div>
 
-                        <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
-                        
-                        <!--Card-Header Ends-->
-                    </div>
-                   
-                    <div class="card-content">
-                        <ul class="nav nav-tabs nav-justified tabs-modified">
-                            <li role="presentation" class="active"><a data-toggle="tab" href="#searchInfo">Search Result</a></li>
-                            <li role="presentation"><a data-toggle="tab" href="#SumResult">Summary of Results</a></li>
-                        </ul>
+                <div class="card-content">
+                    <ul class="nav nav-tabs nav-justified tabs-modified">
+                        <li role="presentation" class="active"><a data-toggle="tab" href="#searchInfo">Search Result</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#SumResult">Summary of Results</a></li>
+                    </ul>
 
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="searchInfo">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="searchInfo">
                             <h2 style="text-align:center">List of Partners</h2>
-                            
-                                 <div class="table-responsive">
-                                 <table id="example" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+
+                            <div class="table-responsive">
+                                <table id="example" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -59,7 +57,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                             <th>Name</th>
+                                            <th>Name</th>
                                             <th>status</th>
                                             <th>Organization Type</th>
                                             <th>Initiate</th>
@@ -85,163 +83,163 @@
                                             <td>N/A</td>
                                             <td>N/A</td>
                                             <td>India</td>
-                                             <td>Edit Delete</td>
+                                            <td>Edit Delete</td>
                                         </tr>
-                                        
+
                                     </tbody>
                                 </table>
-                                </div>
-
-
-                                <!-- search Result Ends -->
                             </div>
 
-                            <div role="tabpanel" class="tab-pane" id="SumResult">
 
-                             <div class="row container-fluid" style="margin: 10px;">
-                                
+                            <!-- search Result Ends -->
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="SumResult">
+
+                            <div class="row container-fluid" style="margin: 10px;">
+
                                 <div class="col-md-2 dataBox">
                                     <h2 class="text-center">377</h2>
                                     <p>Total number of Partners</p>
                                 </div>
                                 <div class="col-md-2 dataBox">
-                                 <h2 class="text-center">28</h2>
+                                    <h2 class="text-center">28</h2>
                                     <p>Total number of Countries</p>
-                                   
+
                                 </div>
-                                
+
                                 <div class="col-md-2 dataBox">
                                     <h2 class="text-center">236</h2>
                                     <p>Total number of LoAs</p>
                                 </div>
-                                
+
                                 <div class="col-md-2 dataBox">
-                                     <h2 class="text-center">104</h2>
+                                    <h2 class="text-center">104</h2>
                                     <p>Total number of MoUs</p>
                                 </div>
-                                
+
                                 <div class="col-md-2 dataBox">
-                                     <h2 class="text-center">30</h2>
+                                    <h2 class="text-center">30</h2>
                                     <p>Total number of Donor Agreement</p>
                                 </div>
-                                
+
                                 <div class="col-md-2 dataBox">
-                                     <h2 class="text-center">209</h2>
+                                    <h2 class="text-center">209</h2>
                                     <p>Total number without Agreements</p>
                                 </div>
-                                
 
-                                </div>
 
-                                <div class= "row container-fluid">
+                            </div>
+
+                            <div class="row container-fluid">
                                 <!-- Chart View -->
-                                       <div class="col-md-12">
+                                <div class="col-md-12">
                                     <!-- CSS Property Defined in the Site CSS File -->
-                                       <div class="chartView"></div>
-                          
+                                    <div class="chartView"></div>
 
-                                 <!-- ChartView Ends -->   
+
+                                    <!-- ChartView Ends -->
                                 </div>
-                        <div class="col-md-12 selectChartTitle">
-                         <p>Select Charts</p>
-                         <!-- SelectChartTitle Ends -->   
-                        </div>
-
-                        
-                        
-                        <div class="col-md-1 chartArrows" style="text-align: center;">
-                             <div class="circle chartPrevious">
-                            <a href="#" id="previousChart"><i class="fa fa-chevron-left fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
-                        </div>
-                        </div>
-                        <div class="col-md-10 col-sm-12">
-
-
-                            <div class="chartsSelect">
-                                <div>
-                                <!-- Chart-1 -->
-                                <div class="chartHolder chart1"></div>
-                                <div class="chartRadioContainer"><input id="chart1" type="radio" aria-label="..." name="chartGroup" checked="checked"></div>
-                                </div>
-                                <div> 
-                                <!-- Chart-2 -->
-                                <div class="chartHolder chart2"></div>
-                                <div class="chartRadioContainer"><input class="cardRadio" id="chart2" type="radio" aria-label="..." name="chartGroup"></div>
-                                 <!-- Chart-2 Ends-->
-                                </div>
-                                
-                                <div>
-                                <!-- Chart-3 -->
-                                <div class="chartHolder chart3"></div>
-                                <div class="chartRadioContainer"><input class="cardRadio" id="chart3" type="radio" aria-label="..." name="chartGroup" ></div>
-                                 <!-- Chart-3 Ends-->
+                                <div class="col-md-12 selectChartTitle">
+                                    <p>Select Charts</p>
+                                    <!-- SelectChartTitle Ends -->
                                 </div>
 
-                                <div>
-                                <!-- Chart-4 -->
-                                <div class="chartHolder chart4"></div>
-                                <div class="chartRadioContainer">
-                                <input class="cardRadio" id="chart4" type="radio" aria-label="..." name="chartGroup">
+
+
+                                <div class="col-md-1 chartArrows" style="text-align: center;">
+                                    <div class="circle chartPrevious">
+                                        <a href="#" id="previousChart"><i class="fa fa-chevron-left fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-12">
+
+
+                                    <div class="chartsSelect">
+                                        <div>
+                                            <!-- Chart-1 -->
+                                            <div class="chartHolder chart1"></div>
+                                            <div class="chartRadioContainer"><input id="chart1" type="radio" aria-label="..." name="chartGroup" checked="checked"></div>
+                                        </div>
+                                        <div>
+                                            <!-- Chart-2 -->
+                                            <div class="chartHolder chart2"></div>
+                                            <div class="chartRadioContainer"><input class="cardRadio" id="chart2" type="radio" aria-label="..." name="chartGroup"></div>
+                                            <!-- Chart-2 Ends-->
+                                        </div>
+
+                                        <div>
+                                            <!-- Chart-3 -->
+                                            <div class="chartHolder chart3"></div>
+                                            <div class="chartRadioContainer"><input class="cardRadio" id="chart3" type="radio" aria-label="..." name="chartGroup"></div>
+                                            <!-- Chart-3 Ends-->
+                                        </div>
+
+                                        <div>
+                                            <!-- Chart-4 -->
+                                            <div class="chartHolder chart4"></div>
+                                            <div class="chartRadioContainer">
+                                                <input class="cardRadio" id="chart4" type="radio" aria-label="..." name="chartGroup">
+
+                                            </div>
+                                            <!-- Chart-4 Ends -->
+                                        </div>
+
+                                        <div>
+                                            <!-- Chart-5 -->
+                                            <div class="chartHolder chart5"></div>
+                                            <div class="chartRadioContainer"><input class="cardRadio" id="chart5" type="radio" aria-label="..." name="chartGroup"></div>
+                                            <!-- Chart-5 Ends-->
+                                        </div>
+                                        <!-- Chart-6 -->
+                                        <div>
+                                            <div class="chartHolder chart6"></div>
+                                            <div class="chartRadioContainer"><input class="cardRadio" id="chart6" type="radio" aria-label="..." name="chartGroup"></div>
+                                            <!-- Chart-6 Ends-->
+                                        </div>
+
+                                        <div>
+                                            <!-- Chart-7 -->
+                                            <div class="chartHolder chart7"></div>
+                                            <div class="chartRadioContainer"><input class="cardRadio" id="chart7" type="radio" aria-label="..." name="chartGroup"></div>
+                                            <!-- Chart-7 Ends-->
+                                        </div>
+
+                                        <!-- ChartSelect Ends -->
+                                    </div>
+
+
 
                                 </div>
-                                <!-- Chart-4 Ends -->
+
+                                <div class="col-md-1 chartArrows">
+                                    <div class="circle chartNext">
+                                        <a href="#" id="nextChart"><i class="fa fa-chevron-right fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
+                                    </div>
                                 </div>
 
-                                <div>
-                                <!-- Chart-5 -->
-                                <div class="chartHolder chart5"></div>
-                                <div class="chartRadioContainer"><input class="cardRadio" id="chart5" type="radio" aria-label="..." name="chartGroup"></div>
-                                <!-- Chart-5 Ends-->
-                                </div>
-                                <!-- Chart-6 -->
-                                <div>
-                                <div class="chartHolder chart6"></div>
-                                <div class="chartRadioContainer"><input class="cardRadio" id="chart6" type="radio" aria-label="..." name="chartGroup"></div>
-                                <!-- Chart-6 Ends-->
-                                </div>
-                                
-                                 <div>
-                                <!-- Chart-7 -->
-                                 <div class="chartHolder chart7"></div>
-                                 <div class="chartRadioContainer"><input class="cardRadio" id="chart7" type="radio" aria-label="..." name="chartGroup"></div>
-                                 <!-- Chart-7 Ends-->
-                                 </div>
-
-                                <!-- ChartSelect Ends -->
-                            </div>                   
-
-
-                        
-                        </div>
-
-                        <div class="col-md-1 chartArrows">
-                             <div class="circle chartNext">
-                        <a href="#" id="nextChart"><i class="fa fa-chevron-right fa-bold" style="color:#fff;" aria-hidden="true"></i></a>
-                        </div>
-                        </div>
-                      
 
 
 
 
 
                                 <!-- Main Row Ends -->
-                                </div>
-                            <!-- Summary of Result Ends -->
                             </div>
-
-                            <!--tab-content Ends-->
+                            <!-- Summary of Result Ends -->
                         </div>
-                        <!--Card-content Ends-->
+
+                        <!--tab-content Ends-->
                     </div>
-
-
-                    <!--Card Ends-->
+                    <!--Card-content Ends-->
                 </div>
-                <!--Column ends-->
-            </div>
 
+
+                <!--Card Ends-->
+            </div>
+            <!--Column ends-->
         </div>
+
     </div>
+</div>
 </div>
 

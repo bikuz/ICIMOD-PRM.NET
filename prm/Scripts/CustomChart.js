@@ -548,13 +548,10 @@ function chart5(chartName) {
 };
 
 
-
-function chart6(chartName) {
-
-    
-
+var graph = {};
+graph['chart2']=function chart6(chartName) {
         // Build the chart
-    $(chartName).highcharts({
+    return new Highcharts.Chart({
         credits: {
             enabled: false
         },
@@ -565,7 +562,8 @@ function chart6(chartName) {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                type: 'pie'
+                type: 'pie',
+                renderTo: chartName
             },
             title: {
                 text: 'Browser market shares January, 2015 to May, 2015',
@@ -616,8 +614,8 @@ function chart6(chartName) {
 };
 
 
-function chart7(chartName) {
-    $(chartName).highcharts({
+graph['chart1']=function chart7(chartName) {
+    return new Highcharts.Chart({
         credits: {
             enabled: false
         },
@@ -626,7 +624,8 @@ function chart7(chartName) {
         },
 
         chart: {
-            type: 'column'
+            type: 'column',
+            renderTo: chartName
         },
 
         title: {

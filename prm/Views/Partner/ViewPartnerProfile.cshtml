@@ -1,790 +1,1110 @@
 ﻿@{
-    ViewBag.Title = "ViewPartnerProfile";
+    ViewBag.Title = "View Partner Profile";
 }
+@*<div class="card" style="margin-top:55px;position:fixed;width:100%;">
+        <div class="card-header"><span class="card-title">Partner Information: View Profile</span></div>
+    </div>*@
 
-<div class="row">
+<div class="row" style="margin-top:55px;">
 
     <div class="container-fluid">
+
         <!--Data Card Container Row-->
         <div class="row" style="margin:10px;">
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="profile-header">
                         <!--Card Title-->
-                        <span class="card-title">View Partner Profile</span>
-                        
+                        <div id="profile_logo" class="img-frame">
+                            <div class="img-holder">
+                                <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/CompanyLogos/3b229328-eace-4d92-9632-ef7f98713bcf1.ANSISS.jpg" style="height:90px;width:auto;">
+                            </div>
+                            <div class="down-btn">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div id="profile_info" class="profile-header-infoholder" style="width:680px;height:440px">
+                            <div class="row">
+                                <div class="col-md-6" style="border-right:1px solid #ddd">
+                                    <div class="profile-list">
+                                        <div class="row listitem">
+                                            <div class="col-sm-5 title">Country:</div>
+                                            <div class="col-sm-7 txt">India</div>
+                                        </div>
+                                        <div class="row listitem">
+                                            <div class="col-sm-5 title">Established Year:</div>
+                                            <div class="col-sm-7 txt">1958</div>
+                                        </div>
+                                        <div class="row listitem">
+                                            <div class="col-sm-5 title">Nature of Institution:</div>
+                                            <div class="col-sm-7 txt">Research</div>
+                                        </div>
+                                        @*<div class="row listitem">
+                                                <div class="col-sm-5 title">ICIMOD Focus Area:</div>
+                                                <div class="col-sm-7 txt">Sustainable Livelihoods</div>
+                                            </div>*@
+                                        <div class="row listitem">
+                                            <div class="col-sm-5 title">Core Competencies:</div>
+                                            <div class="col-sm-7 txt">Teaching and research in social sciences</div>
+                                        </div>
+                                        @*<div class="row listitem">
+                                                <div class="col-sm-5 title">Key Funding Agencies:</div>
+                                                <div class="col-sm-7 txt">N/A</div>
+                                            </div>*@
+                                        <div class="row listitem">
+                                            <div class="col-sm-5 title">
+                                                Contact Person:
+                                            </div>
+                                            <div class="col-sm-7 txt" >
+                                                <div>Prof DM Diwakar</div>
+                                                <div><i>Director</i></div>
+                                                <div style="font-size:12px;margin-left:-12px;"><i class="fa fa-phone" aria-hidden="true"><i> N/A</i></i></div>
+                                                <div style="font-size:12px;margin-left:-12px;"><i class="fa fa-envelope-o" aria-hidden="true"><i> dmdiwakar@yahoo.com.in</i></i></div>
+                                                <div style="font-size:12px;margin-left:-12px;"><i class="fa fa-skype" aria-hidden="true"><i> N/A</i></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                @*Profile Map*@
+                                <div class="col-md-6">
+                                    <div id="profile_map" style="padding-left:10px;">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top:10px;">
+                                <div class="col-md-12">
+                                    <div style="width:100%;background-color:#d9edf7;border:1px solid #ddd; padding: 8px;">
+                                        ICIMOD Focus Area
+                                    </div>
+                                    <div style="height:112px;border-color:#ddd;border-style:solid;border-width:0 1px 1px 1px;overflow-y:auto;padding: 8px;font-size: 13px;">
+                                        <div>Sustainable Livelihoods</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="profile-header-info">
+                            <div style="font-size:24px; ">
+                                <span>
+                                    AN Sinha Institute of Social Sciences
+                                    <a href="#" style="margin-left:10px;color:white"><i class="icon-pdf" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                            <div> Patna - 800 001, India</div>
+                            <div><i class="fa fa-phone" aria-hidden="true"></i> +91- 612- 2219395</div>
+                            <div> <i class="fa fa-envelope-o" aria-hidden="true"></i> ansiss1964@gmail.com</div>
+                            <div><i class="fa fa-globe" aria-hidden="true"></i> <a href="http://www.ansiss.in" style="color:white;" target="_blank">http://www.ansiss.in</a> </div>
+                            
+
+                        </div>
+
+                        <div id="btnsearch_Partner" class="profile-header-btn">
+                            <span style="font-size:40px;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+
+                            </span>
+                            Search Partner
+                        </div>
+                        <div id="search_Partner" class="profile-header-btn-dropholder" style="width:250px;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selRMC" style="font-weight:normal;font-size:13px;">Country:</label>
+                                        <select id="selRMC">
+                                            <optgroup label="Regional Member Countries">
+                                                <option value="1">Afghanistan</option>
+                                                <option value="2">Bangladesh</option>
+                                                <option value="3">Bhutan</option>
+                                                <option value="4">China</option>
+                                                <option selected value="5">India</option>
+                                                <option value="6">Myanmar</option>
+                                                <option value="7">Nepal</option>
+                                                <option value="8">Pakistan</option>
+                                            </optgroup>
+                                            <optgroup label="Other Countries">
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Nepl">Nepl</option>
+                                                <option value="Netherland">Netherland</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selRP" style="font-weight:normal;font-size:13px;">Regional Programme:</label>
+                                        <select id="selRP">
+                                            <option value="1">Adaptation to Change</option>
+                                            <option value="2">Transboundary Landscapes</option>
+                                            <option selected value="3">River Basins</option>
+                                            <option value="4">Cryosphere and Atmosphere</option>
+                                            <option value="5">Mountain Environment Regional Information System (MENRIS)</option>
+                                            <option value="6">Himalayan University Consortium (HUC)</option>
+                                            <option value="11">Non-RP/Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selInitiative" style="font-weight:normal;font-size:13px;">Initiative:</label>
+                                        <select id="selInitiative">
+                                            <option value="undefined">Koshi River Basin</option>
+                                            <option value="undefined">Hindu Kush-Himalayan Hydrological Cycle Observation System (HKH-HYCOS)</option>
+                                            <option value="undefined">Himalayan Adaptation, Water and Resilience  Research (HI-AWARE)</option>
+                                            <option value="undefined">Other</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Typology of Partner:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="2">Implementation partner</option>
+                                            <option value="1">Strategic &amp; Policy partner</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Partner:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="36">A N Sinha Institute of Social Studies</option>
+                                            <option value="4414">Advanced Center For Water Resources Development And Management</option>
+                                            <option value="4420">Centre for Ecology Development and Research</option>
+                                            <option value="4313">DHI (India) Water &amp; Environment Pvt. Ltd. </option>
+                                            <option value="4413">Indian Council of Agriculture Research -Research Complex for Eastern Region</option>
+                                            <option value="73">Indian Institute of Technology, Kanpur</option>
+                                            <option value="28">Institute of Economic Growth, University of Delhi Enclave</option>
+                                            <option value="4415">Megh Pyne Abhiyan</option>
+                                            <option value="64">National Institute of Disaster Management </option>
+                                            <option value="14">The Energy and Resource Institute</option>
+                                            <option value="2229">The Mountain Institute India</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
                         <!--Card-Header Ends-->
                     </div>
-                   
+
                     <div class="card-content">
-                    	<h3 class="text-center">SEARCH PARTNER</h3>
-                    	<br>
-                        <div class="row">
-                        <div class="col-md-2">
-                        	<p class="text-center">Select RMC</p>
-                        <select class="form-control" id="sel1">
-						        <option>1</option>
-						        <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-						      </select>
 
-                        </div>
-                        <div class="col-md-2">
-                        	<p class="text-center">Select RP</p>
-                        <select class="form-control" id="sel2">
-						        <option>1</option>
-						        <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-						      </select>
-
-                        </div>
-                        <div class="col-md-2">
-                        	<p class="text-center">Select Initiative</p>
-                        <select class="form-control" id="sel3">
-						        <option>1</option>
-						        <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-						      </select>
-
-                        </div>
-                        <div class="col-md-2">
-                        	
-                        	<p class="text-center">Select Partner Type</p>
-                        <select class="form-control" id="sel4">
-						        <option>1</option>
-						        <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-						      </select>
-
-                        </div>
-                        <div class="col-md-4">
-                        	<p class="text-center">Select Partner</p>
-                        	  <select class="form-control" id="sel5">
-						        <option>1</option>
-						        <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-						      </select>
-
-
-                        </div>
-                        </div>
-                       <div class="searchContent container-fluid" style="border-top: 2px solid #eeeeee; margin-top: 20px; min-height:400px;">
-                       <br>
-                       	 <div class="col-md-12" style="background-color: #0095DA; display:inline-block">
-                       <h3 class="text-center" style="color:white;">AN Sinha Institute of Social Sciences
-                       <span style="float: right;"><a href="#" class="icoPDF"></a></span></h3>
-                       </div>
-
-						<div class="col-md-12" style="border: 1px solid #eeeeee;">
-
-						  <!-- Nav tabs -->
-						  <ul class="nav nav-tabs" role="tablist">
-						    <li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
-						    <li role="presentation"><a href="#selfAssessment" aria-controls="profile" role="tab" data-toggle="tab">Self-Assessment/Due Diligence</a></li>
-						    <li role="presentation"><a href="#profile" aria-controls="messages" role="tab" data-toggle="tab">Partner Profile</a></li>
-						    <li role="presentation"><a href="#partnership" aria-controls="settings" role="tab" data-toggle="tab">Partnership</a></li>
-						    <li role="presentation"><a href="#tracker" aria-controls="settings" role="tab" data-toggle="tab">Partner Tracker</a></li>
-						    <li role="presentation"><a href="#review" aria-controls="settings" role="tab" data-toggle="tab">Review</a></li>
-						    <li role="presentation"><a href="#closeOut" aria-controls="settings" role="tab" data-toggle="tab">Close Out</a></li>
-						  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content" >
-	   <div role="tabpanel" class="tab-pane active" id="overview">
-	   	
-
-	   		<div class="row" style="background-color:#f9f9f9;">
-                      
-                       <div class="col-md-5">
-                       		<br>
-                       		<div class="col-md-4">
-                       			<img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/CompanyLogos/3b229328-eace-4d92-9632-ef7f98713bcf1.ANSISS.jpg">
-                       			<br>
-                       		</div>
-	                       	<div class="col-md-8">
-	                       		<p>
-	                       		Patna - 800 001, India<br>
-								ansiss1964@gmail.com<br>
-								Website: http://www.ansiss.in/<br>
-								Phone No.:+91- 612- 2219395<br>
-	                       		</p>
-	                       		
-	                       	</div>
-	                       	<div class="col-md-12">
-	                       		<div style="overflow:hidden;resize:none;max-width:100%;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://www.hostingreviews.website/bigrock-review" id="auth-map-data">bigrock review</a><style>#display-google-map .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=93ee7a3d-e106-6b7a-b207-e6cc8f80cb45&c=code-for-google-map&u=1470319227" defer="defer" async="async"></script>
-	                       	</div>
-                       </div>
-                       <div class="col-md-7">
-                       	<br>
-							<div class="table-responsive">
-							  <table class="table table-bordered table-hover">
-							    <tr class="info">
-							    	<td class="col-md-6 text-center">Country</td>
-							    	<td class="col-md-6 text-center">Established Year</td>
-							    </tr>
-							    <tr>
-							    	<td class="col-md-6 text-center">India</td>
-							    	<td class="col-md-6 text-center">1958</td>
-							    </tr>
-							    <tr class="info">
-							    	<td class="col-md-6 text-center">Nature of Institution</td>
-							    	<td class="col-md-6 text-center">ICIMOD Focus Area</td>
-							    </tr>
-							    <tr>
-							    	<td class="col-md-6 text-center">Research</td>
-							    	<td class="col-md-6 text-center">Sustainable Livelihoods</td>
-							    </tr>
-							    <tr class="info">
-							    	<td class="col-md-6 text-center">Core Competencies</td>
-							    	<td class="col-md-6 text-center">Key Funding Agencies</td>
-							    </tr>
-							    <tr>
-							    	<td class="col-md-6 text-center">Teaching and research in social sciences</td>
-							    	<td class="col-md-6 text-center">N/A</td>
-							    </tr>
-							     <tr class="info">
-							    	<td class="text-center" colspan="2">Partnership(s) with ICIMOD</td>
-							    	
-							    </tr>
-							    <tr>
-							    	<td class="text-center" colspan="2"><p>Implementation Partnership</p>
-														<p>Koshi : January 1, 2014 – December 31, 2016 (USD 11051.00)<p>
-														<p>Koshi : January 1, 2014 – December 31, 2016 (USD 7000.00)</p>
-														<p>Koshi : June 1, 2014 – December 31, 2016 (USD 50000.00)</p>
-														<p>Koshi : December 16, 2015 – June 30, 2016 (USD 5750.00)</p>
-									</td>
-																					    	
-							    </tr>
-							  </table>
-							</div>
-
-                       </div>
-
-                   </div>
-	   	<!-- Overview Ends -->
-	   </div>
-						    <div role="tabpanel" class="tab-pane" id="selfAssessment">
-						    	
-						    	<!-- SelfAssessment Ends -->
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="profile" style="background-color:#f9f9f9">
-						    
-							    <div class="row" style="background-color:#f9f9f9;">
-									 <br> 
-									<div class="col-md-6">  
-									    <h4>Contact persons</h4>
-									    <p>
-									    PRIMARY CONTACT<br>
-										Prof DM Diwakar<br>
-										Director<br>
-										Tel:N/A<br>
-										Email:dmdiwakar@yahoo.com.in<br>
-										Skype:N/A<br>
-										</p>
-										<h4>ORGINISATION PROFILE</h4>
-										<p>A N Sinha Institute of Social Studies is an autonomous institute with an objective to undertake teaching and research in social sciences. This institute in Patna was founded by the Government of Bihar in memory of Dr. Anugrah Narayan Sinha, inaugurated on the 31st of January, 1958.  However, it was made a statutory autonomous body on 8th October, 1964, under the A N Sinha Institute of Social Studies Act. 1964.<br>
-										The major aim of this institute is to undertake teaching and research in social sciences and undertake study of specific problems, if and when required by the State Government or the Central Government of any other agency, provide for journals, books, pamphlets and such other materials as may be deemed necessary and to organise other allied activities.</p>
-									</div>
-									<div class="col-md-6">
-											<h4>ORGANISATIONAL OBJECTIVE</h4>
-											<ul>
-											<li>To undertake teaching and research in social sciences</li>
-											<li>To undertake study of specific problems, if and when required by the State Government or the Central Government or any other agency</li>
-											<li>To provide for journals, books, pamphlets and other such materials as may be deemed necessary</li>
-											<li>To organise lectures, seminars and conferences and to undertake other allied activities.</li>
-											</ul>
-									</div>
-
-								</div>
-
-
-						    	<!-- Partner Profile Ends -->
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="partnership">
-						    	 <div class="row" style="background-color:#f9f9f9;">
-						    	 <br>
-						    	 <div class="col-md-12">
-						    	 	<h4 >Agreements</h4>
-						    	 </div>
-						    	 
-							    	<div class="col-md-6">
-							    		
-							    		<p>
-							    		Requistion Number:<span class="bold">PNREQ000110</span><br>
-							    		Status:<span class="bold">On-going</span><br>
-							    		Typology of Partners:<span class="bold">Operational partner </span><br>
-							    		Initiative:<span class="bold">Koshi River Basin</span><br>
-							    		Regional Programme:<span class="bold"> River Basins</span><br>
-							    		Start Date:<span class="bold">January 1, 2014</span><br>
-							    		End Date:<span class="bold">December 31, 2016</span><br>
-							    		Contracted Amount:<span class="bold">USD 11051.00</span>
-							    		</p>
-							    		<a href="#">Download Contract File</a>|<a href="#">Download Amendment File</a>
-
-							    		<hr>
-
-							    		<p>
-							    		Requistion Number:<span class="bold">PNREQ000110</span><br>
-							    		Status:<span class="bold">On-going</span><br>
-							    		Typology of Partners:<span class="bold">Operational partner </span><br>
-							    		Initiative:<span class="bold">Koshi River Basin</span><br>
-							    		Regional Programme:<span class="bold"> River Basins</span><br>
-							    		Start Date:<span class="bold">January 1, 2014</span><br>
-							    		End Date:<span class="bold">December 31, 2016</span><br>
-							    		Contracted Amount:<span class="bold">USD 11051.00</span>
-							    		</p>
-							    		<a href="#">Download Contract File</a>|<a href="#">Download Amendment File</a>
-
-							    		
-							    	</div>
-							    	<div class="col-md-6">
-							    		<p>
-							    		Requistion Number:<span class="bold">PNREQ000110</span><br>
-							    		Status:<span class="bold">On-going</span><br>
-							    		Typology of Partners:<span class="bold">Operational partner </span><br>
-							    		Initiative:<span class="bold">Koshi River Basin</span><br>
-							    		Regional Programme:<span class="bold"> River Basins</span><br>
-							    		Start Date:<span class="bold">January 1, 2014</span><br>
-							    		End Date:<span class="bold">December 31, 2016</span><br>
-							    		Contracted Amount:<span class="bold">USD 11051.00</span>
-							    		</p>
-							    		<a href="#">Download Contract File</a>|<a href="#">Download Amendment File</a>
-							    		<hr>
-							    		<p>
-							    		Requistion Number:<span class="bold">PNREQ000110</span><br>
-							    		Status:<span class="bold">On-going</span><br>
-							    		Typology of Partners:<span class="bold">Operational partner </span><br>
-							    		Initiative:<span class="bold">Koshi River Basin</span><br>
-							    		Regional Programme:<span class="bold"> River Basins</span><br>
-							    		Start Date:<span class="bold">January 1, 2014</span><br>
-							    		End Date:<span class="bold">December 31, 2016</span><br>
-							    		Contracted Amount:<span class="bold">USD 11051.00</span>
-							    		</p>
-							    		<a href="#">Download Contract File</a>|<a href="#">Download Amendment File</a>
-							    	</div>
-						    	</div>
-
-						    </div>
-
-						      <div role="tabpanel" class="tab-pane" id="tracker">
-						      	<br>
-						      	<table class="table table-striped table-hover table-bordered" width="100%">
-                                                <thead>
-                                                    <tr>
-                                                        
-                                                        <th data-field="Strategic">Requisition Number</th>
-                                                        <th data-field="Implementation">Deliverables</th>
-
-                                                        <th data-field="Partners">Planned Date</th>
-                                                        <th data-field="Strategic">Delivered Date</th>
-                                                        
-                                                        <th data-field="Implementation" style="width: 15%;">Level of Performance</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                                <tr>
-                                                                        <td rowspan="10" class="col-md-1">
-                                                                            PNREQ000110
-                                                                        </td>
-                                                                    <td class="col-md-3">
-                                                                        Workshop Report
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Inception Report(30 days within signing LoA)
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        June 30, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 31, 2014
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report January-June 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 11, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report July-December 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 11, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report January-June 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 11, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report July-December 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report January-June 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report July-December 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2017
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Progress Termination Report
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 31, 2017
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Travel Report(within 14 days of completion of trip)
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                        <td rowspan="1" class="col-md-1">
-                                                                            PNREQ000166
-                                                                        </td>
-                                                                    <td class="col-md-3">
-                                                                        Field Research Work
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                        <td rowspan="14" class="col-md-1">
-                                                                            PNREQ000099
-                                                                        </td>
-                                                                    <td class="col-md-3">
-                                                                        Inception Report
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 31, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        April 8, 2014
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jan-June 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 15, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jul-Dec 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 15, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jan-June 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        September 15, 2015
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jul-Dec 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jan-June 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        July 1, 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Biannual Progress Report Jul-Dec 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2017
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Project Termination Report
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        January 1, 2017
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Travel Report(All staff details to be documented and attached within 14 days of trip completion)
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Base Line report (socio-economic and livelihood aspects)+datasets
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        March 31, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Report on Food security &amp; Livelihood issues
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        August 31, 2014
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Report  on Policy impacts on upstream &amp; downstream issues, options and opportunities
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        March 31, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Report on best practices, case studies &amp; Policy recommendations
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        December 30, 2015
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="col-md-3">
-                                                                        Final consolidated report including policy recommendations
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        May 1, 2016
-                                                                    </td>
-                                                                    <td class="col-md-2">
-                                                                        
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
-
-
-                                                                    </td>
-
-                                                                </tr>
-
-
-                                                </tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <td colspan="5">
-                                                            <div class="col-sm-4">
-                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300; float: left;margin-top: 4px;margin-right: 5px; display: inline-block;"></div> - Received within the stipulated deadline .
+                        <ul class="nav nav-tabs tabs-modified" role="tablist">
+                            @*<li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>*@
+                            <li role="presentation" class="active"><a href="#selfAssessment" aria-controls="profile" role="tab" data-toggle="tab">Self-Assessment/Due Diligence</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="messages" role="tab" data-toggle="tab">Partner Profile</a></li>
+                            <li role="presentation"><a href="#partnership" aria-controls="settings" role="tab" data-toggle="tab">Partnership Agreements</a></li>
+                            @*<li role="presentation"><a href="#partnership1" aria-controls="settings" role="tab" data-toggle="tab">Partnership</a></li>*@
+                            <li role="presentation"><a href="#tracker" aria-controls="settings" role="tab" data-toggle="tab">Partner Tracker</a></li>
+                            <li role="presentation"><a href="#review" aria-controls="settings" role="tab" data-toggle="tab">Review</a></li>
+                            <li role="presentation"><a href="#closeOut" aria-controls="settings" role="tab" data-toggle="tab">Close Out</a></li>
+                        </ul>
+
+                        <div class="tab-content" style="overflow-x:hidden;overflow-y:auto;">
+                            <div role="tabpanel" class="tab-pane active" id="selfAssessment">
+
+                                --- Here comes SelfAssessment ---
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="profile">
+
+                                <div class="row">
+                                    <br>
+                                    <div class="col-md-6">
+                                        @*<h4>CONTACT PERSONS</h4>
+                                            <h5 style="font-weight:bold">Primary Contact</h5>
+                                            <p>
+                                                Prof DM Diwakar<br>
+                                                Director<br>
+                                                Tel:N/A<br>
+                                                Email:dmdiwakar@yahoo.com.in<br>
+                                                Skype:N/A<br>
+                                            </p>
+                                            <br>*@
+                                        <h4>ORGINISATION PROFILE</h4>
+                                        <p style="text-align:justify">
+                                            A N Sinha Institute of Social Studies is an autonomous institute with an objective to undertake teaching and research in social sciences. This institute in Patna was founded by the Government of Bihar in memory of Dr. Anugrah Narayan Sinha, inaugurated on the 31st of January, 1958.  However, it was made a statutory autonomous body on 8th October, 1964, under the A N Sinha Institute of Social Studies Act. 1964.
+                                        </p>
+                                        <p style="text-align:justify">
+                                            The major aim of this institute is to undertake teaching and research in social sciences and undertake study of specific problems, if and when required by the State Government or the Central Government of any other agency, provide for journals, books, pamphlets and such other materials as may be deemed necessary and to organise other allied activities.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6" style="text-align:justify">
+                                        <h4>ORGANISATIONAL OBJECTIVES</h4>
+                                        <ul>
+                                            <li>To undertake teaching and research in social sciences</li>
+                                            <li>To undertake study of specific problems, if and when required by the State Government or the Central Government or any other agency</li>
+                                            <li>To provide for journals, books, pamphlets and other such materials as may be deemed necessary</li>
+                                            <li>To organise lectures, seminars and conferences and to undertake other allied activities.</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- Partner Profile Ends -->
+                            </div>
+
+                            @*<div role="tabpanel" class="tab-pane" id="partnership">
+                                    <div class="row">
+                                        <div class="col-md-4" style="border-right:1px solid #ddd;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="profile-list">
+                                                        <div class="row listitem heading">
+                                                            <div class="col-sm-5 title">Requistion Number:</div>
+                                                            <div class="col-sm-7 txt">PNREQ000110</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Status:</div>
+                                                            <div class="col-sm-7 txt">On-going</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Typology of Partners:</div>
+                                                            <div class="col-sm-7 txt">Operational partner</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Initiative:</div>
+                                                            <div class="col-sm-7 txt">Koshi River Basin</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Regional Programme:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Start Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">End Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Contracted Amount:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-12 title" style="font-weight:normal;">
+                                                                <a href="#">Download Contract File</a> |
+                                                                <a href="#">Download Amendment File</a>
                                                             </div>
-                                                            <div class="col-sm-4">
-                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #ffd800;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Received till 30 days from the stipulated deadline
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4" style="border-right:1px solid #ddd;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="profile-list">
+                                                        <div class="row listitem heading">
+                                                            <div class="col-sm-5 title">Requistion Number:</div>
+                                                            <div class="col-sm-7 txt">PNREQ000110</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Status:</div>
+                                                            <div class="col-sm-7 txt">On-going</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Typology of Partners:</div>
+                                                            <div class="col-sm-7 txt">Operational partner</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Initiative:</div>
+                                                            <div class="col-sm-7 txt">Koshi River Basin</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Regional Programme:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Start Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">End Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Contracted Amount:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-12 title" style="font-weight:normal;">
+                                                                <a href="#">Download Contract File</a> |
+                                                                <a href="#">Download Amendment File</a>
                                                             </div>
-                                                            <div class="col-sm-4">
-                                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Not received till 30 days of the stipulated deadline or deliverables may have received but not updated in the ERP
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="profile-list">
+                                                        <div class="row listitem heading">
+                                                            <div class="col-sm-5 title">Requistion Number:</div>
+                                                            <div class="col-sm-7 txt">PNREQ000110</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Status:</div>
+                                                            <div class="col-sm-7 txt">On-going</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Typology of Partners:</div>
+                                                            <div class="col-sm-7 txt">Operational partner</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Initiative:</div>
+                                                            <div class="col-sm-7 txt">Koshi River Basin</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Regional Programme:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Start Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">End Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Contracted Amount:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-12 title" style="font-weight:normal;">
+                                                                <a href="#">Download Contract File</a> |
+                                                                <a href="#">Download Amendment File</a>
                                                             </div>
-                                                        </td>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-						      <!-- tracker Ends -->		
-						      </div>
-						  
-						       <div role="tabpanel" class="tab-pane" id="review">
-						       </div>
-						        <div role="tabpanel" class="tab-pane" id="closeOut">
-						        </div>
-						  <!-- Tab Content Ends -->
-						  </div>
-						  <!-- Column Ends -->
-						</div>
+                                        <div class="col-md-4" style="border-right:1px solid #ddd;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="profile-list">
+                                                        <div class="row listitem heading">
+                                                            <div class="col-sm-5 title">Requistion Number:</div>
+                                                            <div class="col-sm-7 txt">PNREQ000110</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Status:</div>
+                                                            <div class="col-sm-7 txt">On-going</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Typology of Partners:</div>
+                                                            <div class="col-sm-7 txt">Operational partner</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Initiative:</div>
+                                                            <div class="col-sm-7 txt">Koshi River Basin</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Regional Programme:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Start Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">End Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Contracted Amount:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-12 title" style="font-weight:normal;">
+                                                                <a href="#">Download Contract File</a> |
+                                                                <a href="#">Download Amendment File</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4" style="border-right:1px solid #ddd;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="profile-list">
+                                                        <div class="row listitem heading">
+                                                            <div class="col-sm-5 title">Requistion Number:</div>
+                                                            <div class="col-sm-7 txt">PNREQ000110</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Status:</div>
+                                                            <div class="col-sm-7 txt">On-going</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Typology of Partners:</div>
+                                                            <div class="col-sm-7 txt">Operational partner</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Initiative:</div>
+                                                            <div class="col-sm-7 txt">Koshi River Basin</div>
+                                                        </div>
+
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Regional Programme:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Start Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">End Date:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-5 title">Contracted Amount:</div>
+                                                            <div class="col-sm-7 txt">River Basins</div>
+                                                        </div>
+                                                        <div class="row listitem">
+                                                            <div class="col-sm-12 title" style="font-weight:normal;">
+                                                                <a href="#">Download Contract File</a> |
+                                                                <a href="#">Download Amendment File</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>*@
+
+                            <div role="tabpanel" class="tab-pane" id="partnership">
+                                <table class="table table-striped table-hover table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Strategic">Requisition Number</th>
+                                            <th data-field="Implementation">Status</th>
+                                            <th data-field="Implementation">Typology of Partners</th>
+                                            <th data-field="Partners">Initiative</th>
+                                            <th data-field="Strategic">Regional Programme</th>
+                                            <th data-field="Strategic">Start Date</th>
+                                            <th data-field="Strategic">End Date</th>
+                                            <th data-field="Implementation">Contracted Amount</th>
+                                            <th data-field="Implementation" style="width:150px;">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Contract File</a> |
+                                                <a href="#">Amendment File</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Contract File</a> |
+                                                <a href="#">Amendment File</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Contract File</a> |
+                                                <a href="#">Amendment File</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Contract File</a> |
+                                                <a href="#">Amendment File</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Contract File</a> |
+                                                <a href="#">Amendment File</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PNREQ000110</td>
+                                            <td>On-going</td>
+                                            <td>Operational partner</td>
+                                            <td>Koshi River Basin</td>
+                                            <td>River Basins</td>
+                                            <td>January 1, 2014</td>
+                                            <td>December 31, 2016</td>
+                                            <td>USD 11051.00</td>
+                                            <td>
+                                                <a href="#">Download Contract File</a> |
+                                                <a href="#">Download Amendment File</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th data-field="Strategic">Requisition Number</th>
+                                            <th data-field="Implementation">Status</th>
+                                            <th data-field="Implementation">Typology of Partners</th>
+                                            <th data-field="Partners">Initiative</th>
+                                            <th data-field="Strategic">Regional Programme</th>
+                                            <th data-field="Strategic">Start Date</th>
+                                            <th data-field="Strategic">End Date</th>
+                                            <th data-field="Implementation">Contracted Amount</th>
+                                            <th data-field="Implementation">Download</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="tracker">
+
+                                <table class="table table-striped table-hover table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300; float: left;margin-top: 4px;margin-right: 5px; display: inline-block;"></div> - Received within the stipulated deadline .
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #ffd800;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Received till 30 days from the stipulated deadline
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Not received till 30 days of the stipulated deadline or deliverables may have received but not updated in the ERP
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <th data-field="Strategic">Requisition Number</th>
+                                            <th data-field="Implementation">Deliverables</th>
+
+                                            <th data-field="Partners">Planned Date</th>
+                                            <th data-field="Strategic">Delivered Date</th>
+
+                                            <th data-field="Implementation" style="width: 15%;">Performance Tracker</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="10" class="col-md-1">
+                                                PNREQ000110
+                                            </td>
+                                            <td class="col-md-3">
+                                                Workshop Report
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2014
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
 
 
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Inception Report(30 days within signing LoA)
+                                            </td>
+                                            <td class="col-md-2">
+                                                June 30, 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 31, 2014
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
 
 
-                       <!-- SearchContent Ends -->
-                       </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report January-June 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 11, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
 
 
+                                            </td>
 
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report July-December 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 11, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report January-June 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 11, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report July-December 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2016
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report January-June 2016
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2016
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report July-December 2016
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2017
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Progress Termination Report
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 31, 2017
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Travel Report(within 14 days of completion of trip)
+                                            </td>
+                                            <td class="col-md-2"></td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="1" class="col-md-1">
+                                                PNREQ000166
+                                            </td>
+                                            <td class="col-md-3">
+                                                Field Research Work
+                                            </td>
+                                            <td class="col-md-2"></td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="14" class="col-md-1">
+                                                PNREQ000099
+                                            </td>
+                                            <td class="col-md-3">
+                                                Inception Report
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 31, 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                April 8, 2014
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jan-June 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 15, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jul-Dec 2014
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 15, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jan-June 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                September 15, 2015
+                                            </td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jul-Dec 2015
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2016
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jan-June 2016
+                                            </td>
+                                            <td class="col-md-2">
+                                                July 1, 2016
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Biannual Progress Report Jul-Dec 2016
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2017
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Project Termination Report
+                                            </td>
+                                            <td class="col-md-2">
+                                                January 1, 2017
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Travel Report(All staff details to be documented and attached within 14 days of trip completion)
+                                            </td>
+                                            <td class="col-md-2"></td>
+                                            <td class="col-md-2"></td>
+
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Base Line report (socio-economic and livelihood aspects)+datasets
+                                            </td>
+                                            <td class="col-md-2">
+                                                March 31, 2014
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Report on Food security &amp; Livelihood issues
+                                            </td>
+                                            <td class="col-md-2">
+                                                August 31, 2014
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Report  on Policy impacts on upstream &amp; downstream issues, options and opportunities
+                                            </td>
+                                            <td class="col-md-2">
+                                                March 31, 2015
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Report on best practices, case studies &amp; Policy recommendations
+                                            </td>
+                                            <td class="col-md-2">
+                                                December 30, 2015
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3">
+                                                Final consolidated report including policy recommendations
+                                            </td>
+                                            <td class="col-md-2">
+                                                May 1, 2016
+                                            </td>
+                                            <td class="col-md-2"></td>
+
+                                            <td>
+                                                <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400"></div>
+
+
+                                            </td>
+
+                                        </tr>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #00B300; float: left;margin-top: 4px;margin-right: 5px; display: inline-block;"></div> - Received within the stipulated deadline .
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #ffd800;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Received till 30 days from the stipulated deadline
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div id="round_dot_escalation" class="intensity_dot" style="background-color: #b32400;float: left;margin-top: 4px;margin-right: 5px;display: inline-block;"></div> - Not received till 30 days of the stipulated deadline or deliverables may have received but not updated in the ERP
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+                                <!-- tracker Ends -->
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="review">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="closeOut">
+                            </div>
+
+                        </div>
                         <!--Card-content Ends-->
                     </div>
-
-
                     <!--Card Ends-->
                 </div>
                 <!--Column ends-->
@@ -794,3 +1114,77 @@
     </div>
 </div>
 
+@section styles{
+    <link href='@Url.Content("~/Content/Page_css/profile.css")' rel="stylesheet" />
+    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />*@
+}
+
+@section scripts{
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    @*<script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script>*@
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFXyyQuzLEkptS7OLFOUvDCIxngtijNJc&callback=initialize"
+        async defer></script>*@
+
+
+    <script>
+        $(document).ready(function () {
+
+            resizeElements();
+            function resizeElements() {
+                $('.tab-content').height($(window).height() - 350);
+            }
+
+            $(window).resize(function () { resizeElements(); })
+            var mouse_is_inside = false;
+            $('#profile_logo').click(function (e) {
+                e.stopPropagation();
+                $('#profile_info').fadeToggle(300);
+                $('#profile_info').toggleClass('active');
+            })
+            $('#profile_logo').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('#btnsearch_Partner').click(function (e) {
+                e.stopPropagation();
+                $('#search_Partner').toggleClass('active');
+                $('#search_Partner').fadeToggle(300);
+            })
+            $('#btnsearch_Partner').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('body').mouseup(function (e) {
+                if (mouse_is_inside)
+                    return;
+                hideform(e, $('#profile_info'));
+                hideform(e, $('#search_Partner'));
+            });
+
+            function hideform(e, container) {
+                //var container = $('#profile_info');
+                //e.preventDefault();
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    if (container.hasClass("active")) {
+                        container.fadeToggle(300);
+                        container.toggleClass('active');
+                    }
+                }
+            }
+
+            //var map = L.map('profile_map').setView([27.6965, 87.9288], 4);
+            //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            //}).addTo(map);
+
+            var map = new google.maps.Map(document.getElementById('profile_map'), {
+                center: { lat: 27.6965, lng: 85.3288 },
+                zoom: 4
+            });
+
+
+        })
+    </script>
+}
