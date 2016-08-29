@@ -1,184 +1,266 @@
 ﻿@{
-    ViewBag.Title = "Partnership Profile";
+    ViewBag.Title = "Pratnership Profile";
 }
+@*<div class="card" style="margin-top:55px;position:fixed;width:100%;">
+        <div class="card-header"><span class="card-title">Partner Information: View Profile</span></div>
+    </div>*@
 
-
-<div class="row">
+<div class="row" style="margin-top:55px;">
 
     <div class="container-fluid">
+
         <!--Data Card Container Row-->
         <div class="row" style="margin:10px;">
 
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="profile-header">
                         <!--Card Title-->
-                        <span class="card-title">Agreement Report</span>
-                        <span class="cardButton" style="margin-top:-4px;"><a href="#" class="icoPDF" id="card-3" ></a></span>
-                        <span class="cardButton" style="margin-top:-4px;"><a href="#" class="icoExcel" id="card-3"></a></span>
+                        @*<div id="profile_logo" class="img-frame">
+                                <div class="img-holder">
+                                    <img class="img-responsive" src="http://prmdemo.icimod.org/Content/Uploads/Images/CompanyLogos/3b229328-eace-4d92-9632-ef7f98713bcf1.ANSISS.jpg" style="height:90px;width:auto;">
+                                </div>
+                                <div class="down-btn">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                            </div>*@
+
+
+
+                        <div class="profile-header-info">
+                            <div style="font-size:24px; ">
+                                <span>
+                                    Partnership Profile
+                                    <a href="#" style="margin-left:10px;color:white"><i class="icon-pdf" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+
+
+                            <div class="input-group" style="width:500px;margin-top:50px;">
+                                <input type="text" class="form-control" placeholder="Free Text Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </span>
+                            </div><!-- /input-group -->
+
+
+
+                        </div>
+
+                        <div id="btnsearch_Partner" class="profile-header-btn">
+                            <span style="font-size:40px;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+
+                            </span>
+                            Advance Search
+                        </div>
+                        <div id="search_Partner" class="profile-header-btn-dropholder col-md-8" >
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selRMC" style="font-weight:normal;font-size:13px;">Country:</label>
+                                        <select id="selRMC">
+                                            <option value="">All</option>
+                                            <optgroup label="Regional Member Countries">
+                                                <option value="1">Afghanistan</option>
+                                                <option value="2">Bangladesh</option>
+                                                <option value="3">Bhutan</option>
+                                                <option value="4">China</option>
+                                                <option value="5">India</option>
+                                                <option value="6">Myanmar</option>
+                                                <option value="7">Nepal</option>
+                                                <option value="8">Pakistan</option>
+                                            </optgroup>
+                                            <optgroup label="Other Countries">
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Nepl">Nepl</option>
+                                                <option value="Netherland">Netherland</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selRP" style="font-weight:normal;font-size:13px;">Regional Programme:</label>
+                                        <select id="selRP">
+                                            <option value="">All</option>
+                                            <option value="1">Adaptation to Change</option>
+                                            <option value="2">Transboundary Landscapes</option>
+                                            <option selected value="3">River Basins</option>
+                                            <option value="4">Cryosphere and Atmosphere</option>
+                                            <option value="5">Mountain Environment Regional Information System (MENRIS)</option>
+                                            <option value="6">Himalayan University Consortium (HUC)</option>
+                                            <option value="11">Non-RP/Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selInitiative" style="font-weight:normal;font-size:13px;">Initiative:</label>
+                                        <select id="selInitiative">
+                                            <option value="">All</option>
+                                            <option value="undefined">Koshi River Basin</option>
+                                            <option value="undefined">Hindu Kush-Himalayan Hydrological Cycle Observation System (HKH-HYCOS)</option>
+                                            <option value="undefined">Himalayan Adaptation, Water and Resilience  Research (HI-AWARE)</option>
+                                            <option value="undefined">Other</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selProjStatus" style="font-weight:normal;font-size:13px;">Project Status:</label>
+                                        <select id="selProjStatus">
+                                            <option value="">All</option>
+                                            <option value="On-going">On-going</option>
+                                            <option value="Completed">Completed</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Type of Agreement:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="">All</option>
+                                            <option value="1">LoA</option>
+                                            <option value="2">MoU</option>
+                                            <option value="6">ICs</option>
+                                            <option value="5">LoI</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="selTypoPartner" style="font-weight:normal;font-size:13px;">Budget:</label>
+                                        <select id="selTypoPartner">
+                                            <option value="">All</option>
+                                            <option value="1">Less than 25000</option>
+                                            <option value="2">25000-100000</option>
+                                            <option value="3">100000-200000</option>
+                                            <option value="4">200000-500000</option>
+                                            <option value="5">More than 500000</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="agreementStartDate" style="font-weight:normal;font-size:13px;">Agreement Start Date:</label>
+                                        <input type="text" id="agreementStartDate" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="agreementEndDate" style="font-weight:normal;font-size:13px;">Agreement End Date:</label>
+                                        <input type="text" id="agreementEndDate" />
+                                    </div>
+                                </div>
+
+                                @*<div class="col-md-4">
+                                    <div class="form-group">
+                                         <label for="agreementEndDate" style="font-weight:normal;font-size:13px;">Agreement End Date:</label>
+                                        <input type="text" id="agreementEndDate" />  
+                                    </div>
+                                </div>*@
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="institutionNature" style="font-weight:normal;font-size:13px;">Nature of Institution:</label>
+                                        @*<input type="text" id="institutionNature" class="multi-choice-input" />*@
+                                        <div class="multi-choice">
+                                            <ul class="multi-choiceList">
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Governmental</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Inter-Governmental</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Academic</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>NGO/Civil Society</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Private</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Research</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Media</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Funding Agency</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Network</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>INGO</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Foundation</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Others</span> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="workingAreas" style="font-weight:normal;font-size:13px;">Working Areas:</label>
+                                        <div class="multi-choice">
+                                            <ul class="multi-choiceList">
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Agriculture</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Agroforestry & Shifting Cultivation</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Atmospheric Pollution</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Biodiversity</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Black Carbon</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Carbon Financing</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Climate Change</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Community Forest</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Cryoshpere</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Disaster Preparedness</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Droughts</span> </li>
+                                                <li class="multi-choiceList-item"><input type="checkbox" /><span>Earth Observations</span> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- <span class="cardButton"><a href="#" class="cardCollapseLink" id="card-3"><i class="fa fa-chevron-circle-down fa-lg fa-bold" style="color:#ffffff;" aria-hidden="true"></i></a></span> -->
                         <!--Card-Header Ends-->
                     </div>
-                   
+
                     <div class="card-content">
-                     
-                    <div class="tempAdvanceSearch">
-                    	
-                    	<div class="col-md-1 col-md-offset-5" style="margin-bottom:10px;">
-                    	<button type="submit" class="btn btn-primary" id="advanceSearchBtn">Advance Search</button>
-                    		
-                    	</div>
-                    	<div class="col-md-12" id="advanceSearchTab">
-                    		<div class="row advanceContent">
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Country</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Regional Programmes</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Initiatives</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Project Status</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Type of Agreement</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Budget</p>
-			                        	  <select class="form-control" style="width:100%">
-									        <option>All</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Agreement Start Date (From)</p>
-			                        	  <input type="text" class="form-control" aria-label="..." style="width:100%">
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Agreement End Date (From)</p>
-			                        	  <input type="text" class="form-control" aria-label="..." style="width:100%">
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Nature of Instution</p>
-						                        	  <select class="form-control" style="width:100%">
-												        <option>All</option>
-												        <option>2</option>
-												        <option>3</option>
-												        <option>4</option>
-												      </select>
-                    			</div>
-                    			<div class="col-md-4" style="padding:20px;">
-                    				<p class="text-center">Working Areas</p>
-			                        	   <select class="form-control" style="width:100%">
-												        <option>All</option>
-												        <option>2</option>
-												        <option>3</option>
-												        <option>4</option>
-												      </select>
-                    			</div>
-
-                    			<div class="col-md-12">
-                    				<p class="text-center">
-                    				<button type="submit" class="btn btn-primary" id="advanceClose"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
-                    				<button type="submit" class="btn btn-primary" id="advanceClose">Reset</i></button>
-                    		
-                    				
-
-                    				</p>
-                    			</div>
-                    			<!-- advance Content ends -->
-                    		</div>
-                    	</div>
-
-                    	<!-- TempAdvanceSearchEnds -->
-                    </div>
-
-                    <div class="tempColumnSH" style="display:block;">
-                    	<div class="col-md-12 " style="border: 1px solid #eeeeee; height: 110px;">
-                    	<h4 class="text-center">Show/Hide Columns</h4>
-                    	<div class="col-md-4 col-sm-4 col-xs-4">
-                    	
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="0" type="checkbox"> Requisition No.</label> </div><br>
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="3" type="checkbox"> Total Budget(USD)</label> </div><br>
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="6" type="checkbox"> Country</label> </div>
-                    	
-                    	
-                    	</div>
-                    	<div class="col-md-4 col-sm-4 col-xs-4">
-                    	<div class="checkbox"> <label> <input class="toggle-vis" data-column="1" type="checkbox"> Partner Name</label> </div> <br>
 
 
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="4" type="checkbox"> Initiative</label> </div><br>
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="7" type="checkbox"> Agreement Period</label> 
-                    	</div>
 
-                    	</div>
+                        <div class="tab-content" style="overflow-x:hidden;overflow-y:auto;">
+                            <div role="tabpanel" class="tab-pane active">
 
-
-                    	<div class="col-md-4 col-sm-4 col-xs-4">
-                    	<div class="checkbox"> <label> <input class="toggle-vis" data-column="2" type="checkbox"> Type of Partner</label> </div> <br>
-
-                    	<div class="checkbox"> <label><input class="toggle-vis" data-column="5" type="checkbox"> Regional Program</label> </div><br>
-                    	</div>
-                    	
-                    	
-                    	
-                    	
-                    	 
-                    	</div>
-                    	<!-- Temp Ends -->
-                    </div>
-                       
-                            <h2 style="text-align:center">List of Agreements</h2>
-
-                            
-                         
-                           
-                                 <div class="table-responsive">
-                                 <table id="Agreement" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                <table id="tblPartnership" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
                                             <th>Requisition No.</th>
                                             <th>Partner Name</th>
                                             <th>Type of Partner</th>
                                             <th>Total Budget(USD)</th>
-                                            <th>Initiative</th>
-                                            <th>Regional Program</th>
                                             <th>Country</th>
+                                            <th>Regional Program</th>
+                                            <th>Initiative</th>
                                             <th>Agreement Period</th>
                                         </tr>
                                     </thead>
@@ -188,9 +270,9 @@
                                             <th>Partner Name</th>
                                             <th>Type of Partner</th>
                                             <th>Total Budget(USD)</th>
-                                            <th>Initiative</th>
-                                            <th>Regional Program</th>
                                             <th>Country</th>
+                                            <th>Regional Program</th>
+                                            <th>Initiative</th>
                                             <th>Agreement Period</th>
                                         </tr>
                                     </tfoot>
@@ -200,30 +282,114 @@
                                             <td>United Nations Office for Outer Space Affairs</td>
                                             <td>Strategic & Policy partner</td>
                                             <td>N/A</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
                                             <td>Austria</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
                                             <td>February 15, 2013 - September 30, 2015</td>
                                         </tr>
                                         <tr>
+                                            <td>H276</td>
                                             <td>Aajeevika</td>
-                                            <td>On-going</td>
-                                            <td>Knowledge partners and networks</td>
-                                            <td>N/A</td>
+                                            <td>Strategic & Policy partner</td>
                                             <td>N/A</td>
                                             <td>India</td>
-                                             <td>Edit Delete</td>
-                                             <td>February 15, 2013 - September 30, 2015</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
                                         </tr>
-                                        
+
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>United Nations Office for Outer Space Affairs</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>Austria</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>Aajeevika</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>India</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>United Nations Office for Outer Space Affairs</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>Austria</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>Aajeevika</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>India</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>United Nations Office for Outer Space Affairs</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>Austria</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>Aajeevika</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>India</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>United Nations Office for Outer Space Affairs</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>Austria</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H276</td>
+                                            <td>Aajeevika</td>
+                                            <td>Strategic & Policy partner</td>
+                                            <td>N/A</td>
+                                            <td>India</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>February 15, 2013 - September 30, 2015</td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
-                                </div>
+                            </div>
 
+
+                        </div>
                         <!--Card-content Ends-->
                     </div>
-
-
                     <!--Card Ends-->
                 </div>
                 <!--Column ends-->
@@ -233,4 +399,74 @@
     </div>
 </div>
 
+@section styles{
+    <link href='@Url.Content("~/Content/Page_css/profile.css")' rel="stylesheet" />
 
+}
+
+@section scripts{
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            resizeElements();
+            function resizeElements() {
+                $('.tab-content').height($(window).height() - 285);
+            }
+
+            $(window).resize(function () { resizeElements(); })
+            var mouse_is_inside = false;
+            $('#profile_logo').click(function (e) {
+                e.stopPropagation();
+                $('#profile_info').fadeToggle(300);
+                $('#profile_info').toggleClass('active');
+            })
+            $('#profile_logo').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('#btnsearch_Partner').click(function (e) {
+                e.stopPropagation();
+                $('#search_Partner').toggleClass('active');
+                $('#search_Partner').fadeToggle(300);
+            })
+            $('#btnsearch_Partner').hover(function () { mouse_is_inside = true; }, function () { mouse_is_inside = false; });
+
+
+
+            $('body').mouseup(function (e) {
+                if (mouse_is_inside)
+                    return;
+                hideform(e, $('#profile_info'));
+                hideform(e, $('#search_Partner'));
+            });
+
+            function hideform(e, container) {
+                //var container = $('#profile_info');
+                //e.preventDefault();
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    if (container.hasClass("active")) {
+                        container.fadeToggle(300);
+                        container.toggleClass('active');
+                    }
+                }
+            }
+
+            $('#tblPartnership').DataTable({
+                "searching": false,
+                "paging": true,
+                "pageLength": 10
+                @*"processing": true,
+                "serverSide": true,
+                "ajax": '@Url.Action("Home","getPartnershipProfile")'*@
+            });
+           
+
+
+        })
+    </script>
+}
